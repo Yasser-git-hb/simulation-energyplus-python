@@ -1,0 +1,1400 @@
+Program Version,EnergyPlus, Version 26.1.0-6f2e40d102, YMD=2026.10.24 20:25
+! <Version>, Version ID
+ Version, 25.2
+! <Timesteps per Hour>, #TimeSteps, Minutes per TimeStep {minutes}
+ Timesteps per Hour,  1, 60
+! <System Convergence Limits>, Minimum System TimeStep {minutes}, Max HVAC Iterations, Minimum Plant Iterations, Maximum Plant Iterations
+ System Convergence Limits, 1, 20, 2, 8
+! <Simulation Control>, Do Zone Sizing, Do System Sizing, Do Plant Sizing, Do Design Days, Do Weather Simulation, Do HVAC Sizing Simulation
+ Simulation Control, No, No, No, Yes, Yes, No
+! <Performance Precision Tradeoffs>, Use Coil Direct Simulation, Zone Radiant Exchange Algorithm, Override Mode, Number of Timestep In Hour, Force Euler Method, Minimum Number of Warmup Days, Force Suppress All Begin Environment Resets, Minimum System Timestep, MaxZoneTempDiff, MaxAllowedDelTemp
+ Performance Precision Tradeoffs, No, ScriptF, Normal, 1, No, 1, No, 1.0, 0.300, 2.0000E-003
+! <Output Reporting Tolerances>, Tolerance for Time Heating Setpoint Not Met, Tolerance for Zone Cooling Setpoint Not Met Time
+ Output Reporting Tolerances, 0.200, 0.200, 
+! <Site:GroundTemperature:BuildingSurface>,Jan{C},Feb{C},Mar{C},Apr{C},May{C},Jun{C},Jul{C},Aug{C},Sep{C},Oct{C},Nov{C},Dec{C}
+ Site:GroundTemperature:BuildingSurface,  18.00,  18.00,  18.00,  18.00,  18.00,  18.00,  18.00,  18.00,  18.00,  18.00,  18.00,  18.00
+! <Site:GroundTemperature:FCfactorMethod>,Jan{C},Feb{C},Mar{C},Apr{C},May{C},Jun{C},Jul{C},Aug{C},Sep{C},Oct{C},Nov{C},Dec{C}
+ Site:GroundTemperature:FCfactorMethod,  17.09,  14.71,  13.24,  12.80,  13.67,  15.66,  18.12,  20.54,  22.15,  22.53,  21.60,  19.64
+! <Site:GroundTemperature:Shallow>,Jan{C},Feb{C},Mar{C},Apr{C},May{C},Jun{C},Jul{C},Aug{C},Sep{C},Oct{C},Nov{C},Dec{C}
+ Site:GroundTemperature:Shallow,  13.00,  13.00,  13.00,  13.00,  13.00,  13.00,  13.00,  13.00,  13.00,  13.00,  13.00,  13.00
+! <Site:GroundTemperature:Deep>,Jan{C},Feb{C},Mar{C},Apr{C},May{C},Jun{C},Jul{C},Aug{C},Sep{C},Oct{C},Nov{C},Dec{C}
+ Site:GroundTemperature:Deep,  16.00,  16.00,  16.00,  16.00,  16.00,  16.00,  16.00,  16.00,  16.00,  16.00,  16.00,  16.00
+! <Site:GroundReflectance>,Jan{dimensionless},Feb{dimensionless},Mar{dimensionless},Apr{dimensionless},May{dimensionless},Jun{dimensionless},Jul{dimensionless},Aug{dimensionless},Sep{dimensionless},Oct{dimensionless},Nov{dimensionless},Dec{dimensionless}
+ Site:GroundReflectance,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20
+! <Site:GroundReflectance:SnowModifier>, Normal, Daylighting {dimensionless}
+ Site:GroundReflectance:SnowModifier,   1.000,   1.000
+! <Site:GroundReflectance:Snow>,Jan{dimensionless},Feb{dimensionless},Mar{dimensionless},Apr{dimensionless},May{dimensionless},Jun{dimensionless},Jul{dimensionless},Aug{dimensionless},Sep{dimensionless},Oct{dimensionless},Nov{dimensionless},Dec{dimensionless}
+ Site:GroundReflectance:Snow,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20
+! <Site:GroundReflectance:Snow:Daylighting>,Jan{dimensionless},Feb{dimensionless},Mar{dimensionless},Apr{dimensionless},May{dimensionless},Jun{dimensionless},Jul{dimensionless},Aug{dimensionless},Sep{dimensionless},Oct{dimensionless},Nov{dimensionless},Dec{dimensionless}
+ Site:GroundReflectance:Snow:Daylighting,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20,  0.20
+! <Environment:Weather Station>,Wind Sensor Height Above Ground {m},Wind Speed Profile Exponent {},Wind Speed Profile Boundary Layer Thickness {m},Air Temperature Sensor Height Above Ground {m},Wind Speed Modifier Coefficient-Internal,Temperature Modifier Coefficient-Internal
+Environment:Weather Station,10.000,0.140,270.000,1.500,1.586,9.750E-003
+! <Site:Location>, Location Name, Latitude {N+/S- Deg}, Longitude {E+/W- Deg},  Time Zone Number {GMT+/-}, Elevation {m},  Standard Pressure at Elevation {Pa}, Standard RhoAir at Elevation
+Site:Location,Rabat-Sale.AP RK MAR SRC-TMYx WMO#=601350,34.05,-6.75,1.00,84.10,100319,1.1923
+! <Site Water Mains Temperature Information>,Calculation Method{},Water Mains Temperature Schedule Name{},Annual Average Outdoor Air Temperature{C},Maximum Difference In Monthly Average Outdoor Air Temperatures{deltaC},Fixed Default Water Mains Temperature{C}
+Site Water Mains Temperature Information,FixedDefault,NA,NA,NA,10.0
+! <Building Information>, Building Name,North Axis {deg},Terrain,  Loads Convergence Tolerance Value,Temperature Convergence Tolerance Value,  Solar Distribution,Maximum Number of Warmup Days,Minimum Number of Warmup Days
+ Building Information,Building 1,0.000,Suburbs,4.00000E-002,0.40000,FullExterior,25,1
+! <Inside Convection Algorithm>, Algorithm {Simple | TARP | CeilingDiffuser | AdaptiveConvectionAlgorithm}
+Inside Convection Algorithm,TARP
+! <Outside Convection Algorithm>, Algorithm {SimpleCombined | TARP | MoWitt | DOE-2 | AdaptiveConvectionAlgorithm}
+Outside Convection Algorithm,DOE-2
+! <Sky Radiance Distribution>, Value {Anisotropic}
+Sky Radiance Distribution,Anisotropic
+! <Zone Air Solution Algorithm>, Algorithm {ThirdOrderBackwardDifference | AnalyticalSolution | EulerMethod}, Space Heat Balance Sizing, Space Heat Balance Simulation
+ Zone Air Solution Algorithm, ThirdOrderBackwardDifference, No, No
+! <Zone Air Carbon Dioxide Balance Simulation>, Simulation {Yes/No}, Carbon Dioxide Concentration
+ Zone Air Carbon Dioxide Balance Simulation, No,N/A
+! <Zone Air Generic Contaminant Balance Simulation>, Simulation {Yes/No}, Generic Contaminant Concentration
+ Zone Air Generic Contaminant Balance Simulation, No,N/A
+! <Zone Air Mass Flow Balance Simulation>, Enforce Mass Balance, Adjust Zone Mixing and Return {AdjustMixingOnly | AdjustReturnOnly | AdjustMixingThenReturn | AdjustReturnThenMixing | None}, Adjust Zone Infiltration {AddInfiltration | AdjustInfiltration | None}, Infiltration Zones {MixingSourceZonesOnly | AllZones}
+ Zone Air Mass Flow Balance Simulation, No,N/A,N/A,N/A
+! <HVACSystemRootFindingAlgorithm>, Value {RegulaFalsi | Bisection | BisectionThenRegulaFalsi | RegulaFalsiThenBisection}
+ HVACSystemRootFindingAlgorithm, RegulaFalsi
+! <Environment:Site Atmospheric Variation>,Wind Speed Profile Exponent {},Wind Speed Profile Boundary Layer Thickness {m},Air Temperature Gradient Coefficient {K/m}
+Environment:Site Atmospheric Variation,0.220,370.000,6.500000E-003
+! <Shadowing/Sun Position Calculations Annual Simulations>, Shading Calculation Method, Shading Calculation Update Frequency Method, Shading Calculation Update Frequency {days}, Maximum Figures in Shadow Overlap Calculations {}, Polygon Clipping Algorithm, Pixel Counting Resolution, Sky Diffuse Modeling Algorithm, Output External Shading Calculation Results, Disable Self-Shading Within Shading Zone Groups, Disable Self-Shading From Shading Zone Groups to Other Zones
+Shadowing/Sun Position Calculations Annual Simulations,PolygonClipping,Periodic,20,15000,SutherlandHodgman,512,SimpleSkyDiffuseModeling,No,No,No
+! <Surface Geometry>,Starting Corner,Vertex Input Direction,Coordinate System,Daylight Reference Point Coordinate System,Rectangular (Simple) Surface Coordinate System
+ Surface Geometry,UpperLeftCorner,Counterclockwise,RelativeCoordinateSystem,RelativeCoordinateSystem,RelativeToZoneOrigin
+! <Surface Heat Transfer Algorithm>, Value {CTF - ConductionTransferFunction | EMPD - MoisturePenetrationDepthConductionTransferFunction | CondFD - ConductionFiniteDifference | HAMT - CombinedHeatAndMoistureFiniteElement} - Description,Inside Surface Max Temperature Limit{C}, Surface Convection Coefficient Lower Limit {W/m2-K}, Surface Convection Coefficient Upper Limit {W/m2-K}
+Surface Heat Transfer Algorithm, CTF - ConductionTransferFunction,200,0.10,1000.0
+! <Shading Summary>, Number of Fixed Detached Shades, Number of Building Detached Shades, Number of Attached Shades
+ Shading Summary,0,0,0
+! <Zone Summary>, Number of Zones, Number of Zone Surfaces, Number of SubSurfaces
+ Zone Summary,6,67,18
+! <Zone Information>,Zone Name,North Axis {deg},Origin X-Coordinate {m},Origin Y-Coordinate {m},Origin Z-Coordinate {m},Centroid X-Coordinate {m},Centroid Y-Coordinate {m},Centroid Z-Coordinate {m},Type,Zone Multiplier,Zone List Multiplier,Minimum X {m},Maximum X {m},Minimum Y {m},Maximum Y {m},Minimum Z {m},Maximum Z {m},Ceiling Height {m},Volume {m3},Zone Inside Convection Algorithm {Simple-Detailed-CeilingDiffuser-TrombeWall},Zone Outside Convection Algorithm {Simple-Detailed-Tarp-MoWitt-DOE-2-BLAST}, Floor Area {m2},Exterior Gross Wall Area {m2},Exterior Net Wall Area {m2},Exterior Window Area {m2}, Number of Surfaces, Number of SubSurfaces, Number of Shading SubSurfaces,  Part of Total Building Area
+ Zone Information, THERMAL ZONE 1,0.0,3.41,3.27,0.50,3.48,3.36,2.13,1,1,1,2.73,4.23,2.38,4.38,0.50,3.85,3.26,9.79,TARP,DOE-2,3.00,0.00,0.00,0.00,10,4,0,Yes
+ Zone Information, THERMAL ZONE 2,0.0,0.48,0.38,0.50,2.01,1.85,2.20,1,1,1,0.48,3.48,0.38,3.38,0.50,4.02,3.39,28.06,TARP,DOE-2,8.25,20.76,13.04,1.47,9,3,0,Yes
+ Zone Information, THERMAL ZONE 3,0.0,4.82,1.44,0.50,4.96,1.99,2.19,1,1,1,3.48,6.48,0.68,3.38,0.50,4.00,3.38,24.90,TARP,DOE-2,7.35,9.13,7.66,1.47,8,4,0,Yes
+ Zone Information, THERMAL ZONE 4,0.0,5.19,4.60,0.50,4.95,4.84,2.07,1,1,1,3.48,6.48,3.38,6.38,0.50,3.76,3.13,25.77,TARP,DOE-2,8.25,18.39,16.92,1.47,8,2,0,Yes
+ Zone Information, THERMAL ZONE 5,0.0,1.70,5.12,0.50,2.01,4.84,2.07,1,1,1,0.48,3.48,3.38,6.38,0.50,3.76,3.13,25.77,TARP,DOE-2,8.25,18.39,16.92,1.47,8,2,0,Yes
+ Zone Information, THERMAL ZONE 6,0.0,4.46,0.81,0.00,4.98,0.52,2.26,1,1,1,3.48,6.48,0.38,0.68,0.50,4.02,3.51,3.16,TARP,DOE-2,0.90,11.63,7.01,4.62,6,3,0,Yes
+! <Zone Internal Gains Nominal>,Zone Name, Floor Area {m2},# Occupants,Area per Occupant {m2/person},Occupant per Area {person/m2},Interior Lighting {W/m2},Electric Load {W/m2},Gas Load {W/m2},Other Load {W/m2},Hot Water Eq {W/m2},Steam Equipment {W/m2},Sum Loads per Area {W/m2},Outdoor Controlled Baseboard Heat
+ Zone Internal Gains Nominal, THERMAL ZONE 1,3.00,0.2,17.696,5.651E-002,10.656,7.642,0.000,0.000,0.000,0.000,18.299,No
+ Zone Internal Gains Nominal, THERMAL ZONE 2,8.25,0.5,17.696,5.651E-002,10.656,7.642,0.000,0.000,0.000,0.000,18.299,No
+ Zone Internal Gains Nominal, THERMAL ZONE 3,7.35,0.4,17.696,5.651E-002,10.656,7.642,0.000,0.000,0.000,0.000,18.299,No
+ Zone Internal Gains Nominal, THERMAL ZONE 4,8.25,0.5,17.696,5.651E-002,10.656,7.642,0.000,0.000,0.000,0.000,18.299,No
+ Zone Internal Gains Nominal, THERMAL ZONE 5,8.25,0.5,17.696,5.651E-002,10.656,7.642,0.000,0.000,0.000,0.000,18.299,No
+ Zone Internal Gains Nominal, THERMAL ZONE 6,0.90,5.1E-002,17.696,5.651E-002,10.656,7.642,0.000,0.000,0.000,0.000,18.299,No
+! <People Internal Gains Nominal>,Name,Schedule Name,Zone Name,Zone Floor Area {m2},# Zone Occupants,Number of People {},People/Floor Area {person/m2},Floor Area per person {m2/person},Fraction Radiant,Fraction Convected,Sensible Fraction Calculation,Activity level,ASHRAE 55 Warnings,Carbon Dioxide Generation Rate,Minimum Number of People for All Day Types,Maximum Number of People for All Day Types,Minimum Number of People for Weekdays, Maximum Number of People for Weekdays, Minimum Number of People for Weekends/Holidays, Maximum Number of People for Weekends /Holidays,Minimum Number of People for Summer Design Days, Maximum Number of People for Summer Design Days,Minimum Number of People for Winter Design Days, Maximum Number of People for Winter Design Days
+ People Internal Gains Nominal, SPACE 6 189.1-2009 - OFFICE - OPENOFFICE - CZ4-8 PEOPLE,OFFICE WORK OCC,THERMAL ZONE 6,0.90,5.1E-002,5.1E-002,5.651E-002,17.696,0.300,0.700,AutoCalculate,OFFICE ACTIVITY,No,3.8200E-008,0.0,5.1E-002,0.0,4.3E-002,0.0,4.3E-002,0.0,5.1E-002,0.0,0.0,
+ People Internal Gains Nominal, SPACE 5 189.1-2009 - OFFICE - OPENOFFICE - CZ4-8 PEOPLE,OFFICE WORK OCC,THERMAL ZONE 1,3.00,0.2,0.2,5.651E-002,17.696,0.300,0.700,AutoCalculate,OFFICE ACTIVITY,No,3.8200E-008,0.0,0.2,0.0,0.1,0.0,0.1,0.0,0.2,0.0,0.0,
+ People Internal Gains Nominal, SPACE 1 189.1-2009 - OFFICE - OPENOFFICE - CZ4-8 PEOPLE,OFFICE WORK OCC,THERMAL ZONE 2,8.25,0.5,0.5,5.651E-002,17.696,0.300,0.700,AutoCalculate,OFFICE ACTIVITY,No,3.8200E-008,0.0,0.5,0.0,0.4,0.0,0.4,0.0,0.5,0.0,0.0,
+ People Internal Gains Nominal, SPACE 2 189.1-2009 - OFFICE - OPENOFFICE - CZ4-8 PEOPLE,OFFICE WORK OCC,THERMAL ZONE 3,7.35,0.4,0.4,5.651E-002,17.696,0.300,0.700,AutoCalculate,OFFICE ACTIVITY,No,3.8200E-008,0.0,0.4,0.0,0.4,0.0,0.4,0.0,0.4,0.0,0.0,
+ People Internal Gains Nominal, SPACE 3 189.1-2009 - OFFICE - OPENOFFICE - CZ4-8 PEOPLE,OFFICE WORK OCC,THERMAL ZONE 4,8.25,0.5,0.5,5.651E-002,17.696,0.300,0.700,AutoCalculate,OFFICE ACTIVITY,No,3.8200E-008,0.0,0.5,0.0,0.4,0.0,0.4,0.0,0.5,0.0,0.0,
+ People Internal Gains Nominal, SPACE 4 189.1-2009 - OFFICE - OPENOFFICE - CZ4-8 PEOPLE,OFFICE WORK OCC,THERMAL ZONE 5,8.25,0.5,0.5,5.651E-002,17.696,0.300,0.700,AutoCalculate,OFFICE ACTIVITY,No,3.8200E-008,0.0,0.5,0.0,0.4,0.0,0.4,0.0,0.5,0.0,0.0,
+! <Lights Internal Gains Nominal>,Name,Schedule Name,Zone Name,Zone Floor Area {m2},# Zone Occupants,Lighting Level {W},Lights/Floor Area {W/m2},Lights per person {W/person},Fraction Return Air,Fraction Radiant,Fraction Short Wave,Fraction Convected,Fraction Replaceable,End-Use, Minimum Lighting Level for All Day Types {W},Maximum Lighting Level for All Day Types {W},Minimum Lighting Level for Weekdays {W}, Maximum Lighting Level for Weekdays {W},Minimum Lighting Level for Weekends/Holidays {W}, Maximum Lighting Level for Weekends /Holidays {W},Minimum Lighting Level for Summer Design Days {W}, Maximum Lighting Level for Summer Design Days {W},Minimum Lighting Level for Winter Design Days {W}, Maximum Lighting Level for Winter Design Days {W}
+ Lights Internal Gains Nominal, SPACE 6 189.1-2009 - OFFICE - OPENOFFICE - CZ4-8 LIGHTS,OFFICE BLDG LIGHT,THERMAL ZONE 6,0.90,5.1E-002,9.591,10.656,188.571,0.000,0.000,0.000,1.000,1.000,General,0.000,9.591,0.480,8.6,0.480,8.632,9.591,9.591,0.000,0.000
+ Lights Internal Gains Nominal, SPACE 5 189.1-2009 - OFFICE - OPENOFFICE - CZ4-8 LIGHTS,OFFICE BLDG LIGHT,THERMAL ZONE 1,3.00,0.2,31.969,10.656,188.571,0.000,0.000,0.000,1.000,1.000,General,0.000,31.969,1.598,28.8,1.598,28.772,31.969,31.969,0.000,0.000
+ Lights Internal Gains Nominal, SPACE 1 189.1-2009 - OFFICE - OPENOFFICE - CZ4-8 LIGHTS,OFFICE BLDG LIGHT,THERMAL ZONE 2,8.25,0.5,87.914,10.656,188.571,0.000,0.000,0.000,1.000,1.000,General,0.000,87.914,4.396,79.1,4.396,79.123,87.914,87.914,0.000,0.000
+ Lights Internal Gains Nominal, SPACE 2 189.1-2009 - OFFICE - OPENOFFICE - CZ4-8 LIGHTS,OFFICE BLDG LIGHT,THERMAL ZONE 3,7.35,0.4,78.324,10.656,188.571,0.000,0.000,0.000,1.000,1.000,General,0.000,78.324,3.916,70.5,3.916,70.491,78.324,78.324,0.000,0.000
+ Lights Internal Gains Nominal, SPACE 3 189.1-2009 - OFFICE - OPENOFFICE - CZ4-8 LIGHTS,OFFICE BLDG LIGHT,THERMAL ZONE 4,8.25,0.5,87.914,10.656,188.571,0.000,0.000,0.000,1.000,1.000,General,0.000,87.914,4.396,79.1,4.396,79.123,87.914,87.914,0.000,0.000
+ Lights Internal Gains Nominal, SPACE 4 189.1-2009 - OFFICE - OPENOFFICE - CZ4-8 LIGHTS,OFFICE BLDG LIGHT,THERMAL ZONE 5,8.25,0.5,87.914,10.656,188.571,0.000,0.000,0.000,1.000,1.000,General,0.000,87.914,4.396,79.1,4.396,79.123,87.914,87.914,0.000,0.000
+! <ElectricEquipment Internal Gains Nominal>,Name,Schedule Name,Zone Name,Zone Floor Area {m2},# Zone Occupants,Equipment Level {W},Equipment/Floor Area {W/m2},Equipment per person {W/person},Fraction Latent,Fraction Radiant,Fraction Lost,Fraction Convected,End-Use SubCategory,Minimum Equipment Level for All Day Types {W},Maximum Equipment Level for All Day Types {W},Minimum Equipment Level for Weekdays {W}, Maximum Equipment Level for Weekdays {W},Minimum Equipment Level for Weekends/Holidays {W}, Maximum Equipment Level for Weekends /Holidays {W},Minimum Equipment Level for Summer Design Days {W}, Maximum Equipment Level for Summer Design Days {W},Minimum Equipment Level for Winter Design Days {W}, Maximum Equipment Level for Winter Design Days {W}
+ ElectricEquipment Internal Gains Nominal, SPACE 6 189.1-2009 - OFFICE - OPENOFFICE - CZ4-8 ELECTRIC EQUIPMENT,OFFICE BLDG EQUIP,THERMAL ZONE 6,0.90,5.1E-002,6.878,7.642,135.238,0.000,0.000,0.000,1.000,General,0.000,6.878,2.751,6.190,2.063,6.190,6.878,6.878,0.000,0.000
+ ElectricEquipment Internal Gains Nominal, SPACE 5 189.1-2009 - OFFICE - OPENOFFICE - CZ4-8 ELECTRIC EQUIPMENT,OFFICE BLDG EQUIP,THERMAL ZONE 1,3.00,0.2,22.927,7.642,135.238,0.000,0.000,0.000,1.000,General,0.000,22.927,9.171,20.634,6.878,20.634,22.927,22.927,0.000,0.000
+ ElectricEquipment Internal Gains Nominal, SPACE 1 189.1-2009 - OFFICE - OPENOFFICE - CZ4-8 ELECTRIC EQUIPMENT,OFFICE BLDG EQUIP,THERMAL ZONE 2,8.25,0.5,63.050,7.642,135.238,0.000,0.000,0.000,1.000,General,0.000,63.050,25.220,56.745,18.915,56.745,63.050,63.050,0.000,0.000
+ ElectricEquipment Internal Gains Nominal, SPACE 2 189.1-2009 - OFFICE - OPENOFFICE - CZ4-8 ELECTRIC EQUIPMENT,OFFICE BLDG EQUIP,THERMAL ZONE 3,7.35,0.4,56.171,7.642,135.238,0.000,0.000,0.000,1.000,General,0.000,56.171,22.469,50.554,16.851,50.554,56.171,56.171,0.000,0.000
+ ElectricEquipment Internal Gains Nominal, SPACE 3 189.1-2009 - OFFICE - OPENOFFICE - CZ4-8 ELECTRIC EQUIPMENT,OFFICE BLDG EQUIP,THERMAL ZONE 4,8.25,0.5,63.050,7.642,135.238,0.000,0.000,0.000,1.000,General,0.000,63.050,25.220,56.745,18.915,56.745,63.050,63.050,0.000,0.000
+ ElectricEquipment Internal Gains Nominal, SPACE 4 189.1-2009 - OFFICE - OPENOFFICE - CZ4-8 ELECTRIC EQUIPMENT,OFFICE BLDG EQUIP,THERMAL ZONE 5,8.25,0.5,63.050,7.642,135.238,0.000,0.000,0.000,1.000,General,0.000,63.050,25.220,56.745,18.915,56.745,63.050,63.050,0.000,0.000
+! <ZoneInfiltration Airflow Stats Nominal>,Name,Input Object, Schedule Name,Zone Name, Zone Floor Area {m2}, # Zone Occupants,Design Volume Flow Rate {m3/s},Volume Flow Rate/Floor Area {m3/s-m2},Volume Flow Rate/Exterior Surface Area {m3/s-m2},ACH - Air Changes per Hour,Equation A - Constant Term Coefficient {},Equation B - Temperature Term Coefficient {1/C},Equation C - Velocity Term Coefficient {s/m}, Equation D - Velocity Squared Term Coefficient {s2/m2}
+ ZoneInfiltration Airflow Stats Nominal, SPACE 6 189.1-2009 - OFFICE - OPENOFFICE - CZ4-8 INFILTRATION,ZoneInfiltration:DesignFlowRate,OFFICE INFIL QUARTER ON,THERMAL ZONE 6,0.90,5.1E-002,3.043E-003,3.381E-003,2.266E-004,3.466,1.000,0.000,0.000,0.000
+ ZoneInfiltration Airflow Stats Nominal, SPACE 5 189.1-2009 - OFFICE - OPENOFFICE - CZ4-8 INFILTRATION,ZoneInfiltration:DesignFlowRate,OFFICE INFIL QUARTER ON,THERMAL ZONE 1,3.00,0.2,1.362E-003,4.540E-004,2.266E-004,0.501,1.000,0.000,0.000,0.000
+ ZoneInfiltration Airflow Stats Nominal, SPACE 1 189.1-2009 - OFFICE - OPENOFFICE - CZ4-8 INFILTRATION,ZoneInfiltration:DesignFlowRate,OFFICE INFIL QUARTER ON,THERMAL ZONE 2,8.25,0.5,9.864E-003,1.196E-003,2.266E-004,1.265,1.000,0.000,0.000,0.000
+ ZoneInfiltration Airflow Stats Nominal, SPACE 2 189.1-2009 - OFFICE - OPENOFFICE - CZ4-8 INFILTRATION,ZoneInfiltration:DesignFlowRate,OFFICE INFIL QUARTER ON,THERMAL ZONE 3,7.35,0.4,5.405E-003,7.354E-004,2.266E-004,0.781,1.000,0.000,0.000,0.000
+ ZoneInfiltration Airflow Stats Nominal, SPACE 3 189.1-2009 - OFFICE - OPENOFFICE - CZ4-8 INFILTRATION,ZoneInfiltration:DesignFlowRate,OFFICE INFIL QUARTER ON,THERMAL ZONE 4,8.25,0.5,7.913E-003,9.591E-004,2.266E-004,1.106,1.000,0.000,0.000,0.000
+ ZoneInfiltration Airflow Stats Nominal, SPACE 4 189.1-2009 - OFFICE - OPENOFFICE - CZ4-8 INFILTRATION,ZoneInfiltration:DesignFlowRate,OFFICE INFIL QUARTER ON,THERMAL ZONE 5,8.25,0.5,7.913E-003,9.591E-004,2.266E-004,1.106,1.000,0.000,0.000,0.000
+! <AirFlow Model>, Simple
+ AirFlow Model, Simple
+! <RoomAir Model>, Zone Name, Mixing/Mundt/UCSDDV/UCSDCV/UCSDUFI/UCSDUFE/User Defined
+RoomAir Model,THERMAL ZONE 1,Mixing/Well-Stirred
+RoomAir Model,THERMAL ZONE 2,Mixing/Well-Stirred
+RoomAir Model,THERMAL ZONE 3,Mixing/Well-Stirred
+RoomAir Model,THERMAL ZONE 4,Mixing/Well-Stirred
+RoomAir Model,THERMAL ZONE 5,Mixing/Well-Stirred
+RoomAir Model,THERMAL ZONE 6,Mixing/Well-Stirred
+! <AirflowNetwork Model:Control>, No Multizone or Distribution/Multizone with Distribution/Multizone without Distribution/Multizone with Distribution only during Fan Operation
+AirflowNetwork Model:Control,MultizoneWithoutDistribution
+! <AirflowNetwork Model:Wind Direction>, Wind Direction #1 to n (degree)
+AirflowNetwork Model:Wind Direction, 0.0,30.0,60.0,90.0,120.0,150.0,180.0,210.0,240.0,270.0,300.0,330.0
+! <AirflowNetwork Model:Wind Pressure Coefficients>, Name, Wind Pressure Coefficients #1 to n (dimensionless)
+AirflowNetwork Model:Wind Pressure Coefficients, !WPCTABLE2, -0.44,0.12,0.47,0.60,0.47,0.12,-0.44,-0.68,-0.39,-0.36,-0.39,-0.68
+AirflowNetwork Model:Wind Pressure Coefficients, !WPCTABLE3, -0.36,-0.39,-0.68,-0.44,0.12,0.47,0.60,0.47,0.12,-0.44,-0.68,-0.39
+! <Zone Volume Capacitance Multiplier>, Sensible Heat Capacity Multiplier, Moisture Capacity Multiplier, Carbon Dioxide Capacity Multiplier, Generic Contaminant Capacity Multiplier
+Zone Volume Capacitance Multiplier,   1.000 ,   1.000,   1.000,   1.000
+! <Environment>,Environment Name,Environment Type, Start Date, End Date, Start DayOfWeek, Duration {#days}, Source:Start DayOfWeek,  Use Daylight Saving, Use Holidays, Apply Weekend Holiday Rule,  Use Rain Values, Use Snow Values, Sky Temperature Model
+! <Environment:Special Days>, Special Day Name, Special Day Type, Source, Start Date, Duration {#days}
+! <Environment:Daylight Saving>, Daylight Saving Indicator, Source, Start Date, End Date
+! <Environment:WarmupDays>, NumberofWarmupDays
+Environment,RABAT-SALE.AP ANN CLG .4% CONDNS DB=>MWB,SizingPeriod:DesignDay,08/21,08/21,SummerDesignDay,1,N/A,N/A,N/A,N/A,N/A,N/A,Clark and Allen
+Environment:Daylight Saving,No,SizingPeriod:DesignDay
+! <Environment:Design Day Data>, Max Dry-Bulb Temp {C}, Temp Range {dC}, Temp Range Ind Type, Hum Ind Type, Hum Ind Value at Max Temp, Hum Ind Units, Pressure {Pa}, Wind Direction {deg CW from N}, Wind Speed {m/s}, Clearness, Rain, Snow
+! <Environment:Design Day Misc>,DayOfYear,ASHRAE A Coeff,ASHRAE B Coeff,ASHRAE C Coeff,Solar Constant-Annual Variation,Eq of Time {minutes}, Solar Declination Angle {deg}, Solar Model
+Environment:Design Day Data,32.90,11.20,DefaultMultipliers,Wetbulb,21.30,{C},100319,340,4.0,0.00,No,No
+Environment:Design Day Misc,233,1106.3,0.2000,0.1216,1.0,-3.33,12.4,ASHRAETau2017
+Environment:WarmupDays,  4
+! <Tabular Report>,Style,Unit Conversion, Format Reals
+Tabular Report,HTML,None,Yes
+! <Warmup Convergence Information>,Zone Name,Environment Type/Name,Average Warmup Temperature Difference {deltaC},Std Dev Warmup Temperature Difference {deltaC},Max Temperature Pass/Fail Convergence,Min Temperature Pass/Fail Convergence,Average Warmup Load Difference {W},Std Dev Warmup Load Difference {W},Heating Load Pass/Fail Convergence,Cooling Load Pass/Fail Convergence
+ Warmup Convergence Information,THERMAL ZONE 1,SizingPeriod: RABAT-SALE.AP ANN CLG .4% CONDNS DB=>MWB,0.2967085795,0.1382504902,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 2,SizingPeriod: RABAT-SALE.AP ANN CLG .4% CONDNS DB=>MWB,0.4818119318,0.1926366529,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 3,SizingPeriod: RABAT-SALE.AP ANN CLG .4% CONDNS DB=>MWB,0.3878497228,0.1416169266,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 4,SizingPeriod: RABAT-SALE.AP ANN CLG .4% CONDNS DB=>MWB,0.2712946528,0.1361024330,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 5,SizingPeriod: RABAT-SALE.AP ANN CLG .4% CONDNS DB=>MWB,0.3865377156,0.2176005457,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 6,SizingPeriod: RABAT-SALE.AP ANN CLG .4% CONDNS DB=>MWB,1.0269215195,0.6210074779,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+Environment,RABAT-SALE.AP ANN CLG .4% CONDNS DP=>MDB,SizingPeriod:DesignDay,08/21,08/21,SummerDesignDay,1,N/A,N/A,N/A,N/A,N/A,N/A,Clark and Allen
+Environment:Daylight Saving,No,SizingPeriod:DesignDay
+Environment:Design Day Data,26.00,8.60,DefaultMultipliers,Dewpoint,23.00,{C},100319,340,4.0,0.00,No,No
+Environment:Design Day Misc,233,1106.3,0.2000,0.1216,1.0,-3.33,12.4,ASHRAETau2017
+Environment:WarmupDays,  4
+ Warmup Convergence Information,THERMAL ZONE 1,SizingPeriod: RABAT-SALE.AP ANN CLG .4% CONDNS DP=>MDB,0.2581935122,0.1170163047,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 2,SizingPeriod: RABAT-SALE.AP ANN CLG .4% CONDNS DP=>MDB,0.4375310903,0.1766732210,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 3,SizingPeriod: RABAT-SALE.AP ANN CLG .4% CONDNS DP=>MDB,0.3530114162,0.1350521895,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 4,SizingPeriod: RABAT-SALE.AP ANN CLG .4% CONDNS DP=>MDB,0.2398343896,0.1384464082,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 5,SizingPeriod: RABAT-SALE.AP ANN CLG .4% CONDNS DP=>MDB,0.3439607755,0.1987398229,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 6,SizingPeriod: RABAT-SALE.AP ANN CLG .4% CONDNS DP=>MDB,0.9908846112,0.6130136219,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+Environment,RABAT-SALE.AP ANN CLG .4% CONDNS ENTH=>MDB,SizingPeriod:DesignDay,08/21,08/21,SummerDesignDay,1,N/A,N/A,N/A,N/A,N/A,N/A,Clark and Allen
+Environment:Daylight Saving,No,SizingPeriod:DesignDay
+Environment:Design Day Data,28.50,8.60,DefaultMultipliers,Enthalpy,72700.00,{J/kgDryAir},100319,340,4.0,0.00,No,No
+Environment:Design Day Misc,233,1106.3,0.2000,0.1216,1.0,-3.33,12.4,ASHRAETau2017
+Environment:WarmupDays,  4
+ Warmup Convergence Information,THERMAL ZONE 1,SizingPeriod: RABAT-SALE.AP ANN CLG .4% CONDNS ENTH=>MDB,0.2549383626,0.1165570087,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 2,SizingPeriod: RABAT-SALE.AP ANN CLG .4% CONDNS ENTH=>MDB,0.4335060498,0.1739142580,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 3,SizingPeriod: RABAT-SALE.AP ANN CLG .4% CONDNS ENTH=>MDB,0.3485317438,0.1298308819,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 4,SizingPeriod: RABAT-SALE.AP ANN CLG .4% CONDNS ENTH=>MDB,0.2335588233,0.1367179987,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 5,SizingPeriod: RABAT-SALE.AP ANN CLG .4% CONDNS ENTH=>MDB,0.3409904793,0.1964500286,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 6,SizingPeriod: RABAT-SALE.AP ANN CLG .4% CONDNS ENTH=>MDB,0.9869080115,0.6127366688,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+Environment,RABAT-SALE.AP ANN CLG .4% CONDNS WB=>MDB,SizingPeriod:DesignDay,08/21,08/21,SummerDesignDay,1,N/A,N/A,N/A,N/A,N/A,N/A,Clark and Allen
+Environment:Daylight Saving,No,SizingPeriod:DesignDay
+Environment:Design Day Data,28.40,9.20,DefaultMultipliers,Wetbulb,24.20,{C},100319,340,4.0,0.00,No,No
+Environment:Design Day Misc,233,1106.3,0.2000,0.1216,1.0,-3.33,12.4,ASHRAETau2017
+Environment:WarmupDays,  4
+ Warmup Convergence Information,THERMAL ZONE 1,SizingPeriod: RABAT-SALE.AP ANN CLG .4% CONDNS WB=>MDB,0.2650225692,0.1198401960,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 2,SizingPeriod: RABAT-SALE.AP ANN CLG .4% CONDNS WB=>MDB,0.4439352306,0.1783025886,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 3,SizingPeriod: RABAT-SALE.AP ANN CLG .4% CONDNS WB=>MDB,0.3568111938,0.1337368647,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 4,SizingPeriod: RABAT-SALE.AP ANN CLG .4% CONDNS WB=>MDB,0.2425086535,0.1365896752,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 5,SizingPeriod: RABAT-SALE.AP ANN CLG .4% CONDNS WB=>MDB,0.3505034647,0.2011409301,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 6,SizingPeriod: RABAT-SALE.AP ANN CLG .4% CONDNS WB=>MDB,0.9990565129,0.6221378704,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+Environment,RABAT-SALE.AP ANN CLG 1% CONDNS DB=>MWB,SizingPeriod:DesignDay,08/21,08/21,SummerDesignDay,1,N/A,N/A,N/A,N/A,N/A,N/A,Clark and Allen
+Environment:Daylight Saving,No,SizingPeriod:DesignDay
+Environment:Design Day Data,30.20,11.20,DefaultMultipliers,Wetbulb,21.00,{C},100319,340,4.0,0.00,No,No
+Environment:Design Day Misc,233,1106.3,0.2000,0.1216,1.0,-3.33,12.4,ASHRAETau2017
+Environment:WarmupDays,  4
+ Warmup Convergence Information,THERMAL ZONE 1,SizingPeriod: RABAT-SALE.AP ANN CLG 1% CONDNS DB=>MWB,0.2936108163,0.1355466973,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 2,SizingPeriod: RABAT-SALE.AP ANN CLG 1% CONDNS DB=>MWB,0.4781838032,0.1914770813,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 3,SizingPeriod: RABAT-SALE.AP ANN CLG 1% CONDNS DB=>MWB,0.3851185897,0.1414662387,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 4,SizingPeriod: RABAT-SALE.AP ANN CLG 1% CONDNS DB=>MWB,0.2699130898,0.1370347611,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 5,SizingPeriod: RABAT-SALE.AP ANN CLG 1% CONDNS DB=>MWB,0.3812958819,0.2142789162,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 6,SizingPeriod: RABAT-SALE.AP ANN CLG 1% CONDNS DB=>MWB,1.0292309778,0.6209628965,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+Environment,RABAT-SALE.AP ANN CLG 1% CONDNS DP=>MDB,SizingPeriod:DesignDay,08/21,08/21,SummerDesignDay,1,N/A,N/A,N/A,N/A,N/A,N/A,Clark and Allen
+Environment:Daylight Saving,No,SizingPeriod:DesignDay
+Environment:Design Day Data,25.30,8.60,DefaultMultipliers,Dewpoint,22.20,{C},100319,340,4.0,0.00,No,No
+Environment:Design Day Misc,233,1106.3,0.2000,0.1216,1.0,-3.33,12.4,ASHRAETau2017
+Environment:WarmupDays,  4
+ Warmup Convergence Information,THERMAL ZONE 1,SizingPeriod: RABAT-SALE.AP ANN CLG 1% CONDNS DP=>MDB,0.2590832034,0.1173119822,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 2,SizingPeriod: RABAT-SALE.AP ANN CLG 1% CONDNS DP=>MDB,0.4387088024,0.1777042968,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 3,SizingPeriod: RABAT-SALE.AP ANN CLG 1% CONDNS DP=>MDB,0.3540283724,0.1365925139,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 4,SizingPeriod: RABAT-SALE.AP ANN CLG 1% CONDNS DP=>MDB,0.2412487546,0.1391624661,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 5,SizingPeriod: RABAT-SALE.AP ANN CLG 1% CONDNS DP=>MDB,0.3447345395,0.1995002539,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 6,SizingPeriod: RABAT-SALE.AP ANN CLG 1% CONDNS DP=>MDB,0.9913402745,0.6130011106,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+Environment,RABAT-SALE.AP ANN CLG 1% CONDNS ENTH=>MDB,SizingPeriod:DesignDay,08/21,08/21,SummerDesignDay,1,N/A,N/A,N/A,N/A,N/A,N/A,Clark and Allen
+Environment:Daylight Saving,No,SizingPeriod:DesignDay
+Environment:Design Day Data,26.80,8.60,DefaultMultipliers,Enthalpy,69300.00,{J/kgDryAir},100319,340,4.0,0.00,No,No
+Environment:Design Day Misc,233,1106.3,0.2000,0.1216,1.0,-3.33,12.4,ASHRAETau2017
+Environment:WarmupDays,  4
+ Warmup Convergence Information,THERMAL ZONE 1,SizingPeriod: RABAT-SALE.AP ANN CLG 1% CONDNS ENTH=>MDB,0.2569216833,0.1166444236,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 2,SizingPeriod: RABAT-SALE.AP ANN CLG 1% CONDNS ENTH=>MDB,0.4355525048,0.1755091725,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 3,SizingPeriod: RABAT-SALE.AP ANN CLG 1% CONDNS ENTH=>MDB,0.3513435989,0.1333708388,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 4,SizingPeriod: RABAT-SALE.AP ANN CLG 1% CONDNS ENTH=>MDB,0.2379706974,0.1377290078,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 5,SizingPeriod: RABAT-SALE.AP ANN CLG 1% CONDNS ENTH=>MDB,0.3427191554,0.1979537947,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 6,SizingPeriod: RABAT-SALE.AP ANN CLG 1% CONDNS ENTH=>MDB,0.9890243545,0.6120470035,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+Environment,RABAT-SALE.AP ANN CLG 1% CONDNS WB=>MDB,SizingPeriod:DesignDay,08/21,08/21,SummerDesignDay,1,N/A,N/A,N/A,N/A,N/A,N/A,Clark and Allen
+Environment:Daylight Saving,No,SizingPeriod:DesignDay
+Environment:Design Day Data,27.00,9.20,DefaultMultipliers,Wetbulb,23.30,{C},100319,340,4.0,0.00,No,No
+Environment:Design Day Misc,233,1106.3,0.2000,0.1216,1.0,-3.33,12.4,ASHRAETau2017
+Environment:WarmupDays,  4
+ Warmup Convergence Information,THERMAL ZONE 1,SizingPeriod: RABAT-SALE.AP ANN CLG 1% CONDNS WB=>MDB,0.2666743715,0.1200565806,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 2,SizingPeriod: RABAT-SALE.AP ANN CLG 1% CONDNS WB=>MDB,0.4464734036,0.1787191424,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 3,SizingPeriod: RABAT-SALE.AP ANN CLG 1% CONDNS WB=>MDB,0.3599171007,0.1359050829,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 4,SizingPeriod: RABAT-SALE.AP ANN CLG 1% CONDNS WB=>MDB,0.2461762346,0.1379881228,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 5,SizingPeriod: RABAT-SALE.AP ANN CLG 1% CONDNS WB=>MDB,0.3517923148,0.2029187618,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 6,SizingPeriod: RABAT-SALE.AP ANN CLG 1% CONDNS WB=>MDB,1.0003821336,0.6194895999,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+Environment,RABAT-SALE.AP ANN CLG 2% CONDNS DB=>MWB,SizingPeriod:DesignDay,08/21,08/21,SummerDesignDay,1,N/A,N/A,N/A,N/A,N/A,N/A,Clark and Allen
+Environment:Daylight Saving,No,SizingPeriod:DesignDay
+Environment:Design Day Data,28.30,11.20,DefaultMultipliers,Wetbulb,21.20,{C},100319,340,4.0,0.00,No,No
+Environment:Design Day Misc,233,1106.3,0.2000,0.1216,1.0,-3.33,12.4,ASHRAETau2017
+Environment:WarmupDays,  4
+ Warmup Convergence Information,THERMAL ZONE 1,SizingPeriod: RABAT-SALE.AP ANN CLG 2% CONDNS DB=>MWB,0.2956337027,0.1348595218,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 2,SizingPeriod: RABAT-SALE.AP ANN CLG 2% CONDNS DB=>MWB,0.4789344980,0.1929297166,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 3,SizingPeriod: RABAT-SALE.AP ANN CLG 2% CONDNS DB=>MWB,0.3868561205,0.1440244822,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 4,SizingPeriod: RABAT-SALE.AP ANN CLG 2% CONDNS DB=>MWB,0.2733336026,0.1385277671,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 5,SizingPeriod: RABAT-SALE.AP ANN CLG 2% CONDNS DB=>MWB,0.3816759927,0.2164177066,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 6,SizingPeriod: RABAT-SALE.AP ANN CLG 2% CONDNS DB=>MWB,1.0307030371,0.6207095660,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+Environment,RABAT-SALE.AP ANN CLG 2% CONDNS DP=>MDB,SizingPeriod:DesignDay,08/21,08/21,SummerDesignDay,1,N/A,N/A,N/A,N/A,N/A,N/A,Clark and Allen
+Environment:Daylight Saving,No,SizingPeriod:DesignDay
+Environment:Design Day Data,24.60,8.60,DefaultMultipliers,Dewpoint,21.40,{C},100319,340,4.0,0.00,No,No
+Environment:Design Day Misc,233,1106.3,0.2000,0.1216,1.0,-3.33,12.4,ASHRAETau2017
+Environment:WarmupDays,  4
+ Warmup Convergence Information,THERMAL ZONE 1,SizingPeriod: RABAT-SALE.AP ANN CLG 2% CONDNS DP=>MDB,0.2598631308,0.1176530736,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 2,SizingPeriod: RABAT-SALE.AP ANN CLG 2% CONDNS DP=>MDB,0.4398219809,0.1786445527,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 3,SizingPeriod: RABAT-SALE.AP ANN CLG 2% CONDNS DP=>MDB,0.3549476400,0.1380315207,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 4,SizingPeriod: RABAT-SALE.AP ANN CLG 2% CONDNS DP=>MDB,0.2425695805,0.1398820457,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 5,SizingPeriod: RABAT-SALE.AP ANN CLG 2% CONDNS DP=>MDB,0.3454475499,0.2002354024,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 6,SizingPeriod: RABAT-SALE.AP ANN CLG 2% CONDNS DP=>MDB,0.9917941428,0.6131511640,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+Environment,RABAT-SALE.AP ANN CLG 2% CONDNS ENTH=>MDB,SizingPeriod:DesignDay,08/21,08/21,SummerDesignDay,1,N/A,N/A,N/A,N/A,N/A,N/A,Clark and Allen
+Environment:Daylight Saving,No,SizingPeriod:DesignDay
+Environment:Design Day Data,26.10,8.60,DefaultMultipliers,Enthalpy,67000.00,{J/kgDryAir},100319,340,4.0,0.00,No,No
+Environment:Design Day Misc,233,1106.3,0.2000,0.1216,1.0,-3.33,12.4,ASHRAETau2017
+Environment:WarmupDays,  4
+ Warmup Convergence Information,THERMAL ZONE 1,SizingPeriod: RABAT-SALE.AP ANN CLG 2% CONDNS ENTH=>MDB,0.2578674654,0.1168531428,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 2,SizingPeriod: RABAT-SALE.AP ANN CLG 2% CONDNS ENTH=>MDB,0.4368177151,0.1764545638,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 3,SizingPeriod: RABAT-SALE.AP ANN CLG 2% CONDNS ENTH=>MDB,0.3524161342,0.1348454168,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 4,SizingPeriod: RABAT-SALE.AP ANN CLG 2% CONDNS ENTH=>MDB,0.2394390762,0.1383147071,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 5,SizingPeriod: RABAT-SALE.AP ANN CLG 2% CONDNS ENTH=>MDB,0.3435696790,0.1985967686,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 6,SizingPeriod: RABAT-SALE.AP ANN CLG 2% CONDNS ENTH=>MDB,0.9896580051,0.6124100035,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+Environment,RABAT-SALE.AP ANN CLG 2% CONDNS WB=>MDB,SizingPeriod:DesignDay,08/21,08/21,SummerDesignDay,1,N/A,N/A,N/A,N/A,N/A,N/A,Clark and Allen
+Environment:Daylight Saving,No,SizingPeriod:DesignDay
+Environment:Design Day Data,26.10,9.20,DefaultMultipliers,Wetbulb,22.70,{C},100319,340,4.0,0.00,No,No
+Environment:Design Day Misc,233,1106.3,0.2000,0.1216,1.0,-3.33,12.4,ASHRAETau2017
+Environment:WarmupDays,  4
+ Warmup Convergence Information,THERMAL ZONE 1,SizingPeriod: RABAT-SALE.AP ANN CLG 2% CONDNS WB=>MDB,0.2670251146,0.1213658308,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 2,SizingPeriod: RABAT-SALE.AP ANN CLG 2% CONDNS WB=>MDB,0.4477255045,0.1804285754,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 3,SizingPeriod: RABAT-SALE.AP ANN CLG 2% CONDNS WB=>MDB,0.3617013772,0.1373085146,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 4,SizingPeriod: RABAT-SALE.AP ANN CLG 2% CONDNS WB=>MDB,0.2480056244,0.1393605906,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 5,SizingPeriod: RABAT-SALE.AP ANN CLG 2% CONDNS WB=>MDB,0.3527829052,0.2032203520,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 6,SizingPeriod: RABAT-SALE.AP ANN CLG 2% CONDNS WB=>MDB,1.0009831337,0.6184223508,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+Environment,RABAT-SALE.AP ANN HTG 99% CONDNS DB,SizingPeriod:DesignDay,01/21,01/21,WinterDesignDay,1,N/A,N/A,N/A,N/A,N/A,N/A,Clark and Allen
+Environment:Daylight Saving,No,SizingPeriod:DesignDay
+Environment:Design Day Data,5.60,0.00,DefaultMultipliers,Wetbulb,5.60,{C},100319,160,1.2,0.00,No,No
+Environment:Design Day Misc, 21,1229.0,0.1415,5.7310E-002,1.0,-11.15,-20.1,ASHRAEClearSky
+Environment:WarmupDays,  5
+ Warmup Convergence Information,THERMAL ZONE 1,SizingPeriod: RABAT-SALE.AP ANN HTG 99% CONDNS DB,7.1167431368E-004,1.5380160243E-004,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 2,SizingPeriod: RABAT-SALE.AP ANN HTG 99% CONDNS DB,5.4050200016E-004,1.2313348434E-004,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 3,SizingPeriod: RABAT-SALE.AP ANN HTG 99% CONDNS DB,6.2600100768E-004,1.3952400506E-004,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 4,SizingPeriod: RABAT-SALE.AP ANN HTG 99% CONDNS DB,6.4099301153E-004,1.4845322162E-004,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 5,SizingPeriod: RABAT-SALE.AP ANN HTG 99% CONDNS DB,6.1471526964E-004,1.4327343201E-004,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 6,SizingPeriod: RABAT-SALE.AP ANN HTG 99% CONDNS DB,5.6717874458E-004,1.2857783795E-004,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+Environment,RABAT-SALE.AP ANN HTG 99.6% CONDNS DB,SizingPeriod:DesignDay,01/21,01/21,WinterDesignDay,1,N/A,N/A,N/A,N/A,N/A,N/A,Clark and Allen
+Environment:Daylight Saving,No,SizingPeriod:DesignDay
+Environment:Design Day Data,4.40,0.00,DefaultMultipliers,Wetbulb,4.40,{C},100319,160,1.2,0.00,No,No
+Environment:Design Day Misc, 21,1229.0,0.1415,5.7310E-002,1.0,-11.15,-20.1,ASHRAEClearSky
+Environment:WarmupDays,  5
+ Warmup Convergence Information,THERMAL ZONE 1,SizingPeriod: RABAT-SALE.AP ANN HTG 99.6% CONDNS DB,7.3542535126E-004,1.5653769523E-004,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 2,SizingPeriod: RABAT-SALE.AP ANN HTG 99.6% CONDNS DB,5.5996593422E-004,1.2619301284E-004,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 3,SizingPeriod: RABAT-SALE.AP ANN HTG 99.6% CONDNS DB,6.4820914223E-004,1.4271069949E-004,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 4,SizingPeriod: RABAT-SALE.AP ANN HTG 99.6% CONDNS DB,6.6537194721E-004,1.5254277569E-004,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 5,SizingPeriod: RABAT-SALE.AP ANN HTG 99.6% CONDNS DB,6.3810269794E-004,1.4719012229E-004,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 6,SizingPeriod: RABAT-SALE.AP ANN HTG 99.6% CONDNS DB,5.8781640816E-004,1.3162057656E-004,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+Environment,RABAT-SALE.AP ANN HTG WIND 99% CONDNS WS=>MCDB,SizingPeriod:DesignDay,01/21,01/21,WinterDesignDay,1,N/A,N/A,N/A,N/A,N/A,N/A,Clark and Allen
+Environment:Daylight Saving,No,SizingPeriod:DesignDay
+Environment:Design Day Data,14.80,0.00,DefaultMultipliers,Wetbulb,14.80,{C},100319,160,8.4,0.00,No,No
+Environment:Design Day Misc, 21,1229.0,0.1415,5.7310E-002,1.0,-11.15,-20.1,ASHRAEClearSky
+Environment:WarmupDays,  4
+ Warmup Convergence Information,THERMAL ZONE 1,SizingPeriod: RABAT-SALE.AP ANN HTG WIND 99% CONDNS WS=>MCDB,3.0372434961E-004,9.5713219160E-005,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 2,SizingPeriod: RABAT-SALE.AP ANN HTG WIND 99% CONDNS WS=>MCDB,2.1345479808E-004,6.9330719997E-005,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 3,SizingPeriod: RABAT-SALE.AP ANN HTG WIND 99% CONDNS WS=>MCDB,2.4110516798E-004,7.6922402106E-005,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 4,SizingPeriod: RABAT-SALE.AP ANN HTG WIND 99% CONDNS WS=>MCDB,2.4315405084E-004,7.9706386258E-005,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 5,SizingPeriod: RABAT-SALE.AP ANN HTG WIND 99% CONDNS WS=>MCDB,2.4596611788E-004,8.1340379598E-005,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 6,SizingPeriod: RABAT-SALE.AP ANN HTG WIND 99% CONDNS WS=>MCDB,1.9790580658E-004,6.3869646385E-005,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+Environment,RABAT-SALE.AP ANN HTG WIND 99.6% CONDNS WS=>MCDB,SizingPeriod:DesignDay,01/21,01/21,WinterDesignDay,1,N/A,N/A,N/A,N/A,N/A,N/A,Clark and Allen
+Environment:Daylight Saving,No,SizingPeriod:DesignDay
+Environment:Design Day Data,15.00,0.00,DefaultMultipliers,Wetbulb,15.00,{C},100319,160,10.0,0.00,No,No
+Environment:Design Day Misc, 21,1229.0,0.1415,5.7310E-002,1.0,-11.15,-20.1,ASHRAEClearSky
+Environment:WarmupDays,  4
+ Warmup Convergence Information,THERMAL ZONE 1,SizingPeriod: RABAT-SALE.AP ANN HTG WIND 99.6% CONDNS WS=>MCDB,2.6518391063E-004,8.6478430051E-005,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 2,SizingPeriod: RABAT-SALE.AP ANN HTG WIND 99.6% CONDNS WS=>MCDB,1.8401547734E-004,6.1640253347E-005,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 3,SizingPeriod: RABAT-SALE.AP ANN HTG WIND 99.6% CONDNS WS=>MCDB,2.0836173839E-004,6.8645449517E-005,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 4,SizingPeriod: RABAT-SALE.AP ANN HTG WIND 99.6% CONDNS WS=>MCDB,2.0885124689E-004,7.0524753978E-005,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 5,SizingPeriod: RABAT-SALE.AP ANN HTG WIND 99.6% CONDNS WS=>MCDB,2.1139281476E-004,7.2073455675E-005,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 6,SizingPeriod: RABAT-SALE.AP ANN HTG WIND 99.6% CONDNS WS=>MCDB,1.6899477627E-004,5.6222971751E-005,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+Environment,RABAT-SALE.AP ANN HUM_N 99% CONDNS DP=>MCDB,SizingPeriod:DesignDay,01/21,01/21,WinterDesignDay,1,N/A,N/A,N/A,N/A,N/A,N/A,Clark and Allen
+Environment:Daylight Saving,No,SizingPeriod:DesignDay
+Environment:Design Day Data,10.00,0.00,DefaultMultipliers,Dewpoint,2.50,{C},100319,160,1.2,0.00,No,No
+Environment:Design Day Misc, 21,1229.0,0.1415,5.7310E-002,1.0,-11.15,-20.1,ASHRAEClearSky
+Environment:WarmupDays,  4
+ Warmup Convergence Information,THERMAL ZONE 1,SizingPeriod: RABAT-SALE.AP ANN HUM_N 99% CONDNS DP=>MCDB,1.2643554097E-003,2.3055203578E-004,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 2,SizingPeriod: RABAT-SALE.AP ANN HUM_N 99% CONDNS DP=>MCDB,1.0176720051E-003,2.1069145153E-004,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 3,SizingPeriod: RABAT-SALE.AP ANN HUM_N 99% CONDNS DP=>MCDB,1.1544103924E-003,2.3167155777E-004,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 4,SizingPeriod: RABAT-SALE.AP ANN HUM_N 99% CONDNS DP=>MCDB,1.2181265637E-003,2.5636077815E-004,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 5,SizingPeriod: RABAT-SALE.AP ANN HUM_N 99% CONDNS DP=>MCDB,1.1726016806E-003,2.4694199420E-004,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 6,SizingPeriod: RABAT-SALE.AP ANN HUM_N 99% CONDNS DP=>MCDB,1.0456269475E-003,2.0447414428E-004,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+Environment,RABAT-SALE.AP ANN HUM_N 99.6% CONDNS DP=>MCDB,SizingPeriod:DesignDay,01/21,01/21,WinterDesignDay,1,N/A,N/A,N/A,N/A,N/A,N/A,Clark and Allen
+Environment:Daylight Saving,No,SizingPeriod:DesignDay
+Environment:Design Day Data,11.80,0.00,DefaultMultipliers,Dewpoint,0.80,{C},100319,160,1.2,0.00,No,No
+Environment:Design Day Misc, 21,1229.0,0.1415,5.7310E-002,1.0,-11.15,-20.1,ASHRAEClearSky
+Environment:WarmupDays,  4
+ Warmup Convergence Information,THERMAL ZONE 1,SizingPeriod: RABAT-SALE.AP ANN HUM_N 99.6% CONDNS DP=>MCDB,1.1915429937E-003,2.2144752837E-004,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 2,SizingPeriod: RABAT-SALE.AP ANN HUM_N 99.6% CONDNS DP=>MCDB,9.5882027058E-004,2.0139110986E-004,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 3,SizingPeriod: RABAT-SALE.AP ANN HUM_N 99.6% CONDNS DP=>MCDB,1.0863269844E-003,2.2096000715E-004,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 4,SizingPeriod: RABAT-SALE.AP ANN HUM_N 99.6% CONDNS DP=>MCDB,1.1468340475E-003,2.4553541993E-004,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 5,SizingPeriod: RABAT-SALE.AP ANN HUM_N 99.6% CONDNS DP=>MCDB,1.1044320084E-003,2.3684476289E-004,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 6,SizingPeriod: RABAT-SALE.AP ANN HUM_N 99.6% CONDNS DP=>MCDB,9.8750845102E-004,1.9749553444E-004,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+Environment,RABAT-SALE.AP APRIL .4% CONDNS DB=>MCWB,SizingPeriod:DesignDay,04/21,04/21,SummerDesignDay,1,N/A,N/A,N/A,N/A,N/A,N/A,Clark and Allen
+Environment:Daylight Saving,No,SizingPeriod:DesignDay
+Environment:Design Day Data,29.80,9.70,DefaultMultipliers,Wetbulb,18.10,{C},100319,340,3.2,0.00,No,No
+Environment:Design Day Misc,111,1135.8,0.1796,9.6924E-002,1.0,1.11,11.6,ASHRAETau2017
+Environment:WarmupDays,  4
+ Warmup Convergence Information,THERMAL ZONE 1,SizingPeriod: RABAT-SALE.AP APRIL .4% CONDNS DB=>MCWB,0.2685295353,0.1259437013,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 2,SizingPeriod: RABAT-SALE.AP APRIL .4% CONDNS DB=>MCWB,0.4672214925,0.1830329604,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 3,SizingPeriod: RABAT-SALE.AP APRIL .4% CONDNS DB=>MCWB,0.3631797117,0.1278375634,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 4,SizingPeriod: RABAT-SALE.AP APRIL .4% CONDNS DB=>MCWB,0.2437011826,0.1396537963,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 5,SizingPeriod: RABAT-SALE.AP APRIL .4% CONDNS DB=>MCWB,0.3709668793,0.2136328236,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 6,SizingPeriod: RABAT-SALE.AP APRIL .4% CONDNS DB=>MCWB,1.0504880835,0.6603259619,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+Environment,RABAT-SALE.AP APRIL .4% CONDNS WB=>MCDB,SizingPeriod:DesignDay,04/21,04/21,SummerDesignDay,1,N/A,N/A,N/A,N/A,N/A,N/A,Clark and Allen
+Environment:Daylight Saving,No,SizingPeriod:DesignDay
+Environment:Design Day Data,26.10,9.70,DefaultMultipliers,Wetbulb,20.10,{C},100319,340,3.2,0.00,No,No
+Environment:Design Day Misc,111,1135.8,0.1796,9.6924E-002,1.0,1.11,11.6,ASHRAETau2017
+Environment:WarmupDays,  4
+ Warmup Convergence Information,THERMAL ZONE 1,SizingPeriod: RABAT-SALE.AP APRIL .4% CONDNS WB=>MCDB,0.2720718814,0.1249888619,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 2,SizingPeriod: RABAT-SALE.AP APRIL .4% CONDNS WB=>MCDB,0.4685820095,0.1857807243,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 3,SizingPeriod: RABAT-SALE.AP APRIL .4% CONDNS WB=>MCDB,0.3670606153,0.1322511917,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 4,SizingPeriod: RABAT-SALE.AP APRIL .4% CONDNS WB=>MCDB,0.2517604510,0.1423810755,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 5,SizingPeriod: RABAT-SALE.AP APRIL .4% CONDNS WB=>MCDB,0.3710769523,0.2166786362,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 6,SizingPeriod: RABAT-SALE.AP APRIL .4% CONDNS WB=>MCDB,1.0536170372,0.6601104887,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+Environment,RABAT-SALE.AP APRIL 10% CONDNS DB=>MCWB,SizingPeriod:DesignDay,04/21,04/21,SummerDesignDay,1,N/A,N/A,N/A,N/A,N/A,N/A,Clark and Allen
+Environment:Daylight Saving,No,SizingPeriod:DesignDay
+Environment:Design Day Data,20.80,13.30,DefaultMultipliers,Wetbulb,16.50,{C},100319,340,3.2,0.00,No,No
+Environment:Design Day Misc,111,1135.8,0.1796,9.6924E-002,1.0,1.11,11.6,ASHRAETau2017
+Environment:WarmupDays,  4
+ Warmup Convergence Information,THERMAL ZONE 1,SizingPeriod: RABAT-SALE.AP APRIL 10% CONDNS DB=>MCWB,0.3307598821,0.1480127055,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 2,SizingPeriod: RABAT-SALE.AP APRIL 10% CONDNS DB=>MCWB,0.5371034552,0.2199426835,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 3,SizingPeriod: RABAT-SALE.AP APRIL 10% CONDNS DB=>MCWB,0.4202083291,0.1710282416,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 4,SizingPeriod: RABAT-SALE.AP APRIL 10% CONDNS DB=>MCWB,0.3078861443,0.1549908401,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 5,SizingPeriod: RABAT-SALE.AP APRIL 10% CONDNS DB=>MCWB,0.4299102507,0.2442147892,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 6,SizingPeriod: RABAT-SALE.AP APRIL 10% CONDNS DB=>MCWB,1.1210059608,0.6746161293,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+Environment,RABAT-SALE.AP APRIL 10% CONDNS WB=>MCDB,SizingPeriod:DesignDay,04/21,04/21,SummerDesignDay,1,N/A,N/A,N/A,N/A,N/A,N/A,Clark and Allen
+Environment:Daylight Saving,No,SizingPeriod:DesignDay
+Environment:Design Day Data,20.20,11.30,DefaultMultipliers,Wetbulb,16.90,{C},100319,340,3.2,0.00,No,No
+Environment:Design Day Misc,111,1135.8,0.1796,9.6924E-002,1.0,1.11,11.6,ASHRAETau2017
+Environment:WarmupDays,  4
+ Warmup Convergence Information,THERMAL ZONE 1,SizingPeriod: RABAT-SALE.AP APRIL 10% CONDNS WB=>MCDB,0.3031671708,0.1357293618,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 2,SizingPeriod: RABAT-SALE.AP APRIL 10% CONDNS WB=>MCDB,0.5062209057,0.2049183466,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 3,SizingPeriod: RABAT-SALE.AP APRIL 10% CONDNS WB=>MCDB,0.3977041797,0.1546147690,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 4,SizingPeriod: RABAT-SALE.AP APRIL 10% CONDNS WB=>MCDB,0.2844241699,0.1511306510,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 5,SizingPeriod: RABAT-SALE.AP APRIL 10% CONDNS WB=>MCDB,0.4010960359,0.2332859163,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 6,SizingPeriod: RABAT-SALE.AP APRIL 10% CONDNS WB=>MCDB,1.0901476709,0.6667180066,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+Environment,RABAT-SALE.AP APRIL 2% CONDNS DB=>MCWB,SizingPeriod:DesignDay,04/21,04/21,SummerDesignDay,1,N/A,N/A,N/A,N/A,N/A,N/A,Clark and Allen
+Environment:Daylight Saving,No,SizingPeriod:DesignDay
+Environment:Design Day Data,25.10,9.70,DefaultMultipliers,Wetbulb,16.80,{C},100319,340,3.2,0.00,No,No
+Environment:Design Day Misc,111,1135.8,0.1796,9.6924E-002,1.0,1.11,11.6,ASHRAETau2017
+Environment:WarmupDays,  4
+ Warmup Convergence Information,THERMAL ZONE 1,SizingPeriod: RABAT-SALE.AP APRIL 2% CONDNS DB=>MCWB,0.2735188672,0.1248500467,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 2,SizingPeriod: RABAT-SALE.AP APRIL 2% CONDNS DB=>MCWB,0.4704219332,0.1870155274,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 3,SizingPeriod: RABAT-SALE.AP APRIL 2% CONDNS DB=>MCWB,0.3687378730,0.1340309417,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 4,SizingPeriod: RABAT-SALE.AP APRIL 2% CONDNS DB=>MCWB,0.2537825714,0.1435310065,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 5,SizingPeriod: RABAT-SALE.AP APRIL 2% CONDNS DB=>MCWB,0.3721338422,0.2176334834,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 6,SizingPeriod: RABAT-SALE.AP APRIL 2% CONDNS DB=>MCWB,1.0544529562,0.6615288358,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+Environment,RABAT-SALE.AP APRIL 2% CONDNS WB=>MCDB,SizingPeriod:DesignDay,04/21,04/21,SummerDesignDay,1,N/A,N/A,N/A,N/A,N/A,N/A,Clark and Allen
+Environment:Daylight Saving,No,SizingPeriod:DesignDay
+Environment:Design Day Data,22.90,9.70,DefaultMultipliers,Wetbulb,18.40,{C},100319,340,3.2,0.00,No,No
+Environment:Design Day Misc,111,1135.8,0.1796,9.6924E-002,1.0,1.11,11.6,ASHRAETau2017
+Environment:WarmupDays,  4
+ Warmup Convergence Information,THERMAL ZONE 1,SizingPeriod: RABAT-SALE.AP APRIL 2% CONDNS WB=>MCDB,0.2765607511,0.1252711104,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 2,SizingPeriod: RABAT-SALE.AP APRIL 2% CONDNS WB=>MCDB,0.4744374442,0.1900739282,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 3,SizingPeriod: RABAT-SALE.AP APRIL 2% CONDNS WB=>MCDB,0.3725158052,0.1382722325,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 4,SizingPeriod: RABAT-SALE.AP APRIL 2% CONDNS WB=>MCDB,0.2579363299,0.1466180170,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 5,SizingPeriod: RABAT-SALE.AP APRIL 2% CONDNS WB=>MCDB,0.3744349689,0.2203075381,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 6,SizingPeriod: RABAT-SALE.AP APRIL 2% CONDNS WB=>MCDB,1.0577118468,0.6607779231,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+Environment,RABAT-SALE.AP APRIL 5% CONDNS DB=>MCWB,SizingPeriod:DesignDay,04/21,04/21,SummerDesignDay,1,N/A,N/A,N/A,N/A,N/A,N/A,Clark and Allen
+Environment:Daylight Saving,No,SizingPeriod:DesignDay
+Environment:Design Day Data,22.30,13.30,DefaultMultipliers,Wetbulb,16.80,{C},100319,340,3.2,0.00,No,No
+Environment:Design Day Misc,111,1135.8,0.1796,9.6924E-002,1.0,1.11,11.6,ASHRAETau2017
+Environment:WarmupDays,  4
+ Warmup Convergence Information,THERMAL ZONE 1,SizingPeriod: RABAT-SALE.AP APRIL 5% CONDNS DB=>MCWB,0.3292544233,0.1476211278,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 2,SizingPeriod: RABAT-SALE.AP APRIL 5% CONDNS DB=>MCWB,0.5346474052,0.2176149170,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 3,SizingPeriod: RABAT-SALE.AP APRIL 5% CONDNS DB=>MCWB,0.4182468606,0.1678172276,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 4,SizingPeriod: RABAT-SALE.AP APRIL 5% CONDNS DB=>MCWB,0.3055408511,0.1525174073,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 5,SizingPeriod: RABAT-SALE.AP APRIL 5% CONDNS DB=>MCWB,0.4288267277,0.2420427115,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 6,SizingPeriod: RABAT-SALE.AP APRIL 5% CONDNS DB=>MCWB,1.1185259668,0.6729700548,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+Environment,RABAT-SALE.AP APRIL 5% CONDNS WB=>MCDB,SizingPeriod:DesignDay,04/21,04/21,SummerDesignDay,1,N/A,N/A,N/A,N/A,N/A,N/A,Clark and Allen
+Environment:Daylight Saving,No,SizingPeriod:DesignDay
+Environment:Design Day Data,21.40,11.30,DefaultMultipliers,Wetbulb,17.50,{C},100319,340,3.2,0.00,No,No
+Environment:Design Day Misc,111,1135.8,0.1796,9.6924E-002,1.0,1.11,11.6,ASHRAETau2017
+Environment:WarmupDays,  4
+ Warmup Convergence Information,THERMAL ZONE 1,SizingPeriod: RABAT-SALE.AP APRIL 5% CONDNS WB=>MCDB,0.3018086189,0.1353072487,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 2,SizingPeriod: RABAT-SALE.AP APRIL 5% CONDNS WB=>MCDB,0.5042571832,0.2028858097,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 3,SizingPeriod: RABAT-SALE.AP APRIL 5% CONDNS WB=>MCDB,0.3959205511,0.1520942072,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 4,SizingPeriod: RABAT-SALE.AP APRIL 5% CONDNS WB=>MCDB,0.2823666802,0.1492641191,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 5,SizingPeriod: RABAT-SALE.AP APRIL 5% CONDNS WB=>MCDB,0.4001129918,0.2315342545,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 6,SizingPeriod: RABAT-SALE.AP APRIL 5% CONDNS WB=>MCDB,1.0880018652,0.6660294677,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+Environment,RABAT-SALE.AP AUGUST .4% CONDNS DB=>MCWB,SizingPeriod:DesignDay,08/21,08/21,SummerDesignDay,1,N/A,N/A,N/A,N/A,N/A,N/A,Clark and Allen
+Environment:Daylight Saving,No,SizingPeriod:DesignDay
+Environment:Design Day Data,35.50,8.60,DefaultMultipliers,Wetbulb,21.70,{C},100319,340,2.7,0.00,No,No
+Environment:Design Day Misc,233,1106.3,0.2000,0.1216,1.0,-3.33,12.4,ASHRAETau2017
+Environment:WarmupDays,  4
+ Warmup Convergence Information,THERMAL ZONE 1,SizingPeriod: RABAT-SALE.AP AUGUST .4% CONDNS DB=>MCWB,0.2525449931,0.1182370186,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 2,SizingPeriod: RABAT-SALE.AP AUGUST .4% CONDNS DB=>MCWB,0.4334977998,0.1718938974,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 3,SizingPeriod: RABAT-SALE.AP AUGUST .4% CONDNS DB=>MCWB,0.3429985947,0.1263940680,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 4,SizingPeriod: RABAT-SALE.AP AUGUST .4% CONDNS DB=>MCWB,0.2248794027,0.1351425388,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 5,SizingPeriod: RABAT-SALE.AP AUGUST .4% CONDNS DB=>MCWB,0.3388390605,0.2030479904,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 6,SizingPeriod: RABAT-SALE.AP AUGUST .4% CONDNS DB=>MCWB,0.9813579046,0.6149421733,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+Environment,RABAT-SALE.AP AUGUST .4% CONDNS WB=>MCDB,SizingPeriod:DesignDay,08/21,08/21,SummerDesignDay,1,N/A,N/A,N/A,N/A,N/A,N/A,Clark and Allen
+Environment:Daylight Saving,No,SizingPeriod:DesignDay
+Environment:Design Day Data,30.30,8.60,DefaultMultipliers,Wetbulb,25.80,{C},100319,340,2.7,0.00,No,No
+Environment:Design Day Misc,233,1106.3,0.2000,0.1216,1.0,-3.33,12.4,ASHRAETau2017
+Environment:WarmupDays,  4
+ Warmup Convergence Information,THERMAL ZONE 1,SizingPeriod: RABAT-SALE.AP AUGUST .4% CONDNS WB=>MCDB,0.2465219089,0.1149040225,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 2,SizingPeriod: RABAT-SALE.AP AUGUST .4% CONDNS WB=>MCDB,0.4272849217,0.1720061443,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 3,SizingPeriod: RABAT-SALE.AP AUGUST .4% CONDNS WB=>MCDB,0.3388515168,0.1265068811,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 4,SizingPeriod: RABAT-SALE.AP AUGUST .4% CONDNS WB=>MCDB,0.2206262250,0.1338766608,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 5,SizingPeriod: RABAT-SALE.AP AUGUST .4% CONDNS WB=>MCDB,0.3319563950,0.1991509495,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 6,SizingPeriod: RABAT-SALE.AP AUGUST .4% CONDNS WB=>MCDB,0.9827381823,0.6123638122,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+Environment,RABAT-SALE.AP AUGUST 10% CONDNS DB=>MCWB,SizingPeriod:DesignDay,08/21,08/21,SummerDesignDay,1,N/A,N/A,N/A,N/A,N/A,N/A,Clark and Allen
+Environment:Daylight Saving,No,SizingPeriod:DesignDay
+Environment:Design Day Data,27.10,11.20,DefaultMultipliers,Wetbulb,22.10,{C},100319,340,2.7,0.00,No,No
+Environment:Design Day Misc,233,1106.3,0.2000,0.1216,1.0,-3.33,12.4,ASHRAETau2017
+Environment:WarmupDays,  4
+ Warmup Convergence Information,THERMAL ZONE 1,SizingPeriod: RABAT-SALE.AP AUGUST 10% CONDNS DB=>MCWB,0.2843600710,0.1294478533,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 2,SizingPeriod: RABAT-SALE.AP AUGUST 10% CONDNS DB=>MCWB,0.4686815475,0.1896443133,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 3,SizingPeriod: RABAT-SALE.AP AUGUST 10% CONDNS DB=>MCWB,0.3746687116,0.1415257363,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 4,SizingPeriod: RABAT-SALE.AP AUGUST 10% CONDNS DB=>MCWB,0.2596383393,0.1374849180,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 5,SizingPeriod: RABAT-SALE.AP AUGUST 10% CONDNS DB=>MCWB,0.3679120838,0.2139166020,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 6,SizingPeriod: RABAT-SALE.AP AUGUST 10% CONDNS DB=>MCWB,1.0294966732,0.6203321789,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+Environment,RABAT-SALE.AP AUGUST 10% CONDNS WB=>MCDB,SizingPeriod:DesignDay,08/21,08/21,SummerDesignDay,1,N/A,N/A,N/A,N/A,N/A,N/A,Clark and Allen
+Environment:Daylight Saving,No,SizingPeriod:DesignDay
+Environment:Design Day Data,26.10,9.20,DefaultMultipliers,Wetbulb,22.80,{C},100319,340,2.7,0.00,No,No
+Environment:Design Day Misc,233,1106.3,0.2000,0.1216,1.0,-3.33,12.4,ASHRAETau2017
+Environment:WarmupDays,  4
+ Warmup Convergence Information,THERMAL ZONE 1,SizingPeriod: RABAT-SALE.AP AUGUST 10% CONDNS WB=>MCDB,0.2562288575,0.1178275886,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 2,SizingPeriod: RABAT-SALE.AP AUGUST 10% CONDNS WB=>MCDB,0.4378663482,0.1766196817,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 3,SizingPeriod: RABAT-SALE.AP AUGUST 10% CONDNS WB=>MCDB,0.3498705311,0.1331381147,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 4,SizingPeriod: RABAT-SALE.AP AUGUST 10% CONDNS WB=>MCDB,0.2343926186,0.1384200446,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 5,SizingPeriod: RABAT-SALE.AP AUGUST 10% CONDNS WB=>MCDB,0.3388794300,0.2033376487,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 6,SizingPeriod: RABAT-SALE.AP AUGUST 10% CONDNS WB=>MCDB,0.9980783886,0.6159648536,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+Environment,RABAT-SALE.AP AUGUST 2% CONDNS DB=>MCWB,SizingPeriod:DesignDay,08/21,08/21,SummerDesignDay,1,N/A,N/A,N/A,N/A,N/A,N/A,Clark and Allen
+Environment:Daylight Saving,No,SizingPeriod:DesignDay
+Environment:Design Day Data,30.90,8.60,DefaultMultipliers,Wetbulb,22.60,{C},100319,340,2.7,0.00,No,No
+Environment:Design Day Misc,233,1106.3,0.2000,0.1216,1.0,-3.33,12.4,ASHRAETau2017
+Environment:WarmupDays,  4
+ Warmup Convergence Information,THERMAL ZONE 1,SizingPeriod: RABAT-SALE.AP AUGUST 2% CONDNS DB=>MCWB,0.2475201495,0.1158908103,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 2,SizingPeriod: RABAT-SALE.AP AUGUST 2% CONDNS DB=>MCWB,0.4279989192,0.1719226614,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 3,SizingPeriod: RABAT-SALE.AP AUGUST 2% CONDNS DB=>MCWB,0.3392912712,0.1261186290,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 4,SizingPeriod: RABAT-SALE.AP AUGUST 2% CONDNS DB=>MCWB,0.2211283462,0.1338187782,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 5,SizingPeriod: RABAT-SALE.AP AUGUST 2% CONDNS DB=>MCWB,0.3330712137,0.2004285025,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 6,SizingPeriod: RABAT-SALE.AP AUGUST 2% CONDNS DB=>MCWB,0.9810845827,0.6134639609,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+Environment,RABAT-SALE.AP AUGUST 2% CONDNS WB=>MCDB,SizingPeriod:DesignDay,08/21,08/21,SummerDesignDay,1,N/A,N/A,N/A,N/A,N/A,N/A,Clark and Allen
+Environment:Daylight Saving,No,SizingPeriod:DesignDay
+Environment:Design Day Data,27.90,8.60,DefaultMultipliers,Wetbulb,24.30,{C},100319,340,2.7,0.00,No,No
+Environment:Design Day Misc,233,1106.3,0.2000,0.1216,1.0,-3.33,12.4,ASHRAETau2017
+Environment:WarmupDays,  4
+ Warmup Convergence Information,THERMAL ZONE 1,SizingPeriod: RABAT-SALE.AP AUGUST 2% CONDNS WB=>MCDB,0.2454170090,0.1147411783,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 2,SizingPeriod: RABAT-SALE.AP AUGUST 2% CONDNS WB=>MCDB,0.4255998237,0.1711194444,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 3,SizingPeriod: RABAT-SALE.AP AUGUST 2% CONDNS WB=>MCDB,0.3384276618,0.1273365251,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 4,SizingPeriod: RABAT-SALE.AP AUGUST 2% CONDNS WB=>MCDB,0.2228298940,0.1355680332,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 5,SizingPeriod: RABAT-SALE.AP AUGUST 2% CONDNS WB=>MCDB,0.3290509439,0.1972975085,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 6,SizingPeriod: RABAT-SALE.AP AUGUST 2% CONDNS WB=>MCDB,0.9858852920,0.6138094852,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+Environment,RABAT-SALE.AP AUGUST 5% CONDNS DB=>MCWB,SizingPeriod:DesignDay,08/21,08/21,SummerDesignDay,1,N/A,N/A,N/A,N/A,N/A,N/A,Clark and Allen
+Environment:Daylight Saving,No,SizingPeriod:DesignDay
+Environment:Design Day Data,28.60,11.20,DefaultMultipliers,Wetbulb,22.70,{C},100319,340,2.7,0.00,No,No
+Environment:Design Day Misc,233,1106.3,0.2000,0.1216,1.0,-3.33,12.4,ASHRAETau2017
+Environment:WarmupDays,  4
+ Warmup Convergence Information,THERMAL ZONE 1,SizingPeriod: RABAT-SALE.AP AUGUST 5% CONDNS DB=>MCWB,0.2823779843,0.1302019098,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 2,SizingPeriod: RABAT-SALE.AP AUGUST 5% CONDNS DB=>MCWB,0.4661047069,0.1884772399,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 3,SizingPeriod: RABAT-SALE.AP AUGUST 5% CONDNS DB=>MCWB,0.3722506417,0.1392815911,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 4,SizingPeriod: RABAT-SALE.AP AUGUST 5% CONDNS DB=>MCWB,0.2567801482,0.1366339128,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 5,SizingPeriod: RABAT-SALE.AP AUGUST 5% CONDNS DB=>MCWB,0.3664180337,0.2128393696,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 6,SizingPeriod: RABAT-SALE.AP AUGUST 5% CONDNS DB=>MCWB,1.0278249407,0.6197936367,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+Environment,RABAT-SALE.AP AUGUST 5% CONDNS WB=>MCDB,SizingPeriod:DesignDay,08/21,08/21,SummerDesignDay,1,N/A,N/A,N/A,N/A,N/A,N/A,Clark and Allen
+Environment:Daylight Saving,No,SizingPeriod:DesignDay
+Environment:Design Day Data,26.80,9.20,DefaultMultipliers,Wetbulb,23.40,{C},100319,340,2.7,0.00,No,No
+Environment:Design Day Misc,233,1106.3,0.2000,0.1216,1.0,-3.33,12.4,ASHRAETau2017
+Environment:WarmupDays,  4
+ Warmup Convergence Information,THERMAL ZONE 1,SizingPeriod: RABAT-SALE.AP AUGUST 5% CONDNS WB=>MCDB,0.2559728175,0.1170183408,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 2,SizingPeriod: RABAT-SALE.AP AUGUST 5% CONDNS WB=>MCDB,0.4369207197,0.1752664022,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 3,SizingPeriod: RABAT-SALE.AP AUGUST 5% CONDNS WB=>MCDB,0.3483356070,0.1321484310,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 4,SizingPeriod: RABAT-SALE.AP AUGUST 5% CONDNS WB=>MCDB,0.2329606774,0.1372534780,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 5,SizingPeriod: RABAT-SALE.AP AUGUST 5% CONDNS WB=>MCDB,0.3390467699,0.2017918336,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 6,SizingPeriod: RABAT-SALE.AP AUGUST 5% CONDNS WB=>MCDB,0.9975176009,0.6153380046,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+Environment,RABAT-SALE.AP DECEMBER .4% CONDNS DB=>MCWB,SizingPeriod:DesignDay,12/21,12/21,SummerDesignDay,1,N/A,N/A,N/A,N/A,N/A,N/A,Clark and Allen
+Environment:Daylight Saving,No,SizingPeriod:DesignDay
+Environment:Design Day Data,24.00,9.50,DefaultMultipliers,Wetbulb,15.80,{C},100319,340,2.6,0.00,No,No
+Environment:Design Day Misc,355,1232.8,0.1424,5.7719E-002,1.0,2.45,-23.5,ASHRAETau2017
+Environment:WarmupDays,  4
+ Warmup Convergence Information,THERMAL ZONE 1,SizingPeriod: RABAT-SALE.AP DECEMBER .4% CONDNS DB=>MCWB,0.2659487920,0.1233154154,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 2,SizingPeriod: RABAT-SALE.AP DECEMBER .4% CONDNS DB=>MCWB,0.4948177960,0.2017120027,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 3,SizingPeriod: RABAT-SALE.AP DECEMBER .4% CONDNS DB=>MCWB,0.4769896264,0.1758847127,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 4,SizingPeriod: RABAT-SALE.AP DECEMBER .4% CONDNS DB=>MCWB,0.2397620540,0.1117164909,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 5,SizingPeriod: RABAT-SALE.AP DECEMBER .4% CONDNS DB=>MCWB,0.2757289601,0.1884299970,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 6,SizingPeriod: RABAT-SALE.AP DECEMBER .4% CONDNS DB=>MCWB,1.9497119272,1.4301488238,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+Environment,RABAT-SALE.AP DECEMBER .4% CONDNS WB=>MCDB,SizingPeriod:DesignDay,12/21,12/21,SummerDesignDay,1,N/A,N/A,N/A,N/A,N/A,N/A,Clark and Allen
+Environment:Daylight Saving,No,SizingPeriod:DesignDay
+Environment:Design Day Data,20.70,9.50,DefaultMultipliers,Wetbulb,18.40,{C},100319,340,2.6,0.00,No,No
+Environment:Design Day Misc,355,1232.8,0.1424,5.7719E-002,1.0,2.45,-23.5,ASHRAETau2017
+Environment:WarmupDays,  4
+ Warmup Convergence Information,THERMAL ZONE 1,SizingPeriod: RABAT-SALE.AP DECEMBER .4% CONDNS WB=>MCDB,0.2699951132,0.1241802386,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 2,SizingPeriod: RABAT-SALE.AP DECEMBER .4% CONDNS WB=>MCDB,0.5010125216,0.2094284815,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 3,SizingPeriod: RABAT-SALE.AP DECEMBER .4% CONDNS WB=>MCDB,0.4810096691,0.1826736070,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 4,SizingPeriod: RABAT-SALE.AP DECEMBER .4% CONDNS WB=>MCDB,0.2438369138,0.1183603211,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 5,SizingPeriod: RABAT-SALE.AP DECEMBER .4% CONDNS WB=>MCDB,0.2779428255,0.1946457766,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 6,SizingPeriod: RABAT-SALE.AP DECEMBER .4% CONDNS WB=>MCDB,1.9541059763,1.4316778418,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+Environment,RABAT-SALE.AP DECEMBER 10% CONDNS DB=>MCWB,SizingPeriod:DesignDay,12/21,12/21,SummerDesignDay,1,N/A,N/A,N/A,N/A,N/A,N/A,Clark and Allen
+Environment:Daylight Saving,No,SizingPeriod:DesignDay
+Environment:Design Day Data,18.50,11.10,DefaultMultipliers,Wetbulb,14.90,{C},100319,340,2.6,0.00,No,No
+Environment:Design Day Misc,355,1232.8,0.1424,5.7719E-002,1.0,2.45,-23.5,ASHRAETau2017
+Environment:WarmupDays,  4
+ Warmup Convergence Information,THERMAL ZONE 1,SizingPeriod: RABAT-SALE.AP DECEMBER 10% CONDNS DB=>MCWB,0.2935489649,0.1341422829,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 2,SizingPeriod: RABAT-SALE.AP DECEMBER 10% CONDNS DB=>MCWB,0.5280668828,0.2219202210,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 3,SizingPeriod: RABAT-SALE.AP DECEMBER 10% CONDNS DB=>MCWB,0.5044581852,0.1977508565,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 4,SizingPeriod: RABAT-SALE.AP DECEMBER 10% CONDNS DB=>MCWB,0.2682900379,0.1256808619,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 5,SizingPeriod: RABAT-SALE.AP DECEMBER 10% CONDNS DB=>MCWB,0.2973685366,0.2132824512,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 6,SizingPeriod: RABAT-SALE.AP DECEMBER 10% CONDNS DB=>MCWB,1.9824431126,1.4347231099,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+Environment,RABAT-SALE.AP DECEMBER 10% CONDNS WB=>MCDB,SizingPeriod:DesignDay,12/21,12/21,SummerDesignDay,1,N/A,N/A,N/A,N/A,N/A,N/A,Clark and Allen
+Environment:Daylight Saving,No,SizingPeriod:DesignDay
+Environment:Design Day Data,17.90,8.80,DefaultMultipliers,Wetbulb,15.40,{C},100319,340,2.6,0.00,No,No
+Environment:Design Day Misc,355,1232.8,0.1424,5.7719E-002,1.0,2.45,-23.5,ASHRAETau2017
+Environment:WarmupDays,  4
+ Warmup Convergence Information,THERMAL ZONE 1,SizingPeriod: RABAT-SALE.AP DECEMBER 10% CONDNS WB=>MCDB,0.2631938816,0.1217770623,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 2,SizingPeriod: RABAT-SALE.AP DECEMBER 10% CONDNS WB=>MCDB,0.4948937905,0.2137745030,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 3,SizingPeriod: RABAT-SALE.AP DECEMBER 10% CONDNS WB=>MCDB,0.4737570662,0.1844987057,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 4,SizingPeriod: RABAT-SALE.AP DECEMBER 10% CONDNS WB=>MCDB,0.2365951785,0.1242694985,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 5,SizingPeriod: RABAT-SALE.AP DECEMBER 10% CONDNS WB=>MCDB,0.2710150797,0.1941038969,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 6,SizingPeriod: RABAT-SALE.AP DECEMBER 10% CONDNS WB=>MCDB,1.9483332246,1.4366183032,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+Environment,RABAT-SALE.AP DECEMBER 2% CONDNS DB=>MCWB,SizingPeriod:DesignDay,12/21,12/21,SummerDesignDay,1,N/A,N/A,N/A,N/A,N/A,N/A,Clark and Allen
+Environment:Daylight Saving,No,SizingPeriod:DesignDay
+Environment:Design Day Data,21.40,9.50,DefaultMultipliers,Wetbulb,15.20,{C},100319,340,2.6,0.00,No,No
+Environment:Design Day Misc,355,1232.8,0.1424,5.7719E-002,1.0,2.45,-23.5,ASHRAETau2017
+Environment:WarmupDays,  4
+ Warmup Convergence Information,THERMAL ZONE 1,SizingPeriod: RABAT-SALE.AP DECEMBER 2% CONDNS DB=>MCWB,0.2687168718,0.1237684768,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 2,SizingPeriod: RABAT-SALE.AP DECEMBER 2% CONDNS DB=>MCWB,0.4990218369,0.2076470493,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 3,SizingPeriod: RABAT-SALE.AP DECEMBER 2% CONDNS DB=>MCWB,0.4793618900,0.1809417824,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 4,SizingPeriod: RABAT-SALE.AP DECEMBER 2% CONDNS DB=>MCWB,0.2425531686,0.1168510651,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 5,SizingPeriod: RABAT-SALE.AP DECEMBER 2% CONDNS DB=>MCWB,0.2771551851,0.1929715308,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 6,SizingPeriod: RABAT-SALE.AP DECEMBER 2% CONDNS DB=>MCWB,1.9514241912,1.4337282778,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+Environment,RABAT-SALE.AP DECEMBER 2% CONDNS WB=>MCDB,SizingPeriod:DesignDay,12/21,12/21,SummerDesignDay,1,N/A,N/A,N/A,N/A,N/A,N/A,Clark and Allen
+Environment:Daylight Saving,No,SizingPeriod:DesignDay
+Environment:Design Day Data,19.30,9.50,DefaultMultipliers,Wetbulb,17.10,{C},100319,340,2.6,0.00,No,No
+Environment:Design Day Misc,355,1232.8,0.1424,5.7719E-002,1.0,2.45,-23.5,ASHRAETau2017
+Environment:WarmupDays,  4
+ Warmup Convergence Information,THERMAL ZONE 1,SizingPeriod: RABAT-SALE.AP DECEMBER 2% CONDNS WB=>MCDB,0.2713939015,0.1247798222,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 2,SizingPeriod: RABAT-SALE.AP DECEMBER 2% CONDNS WB=>MCDB,0.5033147694,0.2129138083,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 3,SizingPeriod: RABAT-SALE.AP DECEMBER 2% CONDNS WB=>MCDB,0.4822343585,0.1856780676,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 4,SizingPeriod: RABAT-SALE.AP DECEMBER 2% CONDNS WB=>MCDB,0.2452266558,0.1216057046,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 5,SizingPeriod: RABAT-SALE.AP DECEMBER 2% CONDNS WB=>MCDB,0.2786290387,0.1973785413,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 6,SizingPeriod: RABAT-SALE.AP DECEMBER 2% CONDNS WB=>MCDB,1.9564612322,1.4333253706,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+Environment,RABAT-SALE.AP DECEMBER 5% CONDNS DB=>MCWB,SizingPeriod:DesignDay,12/21,12/21,SummerDesignDay,1,N/A,N/A,N/A,N/A,N/A,N/A,Clark and Allen
+Environment:Daylight Saving,No,SizingPeriod:DesignDay
+Environment:Design Day Data,19.80,11.10,DefaultMultipliers,Wetbulb,15.40,{C},100319,340,2.6,0.00,No,No
+Environment:Design Day Misc,355,1232.8,0.1424,5.7719E-002,1.0,2.45,-23.5,ASHRAETau2017
+Environment:WarmupDays,  4
+ Warmup Convergence Information,THERMAL ZONE 1,SizingPeriod: RABAT-SALE.AP DECEMBER 5% CONDNS DB=>MCWB,0.2922907536,0.1335744832,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 2,SizingPeriod: RABAT-SALE.AP DECEMBER 5% CONDNS DB=>MCWB,0.5258454488,0.2186493927,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 3,SizingPeriod: RABAT-SALE.AP DECEMBER 5% CONDNS DB=>MCWB,0.5030836554,0.1949125401,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 4,SizingPeriod: RABAT-SALE.AP DECEMBER 5% CONDNS DB=>MCWB,0.2670457639,0.1227500388,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 5,SizingPeriod: RABAT-SALE.AP DECEMBER 5% CONDNS DB=>MCWB,0.2968149220,0.2107571774,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 6,SizingPeriod: RABAT-SALE.AP DECEMBER 5% CONDNS DB=>MCWB,1.9791544200,1.4291695653,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+Environment,RABAT-SALE.AP DECEMBER 5% CONDNS WB=>MCDB,SizingPeriod:DesignDay,12/21,12/21,SummerDesignDay,1,N/A,N/A,N/A,N/A,N/A,N/A,Clark and Allen
+Environment:Daylight Saving,No,SizingPeriod:DesignDay
+Environment:Design Day Data,18.60,8.80,DefaultMultipliers,Wetbulb,16.20,{C},100319,340,2.6,0.00,No,No
+Environment:Design Day Misc,355,1232.8,0.1424,5.7719E-002,1.0,2.45,-23.5,ASHRAETau2017
+Environment:WarmupDays,  4
+ Warmup Convergence Information,THERMAL ZONE 1,SizingPeriod: RABAT-SALE.AP DECEMBER 5% CONDNS WB=>MCDB,0.2625367813,0.1213163909,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 2,SizingPeriod: RABAT-SALE.AP DECEMBER 5% CONDNS WB=>MCDB,0.4938107249,0.2119975405,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 3,SizingPeriod: RABAT-SALE.AP DECEMBER 5% CONDNS WB=>MCDB,0.4732028924,0.1829382399,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 4,SizingPeriod: RABAT-SALE.AP DECEMBER 5% CONDNS WB=>MCDB,0.2359434962,0.1225756896,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 5,SizingPeriod: RABAT-SALE.AP DECEMBER 5% CONDNS WB=>MCDB,0.2707010711,0.1926656858,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 6,SizingPeriod: RABAT-SALE.AP DECEMBER 5% CONDNS WB=>MCDB,1.9468014701,1.4362846457,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+Environment,RABAT-SALE.AP FEBRUARY .4% CONDNS DB=>MCWB,SizingPeriod:DesignDay,02/21,02/21,SummerDesignDay,1,N/A,N/A,N/A,N/A,N/A,N/A,Clark and Allen
+Environment:Daylight Saving,No,SizingPeriod:DesignDay
+Environment:Design Day Data,24.40,9.90,DefaultMultipliers,Wetbulb,14.80,{C},100319,340,2.7,0.00,No,No
+Environment:Design Day Misc, 52,1214.6,0.1445,6.0579E-002,1.0,-13.80,-10.8,ASHRAETau2017
+Environment:WarmupDays,  4
+ Warmup Convergence Information,THERMAL ZONE 1,SizingPeriod: RABAT-SALE.AP FEBRUARY .4% CONDNS DB=>MCWB,0.2866484670,0.1280285700,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 2,SizingPeriod: RABAT-SALE.AP FEBRUARY .4% CONDNS DB=>MCWB,0.5147141857,0.2162011140,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 3,SizingPeriod: RABAT-SALE.AP FEBRUARY .4% CONDNS DB=>MCWB,0.4656415839,0.1772189163,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 4,SizingPeriod: RABAT-SALE.AP FEBRUARY .4% CONDNS DB=>MCWB,0.2546748543,0.1322158556,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 5,SizingPeriod: RABAT-SALE.AP FEBRUARY .4% CONDNS DB=>MCWB,0.3407796586,0.1967566873,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 6,SizingPeriod: RABAT-SALE.AP FEBRUARY .4% CONDNS DB=>MCWB,1.7780294670,1.1817423306,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+Environment,RABAT-SALE.AP FEBRUARY .4% CONDNS WB=>MCDB,SizingPeriod:DesignDay,02/21,02/21,SummerDesignDay,1,N/A,N/A,N/A,N/A,N/A,N/A,Clark and Allen
+Environment:Daylight Saving,No,SizingPeriod:DesignDay
+Environment:Design Day Data,21.00,9.90,DefaultMultipliers,Wetbulb,17.30,{C},100319,340,2.7,0.00,No,No
+Environment:Design Day Misc, 52,1214.6,0.1445,6.0579E-002,1.0,-13.80,-10.8,ASHRAETau2017
+Environment:WarmupDays,  4
+ Warmup Convergence Information,THERMAL ZONE 1,SizingPeriod: RABAT-SALE.AP FEBRUARY .4% CONDNS WB=>MCDB,0.2907644696,0.1282166542,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 2,SizingPeriod: RABAT-SALE.AP FEBRUARY .4% CONDNS WB=>MCDB,0.5214505888,0.2209127826,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 3,SizingPeriod: RABAT-SALE.AP FEBRUARY .4% CONDNS WB=>MCDB,0.4704274027,0.1827294814,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 4,SizingPeriod: RABAT-SALE.AP FEBRUARY .4% CONDNS WB=>MCDB,0.2600745458,0.1363931297,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 5,SizingPeriod: RABAT-SALE.AP FEBRUARY .4% CONDNS WB=>MCDB,0.3432971982,0.2019860116,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 6,SizingPeriod: RABAT-SALE.AP FEBRUARY .4% CONDNS WB=>MCDB,1.7829428851,1.1830487905,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+Environment,RABAT-SALE.AP FEBRUARY 10% CONDNS DB=>MCWB,SizingPeriod:DesignDay,02/21,02/21,SummerDesignDay,1,N/A,N/A,N/A,N/A,N/A,N/A,Clark and Allen
+Environment:Daylight Saving,No,SizingPeriod:DesignDay
+Environment:Design Day Data,17.80,12.30,DefaultMultipliers,Wetbulb,14.30,{C},100319,340,2.7,0.00,No,No
+Environment:Design Day Misc, 52,1214.6,0.1445,6.0579E-002,1.0,-13.80,-10.8,ASHRAETau2017
+Environment:WarmupDays,  4
+ Warmup Convergence Information,THERMAL ZONE 1,SizingPeriod: RABAT-SALE.AP FEBRUARY 10% CONDNS DB=>MCWB,0.3261923365,0.1427564550,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 2,SizingPeriod: RABAT-SALE.AP FEBRUARY 10% CONDNS DB=>MCWB,0.5650930721,0.2366003019,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 3,SizingPeriod: RABAT-SALE.AP FEBRUARY 10% CONDNS DB=>MCWB,0.5050278836,0.2068094640,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 4,SizingPeriod: RABAT-SALE.AP FEBRUARY 10% CONDNS DB=>MCWB,0.2965823330,0.1447563799,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 5,SizingPeriod: RABAT-SALE.AP FEBRUARY 10% CONDNS DB=>MCWB,0.3763374697,0.2240870307,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 6,SizingPeriod: RABAT-SALE.AP FEBRUARY 10% CONDNS DB=>MCWB,1.8271902631,1.1906642837,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+Environment,RABAT-SALE.AP FEBRUARY 10% CONDNS WB=>MCDB,SizingPeriod:DesignDay,02/21,02/21,SummerDesignDay,1,N/A,N/A,N/A,N/A,N/A,N/A,Clark and Allen
+Environment:Daylight Saving,No,SizingPeriod:DesignDay
+Environment:Design Day Data,17.40,10.70,DefaultMultipliers,Wetbulb,14.70,{C},100319,340,2.7,0.00,No,No
+Environment:Design Day Misc, 52,1214.6,0.1445,6.0579E-002,1.0,-13.80,-10.8,ASHRAETau2017
+Environment:WarmupDays,  4
+ Warmup Convergence Information,THERMAL ZONE 1,SizingPeriod: RABAT-SALE.AP FEBRUARY 10% CONDNS WB=>MCDB,0.3052144207,0.1340429032,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 2,SizingPeriod: RABAT-SALE.AP FEBRUARY 10% CONDNS WB=>MCDB,0.5409033238,0.2315829031,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 3,SizingPeriod: RABAT-SALE.AP FEBRUARY 10% CONDNS WB=>MCDB,0.4849140517,0.1955728447,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 4,SizingPeriod: RABAT-SALE.AP FEBRUARY 10% CONDNS WB=>MCDB,0.2757133611,0.1433759932,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 5,SizingPeriod: RABAT-SALE.AP FEBRUARY 10% CONDNS WB=>MCDB,0.3558398640,0.2138577716,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 6,SizingPeriod: RABAT-SALE.AP FEBRUARY 10% CONDNS WB=>MCDB,1.8016988654,1.1871336681,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+Environment,RABAT-SALE.AP FEBRUARY 2% CONDNS DB=>MCWB,SizingPeriod:DesignDay,02/21,02/21,SummerDesignDay,1,N/A,N/A,N/A,N/A,N/A,N/A,Clark and Allen
+Environment:Daylight Saving,No,SizingPeriod:DesignDay
+Environment:Design Day Data,21.30,9.90,DefaultMultipliers,Wetbulb,14.90,{C},100319,340,2.7,0.00,No,No
+Environment:Design Day Misc, 52,1214.6,0.1445,6.0579E-002,1.0,-13.80,-10.8,ASHRAETau2017
+Environment:WarmupDays,  4
+ Warmup Convergence Information,THERMAL ZONE 1,SizingPeriod: RABAT-SALE.AP FEBRUARY 2% CONDNS DB=>MCWB,0.2901271520,0.1280479581,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 2,SizingPeriod: RABAT-SALE.AP FEBRUARY 2% CONDNS DB=>MCWB,0.5203601945,0.2205596607,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 3,SizingPeriod: RABAT-SALE.AP FEBRUARY 2% CONDNS DB=>MCWB,0.4694948673,0.1820390590,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 4,SizingPeriod: RABAT-SALE.AP FEBRUARY 2% CONDNS DB=>MCWB,0.2593178033,0.1360325248,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 5,SizingPeriod: RABAT-SALE.AP FEBRUARY 2% CONDNS DB=>MCWB,0.3428302756,0.2013181681,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 6,SizingPeriod: RABAT-SALE.AP FEBRUARY 2% CONDNS DB=>MCWB,1.7812331077,1.1848370850,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+Environment,RABAT-SALE.AP FEBRUARY 2% CONDNS WB=>MCDB,SizingPeriod:DesignDay,02/21,02/21,SummerDesignDay,1,N/A,N/A,N/A,N/A,N/A,N/A,Clark and Allen
+Environment:Daylight Saving,No,SizingPeriod:DesignDay
+Environment:Design Day Data,19.30,9.90,DefaultMultipliers,Wetbulb,16.30,{C},100319,340,2.7,0.00,No,No
+Environment:Design Day Misc, 52,1214.6,0.1445,6.0579E-002,1.0,-13.80,-10.8,ASHRAETau2017
+Environment:WarmupDays,  4
+ Warmup Convergence Information,THERMAL ZONE 1,SizingPeriod: RABAT-SALE.AP FEBRUARY 2% CONDNS WB=>MCDB,0.2925860363,0.1287414327,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 2,SizingPeriod: RABAT-SALE.AP FEBRUARY 2% CONDNS WB=>MCDB,0.5248312414,0.2236454529,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 3,SizingPeriod: RABAT-SALE.AP FEBRUARY 2% CONDNS WB=>MCDB,0.4725116799,0.1858922321,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 4,SizingPeriod: RABAT-SALE.AP FEBRUARY 2% CONDNS WB=>MCDB,0.2624739375,0.1391673695,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 5,SizingPeriod: RABAT-SALE.AP FEBRUARY 2% CONDNS WB=>MCDB,0.3443853620,0.2049639105,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 6,SizingPeriod: RABAT-SALE.AP FEBRUARY 2% CONDNS WB=>MCDB,1.7855587642,1.1850783846,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+Environment,RABAT-SALE.AP FEBRUARY 5% CONDNS DB=>MCWB,SizingPeriod:DesignDay,02/21,02/21,SummerDesignDay,1,N/A,N/A,N/A,N/A,N/A,N/A,Clark and Allen
+Environment:Daylight Saving,No,SizingPeriod:DesignDay
+Environment:Design Day Data,19.30,12.30,DefaultMultipliers,Wetbulb,14.80,{C},100319,340,2.7,0.00,No,No
+Environment:Design Day Misc, 52,1214.6,0.1445,6.0579E-002,1.0,-13.80,-10.8,ASHRAETau2017
+Environment:WarmupDays,  4
+ Warmup Convergence Information,THERMAL ZONE 1,SizingPeriod: RABAT-SALE.AP FEBRUARY 5% CONDNS DB=>MCWB,0.3248766510,0.1424522236,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 2,SizingPeriod: RABAT-SALE.AP FEBRUARY 5% CONDNS DB=>MCWB,0.5623203165,0.2345651910,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 3,SizingPeriod: RABAT-SALE.AP FEBRUARY 5% CONDNS DB=>MCWB,0.5034227790,0.2040909034,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 4,SizingPeriod: RABAT-SALE.AP FEBRUARY 5% CONDNS DB=>MCWB,0.2947900997,0.1422723868,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 5,SizingPeriod: RABAT-SALE.AP FEBRUARY 5% CONDNS DB=>MCWB,0.3756689396,0.2214941481,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 6,SizingPeriod: RABAT-SALE.AP FEBRUARY 5% CONDNS DB=>MCWB,1.8244516456,1.1890843527,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+Environment,RABAT-SALE.AP FEBRUARY 5% CONDNS WB=>MCDB,SizingPeriod:DesignDay,02/21,02/21,SummerDesignDay,1,N/A,N/A,N/A,N/A,N/A,N/A,Clark and Allen
+Environment:Daylight Saving,No,SizingPeriod:DesignDay
+Environment:Design Day Data,18.20,10.70,DefaultMultipliers,Wetbulb,15.50,{C},100319,340,2.7,0.00,No,No
+Environment:Design Day Misc, 52,1214.6,0.1445,6.0579E-002,1.0,-13.80,-10.8,ASHRAETau2017
+Environment:WarmupDays,  4
+ Warmup Convergence Information,THERMAL ZONE 1,SizingPeriod: RABAT-SALE.AP FEBRUARY 5% CONDNS WB=>MCDB,0.3045583315,0.1337903681,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 2,SizingPeriod: RABAT-SALE.AP FEBRUARY 5% CONDNS WB=>MCDB,0.5396143677,0.2299136817,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 3,SizingPeriod: RABAT-SALE.AP FEBRUARY 5% CONDNS WB=>MCDB,0.4842189690,0.1940050919,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 4,SizingPeriod: RABAT-SALE.AP FEBRUARY 5% CONDNS WB=>MCDB,0.2748006511,0.1419395529,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 5,SizingPeriod: RABAT-SALE.AP FEBRUARY 5% CONDNS WB=>MCDB,0.3555351393,0.2124519918,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 6,SizingPeriod: RABAT-SALE.AP FEBRUARY 5% CONDNS WB=>MCDB,1.8007650962,1.1861921721,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+Environment,RABAT-SALE.AP JANUARY .4% CONDNS DB=>MCWB,SizingPeriod:DesignDay,01/21,01/21,SummerDesignDay,1,N/A,N/A,N/A,N/A,N/A,N/A,Clark and Allen
+Environment:Daylight Saving,No,SizingPeriod:DesignDay
+Environment:Design Day Data,22.00,9.80,DefaultMultipliers,Wetbulb,14.00,{C},100319,340,2.4,0.00,No,No
+Environment:Design Day Misc, 21,1229.0,0.1415,5.7310E-002,1.0,-11.15,-20.1,ASHRAETau2017
+Environment:WarmupDays,  4
+ Warmup Convergence Information,THERMAL ZONE 1,SizingPeriod: RABAT-SALE.AP JANUARY .4% CONDNS DB=>MCWB,0.2775291528,0.1246536892,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 2,SizingPeriod: RABAT-SALE.AP JANUARY .4% CONDNS DB=>MCWB,0.5181895826,0.1943789060,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 3,SizingPeriod: RABAT-SALE.AP JANUARY .4% CONDNS DB=>MCWB,0.4877337085,0.1777660419,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 4,SizingPeriod: RABAT-SALE.AP JANUARY .4% CONDNS DB=>MCWB,0.2505668973,0.1229116636,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 5,SizingPeriod: RABAT-SALE.AP JANUARY .4% CONDNS DB=>MCWB,0.2952475907,0.1958384817,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 6,SizingPeriod: RABAT-SALE.AP JANUARY .4% CONDNS DB=>MCWB,1.9417448073,1.3800279503,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+Environment,RABAT-SALE.AP JANUARY .4% CONDNS WB=>MCDB,SizingPeriod:DesignDay,01/21,01/21,SummerDesignDay,1,N/A,N/A,N/A,N/A,N/A,N/A,Clark and Allen
+Environment:Daylight Saving,No,SizingPeriod:DesignDay
+Environment:Design Day Data,19.10,9.80,DefaultMultipliers,Wetbulb,16.50,{C},100319,340,2.4,0.00,No,No
+Environment:Design Day Misc, 21,1229.0,0.1415,5.7310E-002,1.0,-11.15,-20.1,ASHRAETau2017
+Environment:WarmupDays,  4
+ Warmup Convergence Information,THERMAL ZONE 1,SizingPeriod: RABAT-SALE.AP JANUARY .4% CONDNS WB=>MCDB,0.2809136302,0.1256291268,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 2,SizingPeriod: RABAT-SALE.AP JANUARY .4% CONDNS WB=>MCDB,0.5235914621,0.2028416251,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 3,SizingPeriod: RABAT-SALE.AP JANUARY .4% CONDNS WB=>MCDB,0.4911639763,0.1840631610,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 4,SizingPeriod: RABAT-SALE.AP JANUARY .4% CONDNS WB=>MCDB,0.2539980676,0.1286831414,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 5,SizingPeriod: RABAT-SALE.AP JANUARY .4% CONDNS WB=>MCDB,0.2973965547,0.2009565208,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 6,SizingPeriod: RABAT-SALE.AP JANUARY .4% CONDNS WB=>MCDB,1.9469567699,1.3812508980,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+Environment,RABAT-SALE.AP JANUARY 10% CONDNS DB=>MCWB,SizingPeriod:DesignDay,01/21,01/21,SummerDesignDay,1,N/A,N/A,N/A,N/A,N/A,N/A,Clark and Allen
+Environment:Daylight Saving,No,SizingPeriod:DesignDay
+Environment:Design Day Data,16.90,11.40,DefaultMultipliers,Wetbulb,13.60,{C},100319,340,2.4,0.00,No,No
+Environment:Design Day Misc, 21,1229.0,0.1415,5.7310E-002,1.0,-11.15,-20.1,ASHRAETau2017
+Environment:WarmupDays,  4
+ Warmup Convergence Information,THERMAL ZONE 1,SizingPeriod: RABAT-SALE.AP JANUARY 10% CONDNS DB=>MCWB,0.3035603565,0.1352737097,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 2,SizingPeriod: RABAT-SALE.AP JANUARY 10% CONDNS DB=>MCWB,0.5501008827,0.2167433779,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 3,SizingPeriod: RABAT-SALE.AP JANUARY 10% CONDNS DB=>MCWB,0.5136462211,0.1991461601,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 4,SizingPeriod: RABAT-SALE.AP JANUARY 10% CONDNS DB=>MCWB,0.2777594694,0.1342984495,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 5,SizingPeriod: RABAT-SALE.AP JANUARY 10% CONDNS DB=>MCWB,0.3185198526,0.2157513978,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 6,SizingPeriod: RABAT-SALE.AP JANUARY 10% CONDNS DB=>MCWB,1.9741519654,1.3817141549,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+Environment,RABAT-SALE.AP JANUARY 10% CONDNS WB=>MCDB,SizingPeriod:DesignDay,01/21,01/21,SummerDesignDay,1,N/A,N/A,N/A,N/A,N/A,N/A,Clark and Allen
+Environment:Daylight Saving,No,SizingPeriod:DesignDay
+Environment:Design Day Data,16.50,9.70,DefaultMultipliers,Wetbulb,14.00,{C},100319,340,2.4,0.00,No,No
+Environment:Design Day Misc, 21,1229.0,0.1415,5.7310E-002,1.0,-11.15,-20.1,ASHRAETau2017
+Environment:WarmupDays,  4
+ Warmup Convergence Information,THERMAL ZONE 1,SizingPeriod: RABAT-SALE.AP JANUARY 10% CONDNS WB=>MCDB,0.2818208363,0.1263948753,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 2,SizingPeriod: RABAT-SALE.AP JANUARY 10% CONDNS WB=>MCDB,0.5262247490,0.2097700531,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 3,SizingPeriod: RABAT-SALE.AP JANUARY 10% CONDNS WB=>MCDB,0.4918563984,0.1890951465,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 4,SizingPeriod: RABAT-SALE.AP JANUARY 10% CONDNS WB=>MCDB,0.2549299700,0.1342585752,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 5,SizingPeriod: RABAT-SALE.AP JANUARY 10% CONDNS WB=>MCDB,0.2973640837,0.2049826985,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 6,SizingPeriod: RABAT-SALE.AP JANUARY 10% CONDNS WB=>MCDB,1.9495841576,1.3842860860,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+Environment,RABAT-SALE.AP JANUARY 2% CONDNS DB=>MCWB,SizingPeriod:DesignDay,01/21,01/21,SummerDesignDay,1,N/A,N/A,N/A,N/A,N/A,N/A,Clark and Allen
+Environment:Daylight Saving,No,SizingPeriod:DesignDay
+Environment:Design Day Data,19.40,9.80,DefaultMultipliers,Wetbulb,14.30,{C},100319,340,2.4,0.00,No,No
+Environment:Design Day Misc, 21,1229.0,0.1415,5.7310E-002,1.0,-11.15,-20.1,ASHRAETau2017
+Environment:WarmupDays,  4
+ Warmup Convergence Information,THERMAL ZONE 1,SizingPeriod: RABAT-SALE.AP JANUARY 2% CONDNS DB=>MCWB,0.2801200901,0.1253479884,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 2,SizingPeriod: RABAT-SALE.AP JANUARY 2% CONDNS DB=>MCWB,0.5223374181,0.2013350563,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 3,SizingPeriod: RABAT-SALE.AP JANUARY 2% CONDNS DB=>MCWB,0.4900616247,0.1831586988,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 4,SizingPeriod: RABAT-SALE.AP JANUARY 2% CONDNS DB=>MCWB,0.2532019362,0.1280789869,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 5,SizingPeriod: RABAT-SALE.AP JANUARY 2% CONDNS DB=>MCWB,0.2967823723,0.2002071803,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 6,SizingPeriod: RABAT-SALE.AP JANUARY 2% CONDNS DB=>MCWB,1.9450796677,1.3821078739,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+Environment,RABAT-SALE.AP JANUARY 2% CONDNS WB=>MCDB,SizingPeriod:DesignDay,01/21,01/21,SummerDesignDay,1,N/A,N/A,N/A,N/A,N/A,N/A,Clark and Allen
+Environment:Daylight Saving,No,SizingPeriod:DesignDay
+Environment:Design Day Data,17.90,9.80,DefaultMultipliers,Wetbulb,15.60,{C},100319,340,2.4,0.00,No,No
+Environment:Design Day Misc, 21,1229.0,0.1415,5.7310E-002,1.0,-11.15,-20.1,ASHRAETau2017
+Environment:WarmupDays,  4
+ Warmup Convergence Information,THERMAL ZONE 1,SizingPeriod: RABAT-SALE.AP JANUARY 2% CONDNS WB=>MCDB,0.2820533429,0.1262088099,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 2,SizingPeriod: RABAT-SALE.AP JANUARY 2% CONDNS WB=>MCDB,0.5256440008,0.2063306750,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 3,SizingPeriod: RABAT-SALE.AP JANUARY 2% CONDNS WB=>MCDB,0.4922414883,0.1866948441,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 4,SizingPeriod: RABAT-SALE.AP JANUARY 2% CONDNS WB=>MCDB,0.2551535200,0.1312998704,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 5,SizingPeriod: RABAT-SALE.AP JANUARY 2% CONDNS WB=>MCDB,0.2980609314,0.2031374856,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 6,SizingPeriod: RABAT-SALE.AP JANUARY 2% CONDNS WB=>MCDB,1.9491600549,1.3823822470,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+Environment,RABAT-SALE.AP JANUARY 5% CONDNS DB=>MCWB,SizingPeriod:DesignDay,01/21,01/21,SummerDesignDay,1,N/A,N/A,N/A,N/A,N/A,N/A,Clark and Allen
+Environment:Daylight Saving,No,SizingPeriod:DesignDay
+Environment:Design Day Data,18.10,11.40,DefaultMultipliers,Wetbulb,14.20,{C},100319,340,2.4,0.00,No,No
+Environment:Design Day Misc, 21,1229.0,0.1415,5.7310E-002,1.0,-11.15,-20.1,ASHRAETau2017
+Environment:WarmupDays,  4
+ Warmup Convergence Information,THERMAL ZONE 1,SizingPeriod: RABAT-SALE.AP JANUARY 5% CONDNS DB=>MCWB,0.3025908464,0.1347466539,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 2,SizingPeriod: RABAT-SALE.AP JANUARY 5% CONDNS DB=>MCWB,0.5481200515,0.2144387269,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 3,SizingPeriod: RABAT-SALE.AP JANUARY 5% CONDNS DB=>MCWB,0.5126280565,0.1966805043,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 4,SizingPeriod: RABAT-SALE.AP JANUARY 5% CONDNS DB=>MCWB,0.2766041749,0.1320759799,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 5,SizingPeriod: RABAT-SALE.AP JANUARY 5% CONDNS DB=>MCWB,0.3180047201,0.2136597960,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 6,SizingPeriod: RABAT-SALE.AP JANUARY 5% CONDNS DB=>MCWB,1.9717586558,1.3807644675,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+Environment,RABAT-SALE.AP JANUARY 5% CONDNS WB=>MCDB,SizingPeriod:DesignDay,01/21,01/21,SummerDesignDay,1,N/A,N/A,N/A,N/A,N/A,N/A,Clark and Allen
+Environment:Daylight Saving,No,SizingPeriod:DesignDay
+Environment:Design Day Data,17.20,9.70,DefaultMultipliers,Wetbulb,14.80,{C},100319,340,2.4,0.00,No,No
+Environment:Design Day Misc, 21,1229.0,0.1415,5.7310E-002,1.0,-11.15,-20.1,ASHRAETau2017
+Environment:WarmupDays,  4
+ Warmup Convergence Information,THERMAL ZONE 1,SizingPeriod: RABAT-SALE.AP JANUARY 5% CONDNS WB=>MCDB,0.2812716453,0.1260051385,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 2,SizingPeriod: RABAT-SALE.AP JANUARY 5% CONDNS WB=>MCDB,0.5251938095,0.2076972289,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 3,SizingPeriod: RABAT-SALE.AP JANUARY 5% CONDNS WB=>MCDB,0.4913880170,0.1875679575,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 4,SizingPeriod: RABAT-SALE.AP JANUARY 5% CONDNS WB=>MCDB,0.2543371944,0.1327734416,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 5,SizingPeriod: RABAT-SALE.AP JANUARY 5% CONDNS WB=>MCDB,0.2970753407,0.2037119805,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 6,SizingPeriod: RABAT-SALE.AP JANUARY 5% CONDNS WB=>MCDB,1.9486200603,1.3834359884,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+Environment,RABAT-SALE.AP JULY .4% CONDNS DB=>MCWB,SizingPeriod:DesignDay,07/21,07/21,SummerDesignDay,1,N/A,N/A,N/A,N/A,N/A,N/A,Clark and Allen
+Environment:Daylight Saving,No,SizingPeriod:DesignDay
+Environment:Design Day Data,36.80,8.50,DefaultMultipliers,Wetbulb,23.70,{C},100319,340,3.0,0.00,No,No
+Environment:Design Day Misc,202,1084.4,0.2082,0.1365,1.0,-6.23,20.6,ASHRAETau2017
+Environment:WarmupDays,  4
+ Warmup Convergence Information,THERMAL ZONE 1,SizingPeriod: RABAT-SALE.AP JULY .4% CONDNS DB=>MCWB,0.2454341690,0.1141031719,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 2,SizingPeriod: RABAT-SALE.AP JULY .4% CONDNS DB=>MCWB,0.4068749506,0.1776504817,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 3,SizingPeriod: RABAT-SALE.AP JULY .4% CONDNS DB=>MCWB,0.3100778996,0.1215764096,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 4,SizingPeriod: RABAT-SALE.AP JULY .4% CONDNS DB=>MCWB,0.2297849299,0.1283239328,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 5,SizingPeriod: RABAT-SALE.AP JULY .4% CONDNS DB=>MCWB,0.3507962806,0.1911168155,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 6,SizingPeriod: RABAT-SALE.AP JULY .4% CONDNS DB=>MCWB,0.7150458879,0.3865703950,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+Environment,RABAT-SALE.AP JULY .4% CONDNS WB=>MCDB,SizingPeriod:DesignDay,07/21,07/21,SummerDesignDay,1,N/A,N/A,N/A,N/A,N/A,N/A,Clark and Allen
+Environment:Daylight Saving,No,SizingPeriod:DesignDay
+Environment:Design Day Data,32.80,8.50,DefaultMultipliers,Wetbulb,25.90,{C},100319,340,3.0,0.00,No,No
+Environment:Design Day Misc,202,1084.4,0.2082,0.1365,1.0,-6.23,20.6,ASHRAETau2017
+Environment:WarmupDays,  4
+ Warmup Convergence Information,THERMAL ZONE 1,SizingPeriod: RABAT-SALE.AP JULY .4% CONDNS WB=>MCDB,0.2433409494,0.1134430660,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 2,SizingPeriod: RABAT-SALE.AP JULY .4% CONDNS WB=>MCDB,0.4055994485,0.1768757824,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 3,SizingPeriod: RABAT-SALE.AP JULY .4% CONDNS WB=>MCDB,0.3087794930,0.1212937977,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 4,SizingPeriod: RABAT-SALE.AP JULY .4% CONDNS WB=>MCDB,0.2281985478,0.1277494455,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 5,SizingPeriod: RABAT-SALE.AP JULY .4% CONDNS WB=>MCDB,0.3485783455,0.1910327796,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 6,SizingPeriod: RABAT-SALE.AP JULY .4% CONDNS WB=>MCDB,0.7135216321,0.3885812415,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+Environment,RABAT-SALE.AP JULY 10% CONDNS DB=>MCWB,SizingPeriod:DesignDay,07/21,07/21,SummerDesignDay,1,N/A,N/A,N/A,N/A,N/A,N/A,Clark and Allen
+Environment:Daylight Saving,No,SizingPeriod:DesignDay
+Environment:Design Day Data,26.70,11.70,DefaultMultipliers,Wetbulb,21.80,{C},100319,340,3.0,0.00,No,No
+Environment:Design Day Misc,202,1084.4,0.2082,0.1365,1.0,-6.23,20.6,ASHRAETau2017
+Environment:WarmupDays,  4
+ Warmup Convergence Information,THERMAL ZONE 1,SizingPeriod: RABAT-SALE.AP JULY 10% CONDNS DB=>MCWB,0.2878693591,0.1285216401,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 2,SizingPeriod: RABAT-SALE.AP JULY 10% CONDNS DB=>MCWB,0.4565419804,0.1944411071,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 3,SizingPeriod: RABAT-SALE.AP JULY 10% CONDNS DB=>MCWB,0.3531021125,0.1348542163,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 4,SizingPeriod: RABAT-SALE.AP JULY 10% CONDNS DB=>MCWB,0.2714801154,0.1327226571,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 5,SizingPeriod: RABAT-SALE.AP JULY 10% CONDNS DB=>MCWB,0.3902059985,0.2050218631,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 6,SizingPeriod: RABAT-SALE.AP JULY 10% CONDNS DB=>MCWB,0.7776086623,0.4064730685,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+Environment,RABAT-SALE.AP JULY 10% CONDNS WB=>MCDB,SizingPeriod:DesignDay,07/21,07/21,SummerDesignDay,1,N/A,N/A,N/A,N/A,N/A,N/A,Clark and Allen
+Environment:Daylight Saving,No,SizingPeriod:DesignDay
+Environment:Design Day Data,25.80,9.80,DefaultMultipliers,Wetbulb,22.30,{C},100319,340,3.0,0.00,No,No
+Environment:Design Day Misc,202,1084.4,0.2082,0.1365,1.0,-6.23,20.6,ASHRAETau2017
+Environment:WarmupDays,  4
+ Warmup Convergence Information,THERMAL ZONE 1,SizingPeriod: RABAT-SALE.AP JULY 10% CONDNS WB=>MCDB,0.2603128196,0.1171926291,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 2,SizingPeriod: RABAT-SALE.AP JULY 10% CONDNS WB=>MCDB,0.4263043132,0.1808601549,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 3,SizingPeriod: RABAT-SALE.AP JULY 10% CONDNS WB=>MCDB,0.3291979524,0.1285390736,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 4,SizingPeriod: RABAT-SALE.AP JULY 10% CONDNS WB=>MCDB,0.2490758328,0.1305125775,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 5,SizingPeriod: RABAT-SALE.AP JULY 10% CONDNS WB=>MCDB,0.3613907965,0.1955103462,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 6,SizingPeriod: RABAT-SALE.AP JULY 10% CONDNS WB=>MCDB,0.7452139990,0.3957490708,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+Environment,RABAT-SALE.AP JULY 2% CONDNS DB=>MCWB,SizingPeriod:DesignDay,07/21,07/21,SummerDesignDay,1,N/A,N/A,N/A,N/A,N/A,N/A,Clark and Allen
+Environment:Daylight Saving,No,SizingPeriod:DesignDay
+Environment:Design Day Data,30.80,8.50,DefaultMultipliers,Wetbulb,21.90,{C},100319,340,3.0,0.00,No,No
+Environment:Design Day Misc,202,1084.4,0.2082,0.1365,1.0,-6.23,20.6,ASHRAETau2017
+Environment:WarmupDays,  4
+ Warmup Convergence Information,THERMAL ZONE 1,SizingPeriod: RABAT-SALE.AP JULY 2% CONDNS DB=>MCWB,0.2396331418,0.1118279398,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 2,SizingPeriod: RABAT-SALE.AP JULY 2% CONDNS DB=>MCWB,0.4018672570,0.1737076434,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 3,SizingPeriod: RABAT-SALE.AP JULY 2% CONDNS DB=>MCWB,0.3066032582,0.1190359292,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 4,SizingPeriod: RABAT-SALE.AP JULY 2% CONDNS DB=>MCWB,0.2265668613,0.1254542807,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 5,SizingPeriod: RABAT-SALE.AP JULY 2% CONDNS DB=>MCWB,0.3445564280,0.1892133316,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 6,SizingPeriod: RABAT-SALE.AP JULY 2% CONDNS DB=>MCWB,0.7140417948,0.3878722008,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+Environment,RABAT-SALE.AP JULY 2% CONDNS WB=>MCDB,SizingPeriod:DesignDay,07/21,07/21,SummerDesignDay,1,N/A,N/A,N/A,N/A,N/A,N/A,Clark and Allen
+Environment:Daylight Saving,No,SizingPeriod:DesignDay
+Environment:Design Day Data,28.40,8.50,DefaultMultipliers,Wetbulb,24.00,{C},100319,340,3.0,0.00,No,No
+Environment:Design Day Misc,202,1084.4,0.2082,0.1365,1.0,-6.23,20.6,ASHRAETau2017
+Environment:WarmupDays,  4
+ Warmup Convergence Information,THERMAL ZONE 1,SizingPeriod: RABAT-SALE.AP JULY 2% CONDNS WB=>MCDB,0.2376833750,0.1101551117,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 2,SizingPeriod: RABAT-SALE.AP JULY 2% CONDNS WB=>MCDB,0.4004382634,0.1704993630,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 3,SizingPeriod: RABAT-SALE.AP JULY 2% CONDNS WB=>MCDB,0.3052877466,0.1212928978,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 4,SizingPeriod: RABAT-SALE.AP JULY 2% CONDNS WB=>MCDB,0.2265666316,0.1258816643,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 5,SizingPeriod: RABAT-SALE.AP JULY 2% CONDNS WB=>MCDB,0.3404453693,0.1856879073,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 6,SizingPeriod: RABAT-SALE.AP JULY 2% CONDNS WB=>MCDB,0.7172919272,0.3881196475,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+Environment,RABAT-SALE.AP JULY 5% CONDNS DB=>MCWB,SizingPeriod:DesignDay,07/21,07/21,SummerDesignDay,1,N/A,N/A,N/A,N/A,N/A,N/A,Clark and Allen
+Environment:Daylight Saving,No,SizingPeriod:DesignDay
+Environment:Design Day Data,28.40,11.70,DefaultMultipliers,Wetbulb,22.30,{C},100319,340,3.0,0.00,No,No
+Environment:Design Day Misc,202,1084.4,0.2082,0.1365,1.0,-6.23,20.6,ASHRAETau2017
+Environment:WarmupDays,  4
+ Warmup Convergence Information,THERMAL ZONE 1,SizingPeriod: RABAT-SALE.AP JULY 5% CONDNS DB=>MCWB,0.2855086391,0.1292930505,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 2,SizingPeriod: RABAT-SALE.AP JULY 5% CONDNS DB=>MCWB,0.4533504119,0.1928158512,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 3,SizingPeriod: RABAT-SALE.AP JULY 5% CONDNS DB=>MCWB,0.3499344702,0.1326585717,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 4,SizingPeriod: RABAT-SALE.AP JULY 5% CONDNS DB=>MCWB,0.2682274819,0.1313675048,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 5,SizingPeriod: RABAT-SALE.AP JULY 5% CONDNS DB=>MCWB,0.3884995427,0.2035318899,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 6,SizingPeriod: RABAT-SALE.AP JULY 5% CONDNS DB=>MCWB,0.7746747945,0.4058589104,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+Environment,RABAT-SALE.AP JULY 5% CONDNS WB=>MCDB,SizingPeriod:DesignDay,07/21,07/21,SummerDesignDay,1,N/A,N/A,N/A,N/A,N/A,N/A,Clark and Allen
+Environment:Daylight Saving,No,SizingPeriod:DesignDay
+Environment:Design Day Data,26.80,9.80,DefaultMultipliers,Wetbulb,23.10,{C},100319,340,3.0,0.00,No,No
+Environment:Design Day Misc,202,1084.4,0.2082,0.1365,1.0,-6.23,20.6,ASHRAETau2017
+Environment:WarmupDays,  4
+ Warmup Convergence Information,THERMAL ZONE 1,SizingPeriod: RABAT-SALE.AP JULY 5% CONDNS WB=>MCDB,0.2589161527,0.1174502785,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 2,SizingPeriod: RABAT-SALE.AP JULY 5% CONDNS WB=>MCDB,0.4246662549,0.1794777346,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 3,SizingPeriod: RABAT-SALE.AP JULY 5% CONDNS WB=>MCDB,0.3273042031,0.1274293919,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 4,SizingPeriod: RABAT-SALE.AP JULY 5% CONDNS WB=>MCDB,0.2470766400,0.1297419307,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 5,SizingPeriod: RABAT-SALE.AP JULY 5% CONDNS WB=>MCDB,0.3603584215,0.1945762495,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 6,SizingPeriod: RABAT-SALE.AP JULY 5% CONDNS WB=>MCDB,0.7438641817,0.3951893387,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+Environment,RABAT-SALE.AP JUNE .4% CONDNS DB=>MCWB,SizingPeriod:DesignDay,06/21,06/21,SummerDesignDay,1,N/A,N/A,N/A,N/A,N/A,N/A,Clark and Allen
+Environment:Daylight Saving,No,SizingPeriod:DesignDay
+Environment:Design Day Data,36.70,8.90,DefaultMultipliers,Wetbulb,21.70,{C},100319,340,3.1,0.00,No,No
+Environment:Design Day Misc,172,1088.0,0.2039,0.1335,1.0,-1.34,23.4,ASHRAETau2017
+Environment:WarmupDays,  4
+ Warmup Convergence Information,THERMAL ZONE 1,SizingPeriod: RABAT-SALE.AP JUNE .4% CONDNS DB=>MCWB,0.2472621032,0.1162518084,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 2,SizingPeriod: RABAT-SALE.AP JUNE .4% CONDNS DB=>MCWB,0.4140170633,0.1766102923,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 3,SizingPeriod: RABAT-SALE.AP JUNE .4% CONDNS DB=>MCWB,0.2992196904,0.1147836691,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 4,SizingPeriod: RABAT-SALE.AP JUNE .4% CONDNS DB=>MCWB,0.2305824508,0.1275846090,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 5,SizingPeriod: RABAT-SALE.AP JUNE .4% CONDNS DB=>MCWB,0.3689515590,0.1957163739,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 6,SizingPeriod: RABAT-SALE.AP JUNE .4% CONDNS DB=>MCWB,0.6236316607,0.3278406524,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+Environment,RABAT-SALE.AP JUNE .4% CONDNS WB=>MCDB,SizingPeriod:DesignDay,06/21,06/21,SummerDesignDay,1,N/A,N/A,N/A,N/A,N/A,N/A,Clark and Allen
+Environment:Daylight Saving,No,SizingPeriod:DesignDay
+Environment:Design Day Data,30.40,8.90,DefaultMultipliers,Wetbulb,24.10,{C},100319,340,3.1,0.00,No,No
+Environment:Design Day Misc,172,1088.0,0.2039,0.1335,1.0,-1.34,23.4,ASHRAETau2017
+Environment:WarmupDays,  4
+ Warmup Convergence Information,THERMAL ZONE 1,SizingPeriod: RABAT-SALE.AP JUNE .4% CONDNS WB=>MCDB,0.2403411834,0.1130748044,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 2,SizingPeriod: RABAT-SALE.AP JUNE .4% CONDNS WB=>MCDB,0.4071449716,0.1729514951,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 3,SizingPeriod: RABAT-SALE.AP JUNE .4% CONDNS WB=>MCDB,0.2947549947,0.1147829625,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 4,SizingPeriod: RABAT-SALE.AP JUNE .4% CONDNS WB=>MCDB,0.2265494751,0.1260075821,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 5,SizingPeriod: RABAT-SALE.AP JUNE .4% CONDNS WB=>MCDB,0.3614341466,0.1924919440,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 6,SizingPeriod: RABAT-SALE.AP JUNE .4% CONDNS WB=>MCDB,0.6235775374,0.3275888068,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+Environment,RABAT-SALE.AP JUNE 10% CONDNS DB=>MCWB,SizingPeriod:DesignDay,06/21,06/21,SummerDesignDay,1,N/A,N/A,N/A,N/A,N/A,N/A,Clark and Allen
+Environment:Daylight Saving,No,SizingPeriod:DesignDay
+Environment:Design Day Data,25.40,12.70,DefaultMultipliers,Wetbulb,20.40,{C},100319,340,3.1,0.00,No,No
+Environment:Design Day Misc,172,1088.0,0.2039,0.1335,1.0,-1.34,23.4,ASHRAETau2017
+Environment:WarmupDays,  4
+ Warmup Convergence Information,THERMAL ZONE 1,SizingPeriod: RABAT-SALE.AP JUNE 10% CONDNS DB=>MCWB,0.3004441542,0.1342481036,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 2,SizingPeriod: RABAT-SALE.AP JUNE 10% CONDNS DB=>MCWB,0.4755965827,0.2006484710,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 3,SizingPeriod: RABAT-SALE.AP JUNE 10% CONDNS DB=>MCWB,0.3533530105,0.1347250835,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 4,SizingPeriod: RABAT-SALE.AP JUNE 10% CONDNS DB=>MCWB,0.2833240013,0.1364451325,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 5,SizingPeriod: RABAT-SALE.AP JUNE 10% CONDNS DB=>MCWB,0.4185393908,0.2144378235,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 6,SizingPeriod: RABAT-SALE.AP JUNE 10% CONDNS DB=>MCWB,0.6988322504,0.3578824598,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+Environment,RABAT-SALE.AP JUNE 10% CONDNS WB=>MCDB,SizingPeriod:DesignDay,06/21,06/21,SummerDesignDay,1,N/A,N/A,N/A,N/A,N/A,N/A,Clark and Allen
+Environment:Daylight Saving,No,SizingPeriod:DesignDay
+Environment:Design Day Data,24.90,10.30,DefaultMultipliers,Wetbulb,20.90,{C},100319,340,3.1,0.00,No,No
+Environment:Design Day Misc,172,1088.0,0.2039,0.1335,1.0,-1.34,23.4,ASHRAETau2017
+Environment:WarmupDays,  4
+ Warmup Convergence Information,THERMAL ZONE 1,SizingPeriod: RABAT-SALE.AP JUNE 10% CONDNS WB=>MCDB,0.2649972959,0.1202835716,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 2,SizingPeriod: RABAT-SALE.AP JUNE 10% CONDNS WB=>MCDB,0.4349407914,0.1858476768,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 3,SizingPeriod: RABAT-SALE.AP JUNE 10% CONDNS WB=>MCDB,0.3222194169,0.1273098290,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 4,SizingPeriod: RABAT-SALE.AP JUNE 10% CONDNS WB=>MCDB,0.2533392810,0.1345379887,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 5,SizingPeriod: RABAT-SALE.AP JUNE 10% CONDNS WB=>MCDB,0.3814295484,0.2018042219,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 6,SizingPeriod: RABAT-SALE.AP JUNE 10% CONDNS WB=>MCDB,0.6570172197,0.3404312878,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+Environment,RABAT-SALE.AP JUNE 2% CONDNS DB=>MCWB,SizingPeriod:DesignDay,06/21,06/21,SummerDesignDay,1,N/A,N/A,N/A,N/A,N/A,N/A,Clark and Allen
+Environment:Daylight Saving,No,SizingPeriod:DesignDay
+Environment:Design Day Data,30.10,8.90,DefaultMultipliers,Wetbulb,20.80,{C},100319,340,3.1,0.00,No,No
+Environment:Design Day Misc,172,1088.0,0.2039,0.1335,1.0,-1.34,23.4,ASHRAETau2017
+Environment:WarmupDays,  4
+ Warmup Convergence Information,THERMAL ZONE 1,SizingPeriod: RABAT-SALE.AP JUNE 2% CONDNS DB=>MCWB,0.2396500297,0.1130043799,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 2,SizingPeriod: RABAT-SALE.AP JUNE 2% CONDNS DB=>MCWB,0.4071449948,0.1728010315,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 3,SizingPeriod: RABAT-SALE.AP JUNE 2% CONDNS DB=>MCWB,0.2945785693,0.1152275175,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 4,SizingPeriod: RABAT-SALE.AP JUNE 2% CONDNS DB=>MCWB,0.2262718664,0.1263841620,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 5,SizingPeriod: RABAT-SALE.AP JUNE 2% CONDNS DB=>MCWB,0.3612970949,0.1921083104,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 6,SizingPeriod: RABAT-SALE.AP JUNE 2% CONDNS DB=>MCWB,0.6238709556,0.3279010638,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+Environment,RABAT-SALE.AP JUNE 2% CONDNS WB=>MCDB,SizingPeriod:DesignDay,06/21,06/21,SummerDesignDay,1,N/A,N/A,N/A,N/A,N/A,N/A,Clark and Allen
+Environment:Daylight Saving,No,SizingPeriod:DesignDay
+Environment:Design Day Data,26.50,8.90,DefaultMultipliers,Wetbulb,22.40,{C},100319,340,3.1,0.00,No,No
+Environment:Design Day Misc,172,1088.0,0.2039,0.1335,1.0,-1.34,23.4,ASHRAETau2017
+Environment:WarmupDays,  4
+ Warmup Convergence Information,THERMAL ZONE 1,SizingPeriod: RABAT-SALE.AP JUNE 2% CONDNS WB=>MCDB,0.2420394892,0.1121060587,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 2,SizingPeriod: RABAT-SALE.AP JUNE 2% CONDNS WB=>MCDB,0.4081016839,0.1753130085,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 3,SizingPeriod: RABAT-SALE.AP JUNE 2% CONDNS WB=>MCDB,0.2996735805,0.1214784236,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 4,SizingPeriod: RABAT-SALE.AP JUNE 2% CONDNS WB=>MCDB,0.2320752591,0.1309927600,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 5,SizingPeriod: RABAT-SALE.AP JUNE 2% CONDNS WB=>MCDB,0.3590826905,0.1925186517,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 6,SizingPeriod: RABAT-SALE.AP JUNE 2% CONDNS WB=>MCDB,0.6299412793,0.3299002737,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+Environment,RABAT-SALE.AP JUNE 5% CONDNS DB=>MCWB,SizingPeriod:DesignDay,06/21,06/21,SummerDesignDay,1,N/A,N/A,N/A,N/A,N/A,N/A,Clark and Allen
+Environment:Daylight Saving,No,SizingPeriod:DesignDay
+Environment:Design Day Data,27.30,12.70,DefaultMultipliers,Wetbulb,20.80,{C},100319,340,3.1,0.00,No,No
+Environment:Design Day Misc,172,1088.0,0.2039,0.1335,1.0,-1.34,23.4,ASHRAETau2017
+Environment:WarmupDays,  4
+ Warmup Convergence Information,THERMAL ZONE 1,SizingPeriod: RABAT-SALE.AP JUNE 5% CONDNS DB=>MCWB,0.2980546233,0.1346081770,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 2,SizingPeriod: RABAT-SALE.AP JUNE 5% CONDNS DB=>MCWB,0.4720429567,0.1986240696,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 3,SizingPeriod: RABAT-SALE.AP JUNE 5% CONDNS DB=>MCWB,0.3499766498,0.1307668073,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 4,SizingPeriod: RABAT-SALE.AP JUNE 5% CONDNS DB=>MCWB,0.2796522147,0.1337597386,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 5,SizingPeriod: RABAT-SALE.AP JUNE 5% CONDNS DB=>MCWB,0.4168308835,0.2121092781,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 6,SizingPeriod: RABAT-SALE.AP JUNE 5% CONDNS DB=>MCWB,0.6954164239,0.3552970694,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+Environment,RABAT-SALE.AP JUNE 5% CONDNS WB=>MCDB,SizingPeriod:DesignDay,06/21,06/21,SummerDesignDay,1,N/A,N/A,N/A,N/A,N/A,N/A,Clark and Allen
+Environment:Daylight Saving,No,SizingPeriod:DesignDay
+Environment:Design Day Data,25.50,10.30,DefaultMultipliers,Wetbulb,21.50,{C},100319,340,3.1,0.00,No,No
+Environment:Design Day Misc,172,1088.0,0.2039,0.1335,1.0,-1.34,23.4,ASHRAETau2017
+Environment:WarmupDays,  4
+ Warmup Convergence Information,THERMAL ZONE 1,SizingPeriod: RABAT-SALE.AP JUNE 5% CONDNS WB=>MCDB,0.2642255784,0.1203013556,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 2,SizingPeriod: RABAT-SALE.AP JUNE 5% CONDNS WB=>MCDB,0.4340319810,0.1849767501,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 3,SizingPeriod: RABAT-SALE.AP JUNE 5% CONDNS WB=>MCDB,0.3211752593,0.1261290110,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 4,SizingPeriod: RABAT-SALE.AP JUNE 5% CONDNS WB=>MCDB,0.2522091555,0.1335459733,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 5,SizingPeriod: RABAT-SALE.AP JUNE 5% CONDNS WB=>MCDB,0.3808810559,0.2010671530,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 6,SizingPeriod: RABAT-SALE.AP JUNE 5% CONDNS WB=>MCDB,0.6563845211,0.3400510535,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+Environment,RABAT-SALE.AP MARCH .4% CONDNS DB=>MCWB,SizingPeriod:DesignDay,03/21,03/21,SummerDesignDay,1,N/A,N/A,N/A,N/A,N/A,N/A,Clark and Allen
+Environment:Daylight Saving,No,SizingPeriod:DesignDay
+Environment:Design Day Data,29.50,10.20,DefaultMultipliers,Wetbulb,18.50,{C},100319,340,2.9,0.00,No,No
+Environment:Design Day Misc, 80,1184.3,0.1559,7.0716E-002,1.0,-7.51,-4.2E-002,ASHRAETau2017
+Environment:WarmupDays,  4
+ Warmup Convergence Information,THERMAL ZONE 1,SizingPeriod: RABAT-SALE.AP MARCH .4% CONDNS DB=>MCWB,0.2867019512,0.1333410473,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 2,SizingPeriod: RABAT-SALE.AP MARCH .4% CONDNS DB=>MCWB,0.5155513306,0.1848455509,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 3,SizingPeriod: RABAT-SALE.AP MARCH .4% CONDNS DB=>MCWB,0.4418199880,0.1373487736,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 4,SizingPeriod: RABAT-SALE.AP MARCH .4% CONDNS DB=>MCWB,0.2650743400,0.1408371563,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 5,SizingPeriod: RABAT-SALE.AP MARCH .4% CONDNS DB=>MCWB,0.3677529028,0.2082664307,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 6,SizingPeriod: RABAT-SALE.AP MARCH .4% CONDNS DB=>MCWB,1.4891874766,0.9565390802,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+Environment,RABAT-SALE.AP MARCH .4% CONDNS WB=>MCDB,SizingPeriod:DesignDay,03/21,03/21,SummerDesignDay,1,N/A,N/A,N/A,N/A,N/A,N/A,Clark and Allen
+Environment:Daylight Saving,No,SizingPeriod:DesignDay
+Environment:Design Day Data,25.80,10.20,DefaultMultipliers,Wetbulb,19.30,{C},100319,340,2.9,0.00,No,No
+Environment:Design Day Misc, 80,1184.3,0.1559,7.0716E-002,1.0,-7.51,-4.2E-002,ASHRAETau2017
+Environment:WarmupDays,  4
+ Warmup Convergence Information,THERMAL ZONE 1,SizingPeriod: RABAT-SALE.AP MARCH .4% CONDNS WB=>MCDB,0.2904404354,0.1316925345,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 2,SizingPeriod: RABAT-SALE.AP MARCH .4% CONDNS WB=>MCDB,0.5177284496,0.1878941331,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 3,SizingPeriod: RABAT-SALE.AP MARCH .4% CONDNS WB=>MCDB,0.4435129135,0.1411752561,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 4,SizingPeriod: RABAT-SALE.AP MARCH .4% CONDNS WB=>MCDB,0.2717400552,0.1423909301,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 5,SizingPeriod: RABAT-SALE.AP MARCH .4% CONDNS WB=>MCDB,0.3704353144,0.2108179594,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 6,SizingPeriod: RABAT-SALE.AP MARCH .4% CONDNS WB=>MCDB,1.4929284162,0.9569676735,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+Environment,RABAT-SALE.AP MARCH 10% CONDNS DB=>MCWB,SizingPeriod:DesignDay,03/21,03/21,SummerDesignDay,1,N/A,N/A,N/A,N/A,N/A,N/A,Clark and Allen
+Environment:Daylight Saving,No,SizingPeriod:DesignDay
+Environment:Design Day Data,19.50,13.60,DefaultMultipliers,Wetbulb,15.40,{C},100319,340,2.9,0.00,No,No
+Environment:Design Day Misc, 80,1184.3,0.1559,7.0716E-002,1.0,-7.51,-4.2E-002,ASHRAETau2017
+Environment:WarmupDays,  4
+ Warmup Convergence Information,THERMAL ZONE 1,SizingPeriod: RABAT-SALE.AP MARCH 10% CONDNS DB=>MCWB,0.3449784637,0.1513418714,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 2,SizingPeriod: RABAT-SALE.AP MARCH 10% CONDNS DB=>MCWB,0.5852095602,0.2119441779,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 3,SizingPeriod: RABAT-SALE.AP MARCH 10% CONDNS DB=>MCWB,0.4978979935,0.1752474300,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 4,SizingPeriod: RABAT-SALE.AP MARCH 10% CONDNS DB=>MCWB,0.3288671742,0.1494732734,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 5,SizingPeriod: RABAT-SALE.AP MARCH 10% CONDNS DB=>MCWB,0.4198201434,0.2443809650,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 6,SizingPeriod: RABAT-SALE.AP MARCH 10% CONDNS DB=>MCWB,1.5555503692,0.9702369702,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+Environment,RABAT-SALE.AP MARCH 10% CONDNS WB=>MCDB,SizingPeriod:DesignDay,03/21,03/21,SummerDesignDay,1,N/A,N/A,N/A,N/A,N/A,N/A,Clark and Allen
+Environment:Daylight Saving,No,SizingPeriod:DesignDay
+Environment:Design Day Data,19.00,11.60,DefaultMultipliers,Wetbulb,15.90,{C},100319,340,2.9,0.00,No,No
+Environment:Design Day Misc, 80,1184.3,0.1559,7.0716E-002,1.0,-7.51,-4.2E-002,ASHRAETau2017
+Environment:WarmupDays,  4
+ Warmup Convergence Information,THERMAL ZONE 1,SizingPeriod: RABAT-SALE.AP MARCH 10% CONDNS WB=>MCDB,0.3178776053,0.1397740789,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 2,SizingPeriod: RABAT-SALE.AP MARCH 10% CONDNS WB=>MCDB,0.5535319478,0.2024285134,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 3,SizingPeriod: RABAT-SALE.AP MARCH 10% CONDNS WB=>MCDB,0.4715271398,0.1637955221,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 4,SizingPeriod: RABAT-SALE.AP MARCH 10% CONDNS WB=>MCDB,0.3018636363,0.1501819644,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 5,SizingPeriod: RABAT-SALE.AP MARCH 10% CONDNS WB=>MCDB,0.3934235439,0.2306396375,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 6,SizingPeriod: RABAT-SALE.AP MARCH 10% CONDNS WB=>MCDB,1.5260016145,0.9638112018,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+Environment,RABAT-SALE.AP MARCH 2% CONDNS DB=>MCWB,SizingPeriod:DesignDay,03/21,03/21,SummerDesignDay,1,N/A,N/A,N/A,N/A,N/A,N/A,Clark and Allen
+Environment:Daylight Saving,No,SizingPeriod:DesignDay
+Environment:Design Day Data,24.10,10.20,DefaultMultipliers,Wetbulb,16.30,{C},100319,340,2.9,0.00,No,No
+Environment:Design Day Misc, 80,1184.3,0.1559,7.0716E-002,1.0,-7.51,-4.2E-002,ASHRAETau2017
+Environment:WarmupDays,  4
+ Warmup Convergence Information,THERMAL ZONE 1,SizingPeriod: RABAT-SALE.AP MARCH 2% CONDNS DB=>MCWB,0.2926317396,0.1314625365,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 2,SizingPeriod: RABAT-SALE.AP MARCH 2% CONDNS DB=>MCWB,0.5211194428,0.1896321649,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 3,SizingPeriod: RABAT-SALE.AP MARCH 2% CONDNS DB=>MCWB,0.4459557974,0.1443611180,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 4,SizingPeriod: RABAT-SALE.AP MARCH 2% CONDNS DB=>MCWB,0.2746774959,0.1443013165,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 5,SizingPeriod: RABAT-SALE.AP MARCH 2% CONDNS DB=>MCWB,0.3716687588,0.2130640947,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 6,SizingPeriod: RABAT-SALE.AP MARCH 2% CONDNS DB=>MCWB,1.4949008387,0.9575977473,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+Environment,RABAT-SALE.AP MARCH 2% CONDNS WB=>MCDB,SizingPeriod:DesignDay,03/21,03/21,SummerDesignDay,1,N/A,N/A,N/A,N/A,N/A,N/A,Clark and Allen
+Environment:Daylight Saving,No,SizingPeriod:DesignDay
+Environment:Design Day Data,22.30,10.20,DefaultMultipliers,Wetbulb,17.80,{C},100319,340,2.9,0.00,No,No
+Environment:Design Day Misc, 80,1184.3,0.1559,7.0716E-002,1.0,-7.51,-4.2E-002,ASHRAETau2017
+Environment:WarmupDays,  4
+ Warmup Convergence Information,THERMAL ZONE 1,SizingPeriod: RABAT-SALE.AP MARCH 2% CONDNS WB=>MCDB,0.2949104273,0.1316890609,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 2,SizingPeriod: RABAT-SALE.AP MARCH 2% CONDNS WB=>MCDB,0.5247880049,0.1917885025,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 3,SizingPeriod: RABAT-SALE.AP MARCH 2% CONDNS WB=>MCDB,0.4487298326,0.1482775920,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 4,SizingPeriod: RABAT-SALE.AP MARCH 2% CONDNS WB=>MCDB,0.2776828113,0.1468057390,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 5,SizingPeriod: RABAT-SALE.AP MARCH 2% CONDNS WB=>MCDB,0.3730367272,0.2158748317,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 6,SizingPeriod: RABAT-SALE.AP MARCH 2% CONDNS WB=>MCDB,1.4976826465,0.9574080153,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+Environment,RABAT-SALE.AP MARCH 5% CONDNS DB=>MCWB,SizingPeriod:DesignDay,03/21,03/21,SummerDesignDay,1,N/A,N/A,N/A,N/A,N/A,N/A,Clark and Allen
+Environment:Daylight Saving,No,SizingPeriod:DesignDay
+Environment:Design Day Data,21.20,13.60,DefaultMultipliers,Wetbulb,16.00,{C},100319,340,2.9,0.00,No,No
+Environment:Design Day Misc, 80,1184.3,0.1559,7.0716E-002,1.0,-7.51,-4.2E-002,ASHRAETau2017
+Environment:WarmupDays,  4
+ Warmup Convergence Information,THERMAL ZONE 1,SizingPeriod: RABAT-SALE.AP MARCH 5% CONDNS DB=>MCWB,0.3434836094,0.1512201834,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 2,SizingPeriod: RABAT-SALE.AP MARCH 5% CONDNS DB=>MCWB,0.5822366658,0.2095893322,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 3,SizingPeriod: RABAT-SALE.AP MARCH 5% CONDNS DB=>MCWB,0.4957375024,0.1724535511,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 4,SizingPeriod: RABAT-SALE.AP MARCH 5% CONDNS DB=>MCWB,0.3267808031,0.1466751054,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 5,SizingPeriod: RABAT-SALE.AP MARCH 5% CONDNS DB=>MCWB,0.4191368786,0.2415827243,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 6,SizingPeriod: RABAT-SALE.AP MARCH 5% CONDNS DB=>MCWB,1.5526612115,0.9703513172,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+Environment,RABAT-SALE.AP MARCH 5% CONDNS WB=>MCDB,SizingPeriod:DesignDay,03/21,03/21,SummerDesignDay,1,N/A,N/A,N/A,N/A,N/A,N/A,Clark and Allen
+Environment:Daylight Saving,No,SizingPeriod:DesignDay
+Environment:Design Day Data,20.30,11.60,DefaultMultipliers,Wetbulb,16.70,{C},100319,340,2.9,0.00,No,No
+Environment:Design Day Misc, 80,1184.3,0.1559,7.0716E-002,1.0,-7.51,-4.2E-002,ASHRAETau2017
+Environment:WarmupDays,  4
+ Warmup Convergence Information,THERMAL ZONE 1,SizingPeriod: RABAT-SALE.AP MARCH 5% CONDNS WB=>MCDB,0.3166305982,0.1394674812,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 2,SizingPeriod: RABAT-SALE.AP MARCH 5% CONDNS WB=>MCDB,0.5512932195,0.2004225232,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 3,SizingPeriod: RABAT-SALE.AP MARCH 5% CONDNS WB=>MCDB,0.4700956568,0.1608364426,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 4,SizingPeriod: RABAT-SALE.AP MARCH 5% CONDNS WB=>MCDB,0.3001811032,0.1478943375,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 5,SizingPeriod: RABAT-SALE.AP MARCH 5% CONDNS WB=>MCDB,0.3927940084,0.2284165489,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 6,SizingPeriod: RABAT-SALE.AP MARCH 5% CONDNS WB=>MCDB,1.5241905926,0.9641192911,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+Environment,RABAT-SALE.AP MAY .4% CONDNS DB=>MCWB,SizingPeriod:DesignDay,05/21,05/21,SummerDesignDay,1,N/A,N/A,N/A,N/A,N/A,N/A,Clark and Allen
+Environment:Daylight Saving,No,SizingPeriod:DesignDay
+Environment:Design Day Data,34.90,9.90,DefaultMultipliers,Wetbulb,19.70,{C},100319,340,3.2,0.00,No,No
+Environment:Design Day Misc,141,1102.7,0.1968,0.1213,1.0,3.61,20.0,ASHRAETau2017
+Environment:WarmupDays,  4
+ Warmup Convergence Information,THERMAL ZONE 1,SizingPeriod: RABAT-SALE.AP MAY .4% CONDNS DB=>MCWB,0.2674995176,0.1255171191,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 2,SizingPeriod: RABAT-SALE.AP MAY .4% CONDNS DB=>MCWB,0.4419638969,0.1942843015,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 3,SizingPeriod: RABAT-SALE.AP MAY .4% CONDNS DB=>MCWB,0.3287702611,0.1182075393,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 4,SizingPeriod: RABAT-SALE.AP MAY .4% CONDNS DB=>MCWB,0.2484753167,0.1316465413,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 5,SizingPeriod: RABAT-SALE.AP MAY .4% CONDNS DB=>MCWB,0.3878351731,0.2080203894,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 6,SizingPeriod: RABAT-SALE.AP MAY .4% CONDNS DB=>MCWB,0.7450420109,0.4142394147,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+Environment,RABAT-SALE.AP MAY .4% CONDNS WB=>MCDB,SizingPeriod:DesignDay,05/21,05/21,SummerDesignDay,1,N/A,N/A,N/A,N/A,N/A,N/A,Clark and Allen
+Environment:Daylight Saving,No,SizingPeriod:DesignDay
+Environment:Design Day Data,27.40,9.90,DefaultMultipliers,Wetbulb,22.00,{C},100319,340,3.2,0.00,No,No
+Environment:Design Day Misc,141,1102.7,0.1968,0.1213,1.0,3.61,20.0,ASHRAETau2017
+Environment:WarmupDays,  4
+ Warmup Convergence Information,THERMAL ZONE 1,SizingPeriod: RABAT-SALE.AP MAY .4% CONDNS WB=>MCDB,0.2617113691,0.1219633763,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 2,SizingPeriod: RABAT-SALE.AP MAY .4% CONDNS WB=>MCDB,0.4358374829,0.1888239938,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 3,SizingPeriod: RABAT-SALE.AP MAY .4% CONDNS WB=>MCDB,0.3268732916,0.1237252152,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 4,SizingPeriod: RABAT-SALE.AP MAY .4% CONDNS WB=>MCDB,0.2484132856,0.1339514225,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 5,SizingPeriod: RABAT-SALE.AP MAY .4% CONDNS WB=>MCDB,0.3767639705,0.2046420705,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 6,SizingPeriod: RABAT-SALE.AP MAY .4% CONDNS WB=>MCDB,0.7481767779,0.4162995417,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+Environment,RABAT-SALE.AP MAY 10% CONDNS DB=>MCWB,SizingPeriod:DesignDay,05/21,05/21,SummerDesignDay,1,N/A,N/A,N/A,N/A,N/A,N/A,Clark and Allen
+Environment:Daylight Saving,No,SizingPeriod:DesignDay
+Environment:Design Day Data,23.60,15.30,DefaultMultipliers,Wetbulb,18.40,{C},100319,340,3.2,0.00,No,No
+Environment:Design Day Misc,141,1102.7,0.1968,0.1213,1.0,3.61,20.0,ASHRAETau2017
+Environment:WarmupDays,  4
+ Warmup Convergence Information,THERMAL ZONE 1,SizingPeriod: RABAT-SALE.AP MAY 10% CONDNS DB=>MCWB,0.3461286587,0.1545116674,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 2,SizingPeriod: RABAT-SALE.AP MAY 10% CONDNS DB=>MCWB,0.5324784583,0.2358127172,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 3,SizingPeriod: RABAT-SALE.AP MAY 10% CONDNS DB=>MCWB,0.4072538970,0.1547750203,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 4,SizingPeriod: RABAT-SALE.AP MAY 10% CONDNS DB=>MCWB,0.3272683505,0.1487388724,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 5,SizingPeriod: RABAT-SALE.AP MAY 10% CONDNS DB=>MCWB,0.4627153791,0.2408251658,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 6,SizingPeriod: RABAT-SALE.AP MAY 10% CONDNS DB=>MCWB,0.8465246387,0.4395528347,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+Environment,RABAT-SALE.AP MAY 10% CONDNS WB=>MCDB,SizingPeriod:DesignDay,05/21,05/21,SummerDesignDay,1,N/A,N/A,N/A,N/A,N/A,N/A,Clark and Allen
+Environment:Daylight Saving,No,SizingPeriod:DesignDay
+Environment:Design Day Data,23.20,11.90,DefaultMultipliers,Wetbulb,18.90,{C},100319,340,3.2,0.00,No,No
+Environment:Design Day Misc,141,1102.7,0.1968,0.1213,1.0,3.61,20.0,ASHRAETau2017
+Environment:WarmupDays,  4
+ Warmup Convergence Information,THERMAL ZONE 1,SizingPeriod: RABAT-SALE.AP MAY 10% CONDNS WB=>MCDB,0.2975457577,0.1336836874,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 2,SizingPeriod: RABAT-SALE.AP MAY 10% CONDNS WB=>MCDB,0.4776538280,0.2084784344,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 3,SizingPeriod: RABAT-SALE.AP MAY 10% CONDNS WB=>MCDB,0.3634144069,0.1367772619,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 4,SizingPeriod: RABAT-SALE.AP MAY 10% CONDNS WB=>MCDB,0.2842187482,0.1413746420,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 5,SizingPeriod: RABAT-SALE.AP MAY 10% CONDNS WB=>MCDB,0.4123447055,0.2202791975,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 6,SizingPeriod: RABAT-SALE.AP MAY 10% CONDNS WB=>MCDB,0.7906227365,0.4243733353,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+Environment,RABAT-SALE.AP MAY 2% CONDNS DB=>MCWB,SizingPeriod:DesignDay,05/21,05/21,SummerDesignDay,1,N/A,N/A,N/A,N/A,N/A,N/A,Clark and Allen
+Environment:Daylight Saving,No,SizingPeriod:DesignDay
+Environment:Design Day Data,29.70,9.90,DefaultMultipliers,Wetbulb,19.10,{C},100319,340,3.2,0.00,No,No
+Environment:Design Day Misc,141,1102.7,0.1968,0.1213,1.0,3.61,20.0,ASHRAETau2017
+Environment:WarmupDays,  4
+ Warmup Convergence Information,THERMAL ZONE 1,SizingPeriod: RABAT-SALE.AP MAY 2% CONDNS DB=>MCWB,0.2590332738,0.1229415263,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 2,SizingPeriod: RABAT-SALE.AP MAY 2% CONDNS DB=>MCWB,0.4346438785,0.1882934623,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 3,SizingPeriod: RABAT-SALE.AP MAY 2% CONDNS DB=>MCWB,0.3237388960,0.1204385042,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 4,SizingPeriod: RABAT-SALE.AP MAY 2% CONDNS DB=>MCWB,0.2436892672,0.1326000399,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 5,SizingPeriod: RABAT-SALE.AP MAY 2% CONDNS DB=>MCWB,0.3777585470,0.2029710950,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 6,SizingPeriod: RABAT-SALE.AP MAY 2% CONDNS DB=>MCWB,0.7457700332,0.4154146451,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+Environment,RABAT-SALE.AP MAY 2% CONDNS WB=>MCDB,SizingPeriod:DesignDay,05/21,05/21,SummerDesignDay,1,N/A,N/A,N/A,N/A,N/A,N/A,Clark and Allen
+Environment:Daylight Saving,No,SizingPeriod:DesignDay
+Environment:Design Day Data,25.60,9.90,DefaultMultipliers,Wetbulb,20.40,{C},100319,340,3.2,0.00,No,No
+Environment:Design Day Misc,141,1102.7,0.1968,0.1213,1.0,3.61,20.0,ASHRAETau2017
+Environment:WarmupDays,  4
+ Warmup Convergence Information,THERMAL ZONE 1,SizingPeriod: RABAT-SALE.AP MAY 2% CONDNS WB=>MCDB,0.2639965020,0.1216706371,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 2,SizingPeriod: RABAT-SALE.AP MAY 2% CONDNS WB=>MCDB,0.4389200765,0.1907716804,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 3,SizingPeriod: RABAT-SALE.AP MAY 2% CONDNS WB=>MCDB,0.3308979869,0.1269467237,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 4,SizingPeriod: RABAT-SALE.AP MAY 2% CONDNS WB=>MCDB,0.2529273564,0.1364483804,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 5,SizingPeriod: RABAT-SALE.AP MAY 2% CONDNS WB=>MCDB,0.3783759069,0.2064066266,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 6,SizingPeriod: RABAT-SALE.AP MAY 2% CONDNS WB=>MCDB,0.7508579679,0.4174525304,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+Environment,RABAT-SALE.AP MAY 5% CONDNS DB=>MCWB,SizingPeriod:DesignDay,05/21,05/21,SummerDesignDay,1,N/A,N/A,N/A,N/A,N/A,N/A,Clark and Allen
+Environment:Daylight Saving,No,SizingPeriod:DesignDay
+Environment:Design Day Data,25.80,15.30,DefaultMultipliers,Wetbulb,18.80,{C},100319,340,3.2,0.00,No,No
+Environment:Design Day Misc,141,1102.7,0.1968,0.1213,1.0,3.61,20.0,ASHRAETau2017
+Environment:WarmupDays,  4
+ Warmup Convergence Information,THERMAL ZONE 1,SizingPeriod: RABAT-SALE.AP MAY 5% CONDNS DB=>MCWB,0.3439193359,0.1545715045,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 2,SizingPeriod: RABAT-SALE.AP MAY 5% CONDNS DB=>MCWB,0.5291263974,0.2327554996,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 3,SizingPeriod: RABAT-SALE.AP MAY 5% CONDNS DB=>MCWB,0.4039067528,0.1506884809,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 4,SizingPeriod: RABAT-SALE.AP MAY 5% CONDNS DB=>MCWB,0.3236907652,0.1455197493,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 5,SizingPeriod: RABAT-SALE.AP MAY 5% CONDNS DB=>MCWB,0.4611936445,0.2378835392,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 6,SizingPeriod: RABAT-SALE.AP MAY 5% CONDNS DB=>MCWB,0.8427471124,0.4378030330,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+Environment,RABAT-SALE.AP MAY 5% CONDNS WB=>MCDB,SizingPeriod:DesignDay,05/21,05/21,SummerDesignDay,1,N/A,N/A,N/A,N/A,N/A,N/A,Clark and Allen
+Environment:Daylight Saving,No,SizingPeriod:DesignDay
+Environment:Design Day Data,24.30,11.90,DefaultMultipliers,Wetbulb,19.60,{C},100319,340,3.2,0.00,No,No
+Environment:Design Day Misc,141,1102.7,0.1968,0.1213,1.0,3.61,20.0,ASHRAETau2017
+Environment:WarmupDays,  4
+ Warmup Convergence Information,THERMAL ZONE 1,SizingPeriod: RABAT-SALE.AP MAY 5% CONDNS WB=>MCDB,0.2962501699,0.1335160528,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 2,SizingPeriod: RABAT-SALE.AP MAY 5% CONDNS WB=>MCDB,0.4759891762,0.2067832736,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 3,SizingPeriod: RABAT-SALE.AP MAY 5% CONDNS WB=>MCDB,0.3616230643,0.1346447241,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 4,SizingPeriod: RABAT-SALE.AP MAY 5% CONDNS WB=>MCDB,0.2822053561,0.1396555562,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 5,SizingPeriod: RABAT-SALE.AP MAY 5% CONDNS WB=>MCDB,0.4114101764,0.2187723297,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 6,SizingPeriod: RABAT-SALE.AP MAY 5% CONDNS WB=>MCDB,0.7896124244,0.4261465286,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+Environment,RABAT-SALE.AP NOVEMBER .4% CONDNS DB=>MCWB,SizingPeriod:DesignDay,11/21,11/21,SummerDesignDay,1,N/A,N/A,N/A,N/A,N/A,N/A,Clark and Allen
+Environment:Daylight Saving,No,SizingPeriod:DesignDay
+Environment:Design Day Data,27.80,9.80,DefaultMultipliers,Wetbulb,17.60,{C},100319,340,2.5,0.00,No,No
+Environment:Design Day Misc,325,1220.2,0.1488,6.4032E-002,1.0,14.25,-19.7,ASHRAETau2017
+Environment:WarmupDays,  4
+ Warmup Convergence Information,THERMAL ZONE 1,SizingPeriod: RABAT-SALE.AP NOVEMBER .4% CONDNS DB=>MCWB,0.2677742651,0.1258182772,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 2,SizingPeriod: RABAT-SALE.AP NOVEMBER .4% CONDNS DB=>MCWB,0.4902047655,0.1891498794,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 3,SizingPeriod: RABAT-SALE.AP NOVEMBER .4% CONDNS DB=>MCWB,0.4612577773,0.1744317814,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 4,SizingPeriod: RABAT-SALE.AP NOVEMBER .4% CONDNS DB=>MCWB,0.2334154110,0.1069287615,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 5,SizingPeriod: RABAT-SALE.AP NOVEMBER .4% CONDNS DB=>MCWB,0.2893068319,0.1912456274,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 6,SizingPeriod: RABAT-SALE.AP NOVEMBER .4% CONDNS DB=>MCWB,1.9070595032,1.2711218202,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+Environment,RABAT-SALE.AP NOVEMBER .4% CONDNS WB=>MCDB,SizingPeriod:DesignDay,11/21,11/21,SummerDesignDay,1,N/A,N/A,N/A,N/A,N/A,N/A,Clark and Allen
+Environment:Daylight Saving,No,SizingPeriod:DesignDay
+Environment:Design Day Data,23.40,9.80,DefaultMultipliers,Wetbulb,20.50,{C},100319,340,2.5,0.00,No,No
+Environment:Design Day Misc,325,1220.2,0.1488,6.4032E-002,1.0,14.25,-19.7,ASHRAETau2017
+Environment:WarmupDays,  4
+ Warmup Convergence Information,THERMAL ZONE 1,SizingPeriod: RABAT-SALE.AP NOVEMBER .4% CONDNS WB=>MCDB,0.2728793321,0.1267141884,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 2,SizingPeriod: RABAT-SALE.AP NOVEMBER .4% CONDNS WB=>MCDB,0.5000044066,0.1940456530,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 3,SizingPeriod: RABAT-SALE.AP NOVEMBER .4% CONDNS WB=>MCDB,0.4675444361,0.1804209749,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 4,SizingPeriod: RABAT-SALE.AP NOVEMBER .4% CONDNS WB=>MCDB,0.2408999510,0.1116526538,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 5,SizingPeriod: RABAT-SALE.AP NOVEMBER .4% CONDNS WB=>MCDB,0.2924979704,0.1974942755,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 6,SizingPeriod: RABAT-SALE.AP NOVEMBER .4% CONDNS WB=>MCDB,1.9145737745,1.2726320520,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+Environment,RABAT-SALE.AP NOVEMBER 10% CONDNS DB=>MCWB,SizingPeriod:DesignDay,11/21,11/21,SummerDesignDay,1,N/A,N/A,N/A,N/A,N/A,N/A,Clark and Allen
+Environment:Daylight Saving,No,SizingPeriod:DesignDay
+Environment:Design Day Data,20.80,11.80,DefaultMultipliers,Wetbulb,16.70,{C},100319,340,2.5,0.00,No,No
+Environment:Design Day Misc,325,1220.2,0.1488,6.4032E-002,1.0,14.25,-19.7,ASHRAETau2017
+Environment:WarmupDays,  4
+ Warmup Convergence Information,THERMAL ZONE 1,SizingPeriod: RABAT-SALE.AP NOVEMBER 10% CONDNS DB=>MCWB,0.3020364233,0.1399271194,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 2,SizingPeriod: RABAT-SALE.AP NOVEMBER 10% CONDNS DB=>MCWB,0.5346495661,0.2071475966,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 3,SizingPeriod: RABAT-SALE.AP NOVEMBER 10% CONDNS DB=>MCWB,0.4966995738,0.1993568338,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 4,SizingPeriod: RABAT-SALE.AP NOVEMBER 10% CONDNS DB=>MCWB,0.2713751042,0.1207567076,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 5,SizingPeriod: RABAT-SALE.AP NOVEMBER 10% CONDNS DB=>MCWB,0.3170835470,0.2200547335,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 6,SizingPeriod: RABAT-SALE.AP NOVEMBER 10% CONDNS DB=>MCWB,1.9506026478,1.3038558924,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+Environment,RABAT-SALE.AP NOVEMBER 10% CONDNS WB=>MCDB,SizingPeriod:DesignDay,11/21,11/21,SummerDesignDay,1,N/A,N/A,N/A,N/A,N/A,N/A,Clark and Allen
+Environment:Daylight Saving,No,SizingPeriod:DesignDay
+Environment:Design Day Data,20.00,10.00,DefaultMultipliers,Wetbulb,17.10,{C},100319,340,2.5,0.00,No,No
+Environment:Design Day Misc,325,1220.2,0.1488,6.4032E-002,1.0,14.25,-19.7,ASHRAETau2017
+Environment:WarmupDays,  4
+ Warmup Convergence Information,THERMAL ZONE 1,SizingPeriod: RABAT-SALE.AP NOVEMBER 10% CONDNS WB=>MCDB,0.2786885154,0.1302745729,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 2,SizingPeriod: RABAT-SALE.AP NOVEMBER 10% CONDNS WB=>MCDB,0.5095395015,0.2008741846,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 3,SizingPeriod: RABAT-SALE.AP NOVEMBER 10% CONDNS WB=>MCDB,0.4742674227,0.1877649938,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 4,SizingPeriod: RABAT-SALE.AP NOVEMBER 10% CONDNS WB=>MCDB,0.2483774168,0.1181700958,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 5,SizingPeriod: RABAT-SALE.AP NOVEMBER 10% CONDNS WB=>MCDB,0.2965929469,0.2053924539,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 6,SizingPeriod: RABAT-SALE.AP NOVEMBER 10% CONDNS WB=>MCDB,1.9228362330,1.2866414475,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+Environment,RABAT-SALE.AP NOVEMBER 2% CONDNS DB=>MCWB,SizingPeriod:DesignDay,11/21,11/21,SummerDesignDay,1,N/A,N/A,N/A,N/A,N/A,N/A,Clark and Allen
+Environment:Daylight Saving,No,SizingPeriod:DesignDay
+Environment:Design Day Data,24.30,9.80,DefaultMultipliers,Wetbulb,17.10,{C},100319,340,2.5,0.00,No,No
+Environment:Design Day Misc,325,1220.2,0.1488,6.4032E-002,1.0,14.25,-19.7,ASHRAETau2017
+Environment:WarmupDays,  4
+ Warmup Convergence Information,THERMAL ZONE 1,SizingPeriod: RABAT-SALE.AP NOVEMBER 2% CONDNS DB=>MCWB,0.2715386627,0.1260947032,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 2,SizingPeriod: RABAT-SALE.AP NOVEMBER 2% CONDNS DB=>MCWB,0.4973457869,0.1930837646,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 3,SizingPeriod: RABAT-SALE.AP NOVEMBER 2% CONDNS DB=>MCWB,0.4654503435,0.1789000014,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 4,SizingPeriod: RABAT-SALE.AP NOVEMBER 2% CONDNS DB=>MCWB,0.2390678763,0.1100953321,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 5,SizingPeriod: RABAT-SALE.AP NOVEMBER 2% CONDNS DB=>MCWB,0.2916002796,0.1957368491,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 6,SizingPeriod: RABAT-SALE.AP NOVEMBER 2% CONDNS DB=>MCWB,1.9112804663,1.2740253540,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+Environment,RABAT-SALE.AP NOVEMBER 2% CONDNS WB=>MCDB,SizingPeriod:DesignDay,11/21,11/21,SummerDesignDay,1,N/A,N/A,N/A,N/A,N/A,N/A,Clark and Allen
+Environment:Daylight Saving,No,SizingPeriod:DesignDay
+Environment:Design Day Data,21.80,9.80,DefaultMultipliers,Wetbulb,19.40,{C},100319,340,2.5,0.00,No,No
+Environment:Design Day Misc,325,1220.2,0.1488,6.4032E-002,1.0,14.25,-19.7,ASHRAETau2017
+Environment:WarmupDays,  4
+ Warmup Convergence Information,THERMAL ZONE 1,SizingPeriod: RABAT-SALE.AP NOVEMBER 2% CONDNS WB=>MCDB,0.2745034331,0.1276620608,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 2,SizingPeriod: RABAT-SALE.AP NOVEMBER 2% CONDNS WB=>MCDB,0.5033406649,0.1968673749,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 3,SizingPeriod: RABAT-SALE.AP NOVEMBER 2% CONDNS WB=>MCDB,0.4696861233,0.1831677680,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 4,SizingPeriod: RABAT-SALE.AP NOVEMBER 2% CONDNS WB=>MCDB,0.2432991304,0.1142396175,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 5,SizingPeriod: RABAT-SALE.AP NOVEMBER 2% CONDNS WB=>MCDB,0.2934696052,0.2003074036,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 6,SizingPeriod: RABAT-SALE.AP NOVEMBER 2% CONDNS WB=>MCDB,1.9174826859,1.2799082737,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+Environment,RABAT-SALE.AP NOVEMBER 5% CONDNS DB=>MCWB,SizingPeriod:DesignDay,11/21,11/21,SummerDesignDay,1,N/A,N/A,N/A,N/A,N/A,N/A,Clark and Allen
+Environment:Daylight Saving,No,SizingPeriod:DesignDay
+Environment:Design Day Data,22.30,11.80,DefaultMultipliers,Wetbulb,17.30,{C},100319,340,2.5,0.00,No,No
+Environment:Design Day Misc,325,1220.2,0.1488,6.4032E-002,1.0,14.25,-19.7,ASHRAETau2017
+Environment:WarmupDays,  4
+ Warmup Convergence Information,THERMAL ZONE 1,SizingPeriod: RABAT-SALE.AP NOVEMBER 5% CONDNS DB=>MCWB,0.3004823927,0.1396764651,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 2,SizingPeriod: RABAT-SALE.AP NOVEMBER 5% CONDNS DB=>MCWB,0.5316171825,0.2046926106,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 3,SizingPeriod: RABAT-SALE.AP NOVEMBER 5% CONDNS DB=>MCWB,0.4948328857,0.1968672046,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 4,SizingPeriod: RABAT-SALE.AP NOVEMBER 5% CONDNS DB=>MCWB,0.2693579169,0.1181336713,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 5,SizingPeriod: RABAT-SALE.AP NOVEMBER 5% CONDNS DB=>MCWB,0.3163815165,0.2174277803,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 6,SizingPeriod: RABAT-SALE.AP NOVEMBER 5% CONDNS DB=>MCWB,1.9476606956,1.2998663747,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+Environment,RABAT-SALE.AP NOVEMBER 5% CONDNS WB=>MCDB,SizingPeriod:DesignDay,11/21,11/21,SummerDesignDay,1,N/A,N/A,N/A,N/A,N/A,N/A,Clark and Allen
+Environment:Daylight Saving,No,SizingPeriod:DesignDay
+Environment:Design Day Data,21.10,10.00,DefaultMultipliers,Wetbulb,18.20,{C},100319,340,2.5,0.00,No,No
+Environment:Design Day Misc,325,1220.2,0.1488,6.4032E-002,1.0,14.25,-19.7,ASHRAETau2017
+Environment:WarmupDays,  4
+ Warmup Convergence Information,THERMAL ZONE 1,SizingPeriod: RABAT-SALE.AP NOVEMBER 5% CONDNS WB=>MCDB,0.2777123618,0.1294593411,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 2,SizingPeriod: RABAT-SALE.AP NOVEMBER 5% CONDNS WB=>MCDB,0.5075271522,0.1988288378,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 3,SizingPeriod: RABAT-SALE.AP NOVEMBER 5% CONDNS WB=>MCDB,0.4730111012,0.1857706665,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 4,SizingPeriod: RABAT-SALE.AP NOVEMBER 5% CONDNS WB=>MCDB,0.2469172914,0.1159488248,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 5,SizingPeriod: RABAT-SALE.AP NOVEMBER 5% CONDNS WB=>MCDB,0.2961083367,0.2033276544,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 6,SizingPeriod: RABAT-SALE.AP NOVEMBER 5% CONDNS WB=>MCDB,1.9212582045,1.2834002259,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+Environment,RABAT-SALE.AP OCTOBER .4% CONDNS DB=>MCWB,SizingPeriod:DesignDay,10/21,10/21,SummerDesignDay,1,N/A,N/A,N/A,N/A,N/A,N/A,Clark and Allen
+Environment:Daylight Saving,No,SizingPeriod:DesignDay
+Environment:Design Day Data,33.20,9.80,DefaultMultipliers,Wetbulb,18.20,{C},100319,340,2.6,0.00,No,No
+Environment:Design Day Misc,294,1191.2,0.1597,7.3069E-002,1.0,15.18,-10.4,ASHRAETau2017
+Environment:WarmupDays,  4
+ Warmup Convergence Information,THERMAL ZONE 1,SizingPeriod: RABAT-SALE.AP OCTOBER .4% CONDNS DB=>MCWB,0.2767136189,0.1336244447,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 2,SizingPeriod: RABAT-SALE.AP OCTOBER .4% CONDNS DB=>MCWB,0.4993407113,0.1669133049,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 3,SizingPeriod: RABAT-SALE.AP OCTOBER .4% CONDNS DB=>MCWB,0.4554865732,0.1466277653,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 4,SizingPeriod: RABAT-SALE.AP OCTOBER .4% CONDNS DB=>MCWB,0.2463257291,0.1158414708,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 5,SizingPeriod: RABAT-SALE.AP OCTOBER .4% CONDNS DB=>MCWB,0.3162821152,0.2079147092,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 6,SizingPeriod: RABAT-SALE.AP OCTOBER .4% CONDNS DB=>MCWB,1.7022713516,1.0738670608,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+Environment,RABAT-SALE.AP OCTOBER .4% CONDNS WB=>MCDB,SizingPeriod:DesignDay,10/21,10/21,SummerDesignDay,1,N/A,N/A,N/A,N/A,N/A,N/A,Clark and Allen
+Environment:Daylight Saving,No,SizingPeriod:DesignDay
+Environment:Design Day Data,25.70,9.80,DefaultMultipliers,Wetbulb,22.50,{C},100319,340,2.6,0.00,No,No
+Environment:Design Day Misc,294,1191.2,0.1597,7.3069E-002,1.0,15.18,-10.4,ASHRAETau2017
+Environment:WarmupDays,  4
+ Warmup Convergence Information,THERMAL ZONE 1,SizingPeriod: RABAT-SALE.AP OCTOBER .4% CONDNS WB=>MCDB,0.2754899407,0.1273026134,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 2,SizingPeriod: RABAT-SALE.AP OCTOBER .4% CONDNS WB=>MCDB,0.5002300263,0.1662044400,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 3,SizingPeriod: RABAT-SALE.AP OCTOBER .4% CONDNS WB=>MCDB,0.4521657791,0.1481970814,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 4,SizingPeriod: RABAT-SALE.AP OCTOBER .4% CONDNS WB=>MCDB,0.2504018157,0.1180388980,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 5,SizingPeriod: RABAT-SALE.AP OCTOBER .4% CONDNS WB=>MCDB,0.3136810026,0.2056246029,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 6,SizingPeriod: RABAT-SALE.AP OCTOBER .4% CONDNS WB=>MCDB,1.7121746910,1.0781600722,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+Environment,RABAT-SALE.AP OCTOBER 10% CONDNS DB=>MCWB,SizingPeriod:DesignDay,10/21,10/21,SummerDesignDay,1,N/A,N/A,N/A,N/A,N/A,N/A,Clark and Allen
+Environment:Daylight Saving,No,SizingPeriod:DesignDay
+Environment:Design Day Data,24.50,12.60,DefaultMultipliers,Wetbulb,19.40,{C},100319,340,2.6,0.00,No,No
+Environment:Design Day Misc,294,1191.2,0.1597,7.3069E-002,1.0,15.18,-10.4,ASHRAETau2017
+Environment:WarmupDays,  4
+ Warmup Convergence Information,THERMAL ZONE 1,SizingPeriod: RABAT-SALE.AP OCTOBER 10% CONDNS DB=>MCWB,0.3144445705,0.1459632977,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 2,SizingPeriod: RABAT-SALE.AP OCTOBER 10% CONDNS DB=>MCWB,0.5446063863,0.1857818394,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 3,SizingPeriod: RABAT-SALE.AP OCTOBER 10% CONDNS DB=>MCWB,0.4909907877,0.1703405132,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 4,SizingPeriod: RABAT-SALE.AP OCTOBER 10% CONDNS DB=>MCWB,0.2910666130,0.1221626006,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 5,SizingPeriod: RABAT-SALE.AP OCTOBER 10% CONDNS DB=>MCWB,0.3519678951,0.2273907202,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 6,SizingPeriod: RABAT-SALE.AP OCTOBER 10% CONDNS DB=>MCWB,1.7579296083,1.1004625228,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+Environment,RABAT-SALE.AP OCTOBER 10% CONDNS WB=>MCDB,SizingPeriod:DesignDay,10/21,10/21,SummerDesignDay,1,N/A,N/A,N/A,N/A,N/A,N/A,Clark and Allen
+Environment:Daylight Saving,No,SizingPeriod:DesignDay
+Environment:Design Day Data,23.10,9.90,DefaultMultipliers,Wetbulb,20.00,{C},100319,340,2.6,0.00,No,No
+Environment:Design Day Misc,294,1191.2,0.1597,7.3069E-002,1.0,15.18,-10.4,ASHRAETau2017
+Environment:WarmupDays,  4
+ Warmup Convergence Information,THERMAL ZONE 1,SizingPeriod: RABAT-SALE.AP OCTOBER 10% CONDNS WB=>MCDB,0.2795924775,0.1289206863,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 2,SizingPeriod: RABAT-SALE.AP OCTOBER 10% CONDNS WB=>MCDB,0.5069227009,0.1703885303,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 3,SizingPeriod: RABAT-SALE.AP OCTOBER 10% CONDNS WB=>MCDB,0.4570560538,0.1536588333,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 4,SizingPeriod: RABAT-SALE.AP OCTOBER 10% CONDNS WB=>MCDB,0.2559947884,0.1218803207,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 5,SizingPeriod: RABAT-SALE.AP OCTOBER 10% CONDNS WB=>MCDB,0.3170081069,0.2097014277,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 6,SizingPeriod: RABAT-SALE.AP OCTOBER 10% CONDNS WB=>MCDB,1.7166919458,1.0824752050,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+Environment,RABAT-SALE.AP OCTOBER 2% CONDNS DB=>MCWB,SizingPeriod:DesignDay,10/21,10/21,SummerDesignDay,1,N/A,N/A,N/A,N/A,N/A,N/A,Clark and Allen
+Environment:Daylight Saving,No,SizingPeriod:DesignDay
+Environment:Design Day Data,28.60,9.80,DefaultMultipliers,Wetbulb,18.30,{C},100319,340,2.6,0.00,No,No
+Environment:Design Day Misc,294,1191.2,0.1597,7.3069E-002,1.0,15.18,-10.4,ASHRAETau2017
+Environment:WarmupDays,  4
+ Warmup Convergence Information,THERMAL ZONE 1,SizingPeriod: RABAT-SALE.AP OCTOBER 2% CONDNS DB=>MCWB,0.2720588570,0.1276311318,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 2,SizingPeriod: RABAT-SALE.AP OCTOBER 2% CONDNS DB=>MCWB,0.4955900318,0.1628938656,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 3,SizingPeriod: RABAT-SALE.AP OCTOBER 2% CONDNS DB=>MCWB,0.4495633456,0.1435971107,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 4,SizingPeriod: RABAT-SALE.AP OCTOBER 2% CONDNS DB=>MCWB,0.2451213194,0.1165181241,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 5,SizingPeriod: RABAT-SALE.AP OCTOBER 2% CONDNS DB=>MCWB,0.3108401759,0.2030530906,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 6,SizingPeriod: RABAT-SALE.AP OCTOBER 2% CONDNS DB=>MCWB,1.7071367628,1.0771809052,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+Environment,RABAT-SALE.AP OCTOBER 2% CONDNS WB=>MCDB,SizingPeriod:DesignDay,10/21,10/21,SummerDesignDay,1,N/A,N/A,N/A,N/A,N/A,N/A,Clark and Allen
+Environment:Daylight Saving,No,SizingPeriod:DesignDay
+Environment:Design Day Data,24.60,9.80,DefaultMultipliers,Wetbulb,21.40,{C},100319,340,2.6,0.00,No,No
+Environment:Design Day Misc,294,1191.2,0.1597,7.3069E-002,1.0,15.18,-10.4,ASHRAETau2017
+Environment:WarmupDays,  4
+ Warmup Convergence Information,THERMAL ZONE 1,SizingPeriod: RABAT-SALE.AP OCTOBER 2% CONDNS WB=>MCDB,0.2766782739,0.1275818596,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 2,SizingPeriod: RABAT-SALE.AP OCTOBER 2% CONDNS WB=>MCDB,0.5024367320,0.1675261262,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 3,SizingPeriod: RABAT-SALE.AP OCTOBER 2% CONDNS WB=>MCDB,0.4536941927,0.1501520090,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 4,SizingPeriod: RABAT-SALE.AP OCTOBER 2% CONDNS WB=>MCDB,0.2522160999,0.1195737962,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 5,SizingPeriod: RABAT-SALE.AP OCTOBER 2% CONDNS WB=>MCDB,0.3145313294,0.2069444730,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 6,SizingPeriod: RABAT-SALE.AP OCTOBER 2% CONDNS WB=>MCDB,1.7133056306,1.0797775644,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+Environment,RABAT-SALE.AP OCTOBER 5% CONDNS DB=>MCWB,SizingPeriod:DesignDay,10/21,10/21,SummerDesignDay,1,N/A,N/A,N/A,N/A,N/A,N/A,Clark and Allen
+Environment:Daylight Saving,No,SizingPeriod:DesignDay
+Environment:Design Day Data,26.00,12.60,DefaultMultipliers,Wetbulb,19.20,{C},100319,340,2.6,0.00,No,No
+Environment:Design Day Misc,294,1191.2,0.1597,7.3069E-002,1.0,15.18,-10.4,ASHRAETau2017
+Environment:WarmupDays,  4
+ Warmup Convergence Information,THERMAL ZONE 1,SizingPeriod: RABAT-SALE.AP OCTOBER 5% CONDNS DB=>MCWB,0.3127938593,0.1463570762,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 2,SizingPeriod: RABAT-SALE.AP OCTOBER 5% CONDNS DB=>MCWB,0.5416625851,0.1826738895,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 3,SizingPeriod: RABAT-SALE.AP OCTOBER 5% CONDNS DB=>MCWB,0.4889117661,0.1669522116,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 4,SizingPeriod: RABAT-SALE.AP OCTOBER 5% CONDNS DB=>MCWB,0.2887090732,0.1203383801,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 5,SizingPeriod: RABAT-SALE.AP OCTOBER 5% CONDNS DB=>MCWB,0.3510777545,0.2253360391,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 6,SizingPeriod: RABAT-SALE.AP OCTOBER 5% CONDNS DB=>MCWB,1.7548559045,1.0975555493,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+Environment,RABAT-SALE.AP OCTOBER 5% CONDNS WB=>MCDB,SizingPeriod:DesignDay,10/21,10/21,SummerDesignDay,1,N/A,N/A,N/A,N/A,N/A,N/A,Clark and Allen
+Environment:Daylight Saving,No,SizingPeriod:DesignDay
+Environment:Design Day Data,23.70,9.90,DefaultMultipliers,Wetbulb,20.70,{C},100319,340,2.6,0.00,No,No
+Environment:Design Day Misc,294,1191.2,0.1597,7.3069E-002,1.0,15.18,-10.4,ASHRAETau2017
+Environment:WarmupDays,  4
+ Warmup Convergence Information,THERMAL ZONE 1,SizingPeriod: RABAT-SALE.AP OCTOBER 5% CONDNS WB=>MCDB,0.2790110028,0.1286346243,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 2,SizingPeriod: RABAT-SALE.AP OCTOBER 5% CONDNS WB=>MCDB,0.5058147922,0.1694387820,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 3,SizingPeriod: RABAT-SALE.AP OCTOBER 5% CONDNS WB=>MCDB,0.4563210688,0.1524887284,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 4,SizingPeriod: RABAT-SALE.AP OCTOBER 5% CONDNS WB=>MCDB,0.2550836069,0.1209175873,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 5,SizingPeriod: RABAT-SALE.AP OCTOBER 5% CONDNS WB=>MCDB,0.3166001608,0.2088594485,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 6,SizingPeriod: RABAT-SALE.AP OCTOBER 5% CONDNS WB=>MCDB,1.7161225475,1.0817297682,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+Environment,RABAT-SALE.AP SEPTEMBER .4% CONDNS DB=>MCWB,SizingPeriod:DesignDay,09/21,09/21,SummerDesignDay,1,N/A,N/A,N/A,N/A,N/A,N/A,Clark and Allen
+Environment:Daylight Saving,No,SizingPeriod:DesignDay
+Environment:Design Day Data,33.00,9.10,DefaultMultipliers,Wetbulb,22.10,{C},100319,340,2.6,0.00,No,No
+Environment:Design Day Misc,264,1151.1,0.1777,9.2179E-002,1.0,6.63,1.0,ASHRAETau2017
+Environment:WarmupDays,  4
+ Warmup Convergence Information,THERMAL ZONE 1,SizingPeriod: RABAT-SALE.AP SEPTEMBER .4% CONDNS DB=>MCWB,0.2664989882,0.1272709508,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 2,SizingPeriod: RABAT-SALE.AP SEPTEMBER .4% CONDNS DB=>MCWB,0.4728830058,0.1892442783,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 3,SizingPeriod: RABAT-SALE.AP SEPTEMBER .4% CONDNS DB=>MCWB,0.4050434552,0.1270026814,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 4,SizingPeriod: RABAT-SALE.AP SEPTEMBER .4% CONDNS DB=>MCWB,0.2369461773,0.1298742882,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 5,SizingPeriod: RABAT-SALE.AP SEPTEMBER .4% CONDNS DB=>MCWB,0.3443510034,0.2008310484,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 6,SizingPeriod: RABAT-SALE.AP SEPTEMBER .4% CONDNS DB=>MCWB,1.3717071034,0.8927162857,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+Environment,RABAT-SALE.AP SEPTEMBER .4% CONDNS WB=>MCDB,SizingPeriod:DesignDay,09/21,09/21,SummerDesignDay,1,N/A,N/A,N/A,N/A,N/A,N/A,Clark and Allen
+Environment:Daylight Saving,No,SizingPeriod:DesignDay
+Environment:Design Day Data,28.90,9.10,DefaultMultipliers,Wetbulb,24.40,{C},100319,340,2.6,0.00,No,No
+Environment:Design Day Misc,264,1151.1,0.1777,9.2179E-002,1.0,6.63,1.0,ASHRAETau2017
+Environment:WarmupDays,  4
+ Warmup Convergence Information,THERMAL ZONE 1,SizingPeriod: RABAT-SALE.AP SEPTEMBER .4% CONDNS WB=>MCDB,0.2606368625,0.1223296471,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 2,SizingPeriod: RABAT-SALE.AP SEPTEMBER .4% CONDNS WB=>MCDB,0.4682921550,0.1847394169,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 3,SizingPeriod: RABAT-SALE.AP SEPTEMBER .4% CONDNS WB=>MCDB,0.4000316805,0.1262473916,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 4,SizingPeriod: RABAT-SALE.AP SEPTEMBER .4% CONDNS WB=>MCDB,0.2331064418,0.1315795868,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 5,SizingPeriod: RABAT-SALE.AP SEPTEMBER .4% CONDNS WB=>MCDB,0.3367397273,0.1938522788,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 6,SizingPeriod: RABAT-SALE.AP SEPTEMBER .4% CONDNS WB=>MCDB,1.3753693808,0.8903525768,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+Environment,RABAT-SALE.AP SEPTEMBER 10% CONDNS DB=>MCWB,SizingPeriod:DesignDay,09/21,09/21,SummerDesignDay,1,N/A,N/A,N/A,N/A,N/A,N/A,Clark and Allen
+Environment:Daylight Saving,No,SizingPeriod:DesignDay
+Environment:Design Day Data,25.80,10.90,DefaultMultipliers,Wetbulb,20.80,{C},100319,340,2.6,0.00,No,No
+Environment:Design Day Misc,264,1151.1,0.1777,9.2179E-002,1.0,6.63,1.0,ASHRAETau2017
+Environment:WarmupDays,  4
+ Warmup Convergence Information,THERMAL ZONE 1,SizingPeriod: RABAT-SALE.AP SEPTEMBER 10% CONDNS DB=>MCWB,0.2886662028,0.1343841664,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 2,SizingPeriod: RABAT-SALE.AP SEPTEMBER 10% CONDNS DB=>MCWB,0.4996013490,0.1961077561,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 3,SizingPeriod: RABAT-SALE.AP SEPTEMBER 10% CONDNS DB=>MCWB,0.4261699523,0.1409422405,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 4,SizingPeriod: RABAT-SALE.AP SEPTEMBER 10% CONDNS DB=>MCWB,0.2645380358,0.1329975835,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 5,SizingPeriod: RABAT-SALE.AP SEPTEMBER 10% CONDNS DB=>MCWB,0.3637564916,0.2086763848,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 6,SizingPeriod: RABAT-SALE.AP SEPTEMBER 10% CONDNS DB=>MCWB,1.4073257834,0.8931652289,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+Environment,RABAT-SALE.AP SEPTEMBER 10% CONDNS WB=>MCDB,SizingPeriod:DesignDay,09/21,09/21,SummerDesignDay,1,N/A,N/A,N/A,N/A,N/A,N/A,Clark and Allen
+Environment:Daylight Saving,No,SizingPeriod:DesignDay
+Environment:Design Day Data,24.60,9.40,DefaultMultipliers,Wetbulb,21.50,{C},100319,340,2.6,0.00,No,No
+Environment:Design Day Misc,264,1151.1,0.1777,9.2179E-002,1.0,6.63,1.0,ASHRAETau2017
+Environment:WarmupDays,  4
+ Warmup Convergence Information,THERMAL ZONE 1,SizingPeriod: RABAT-SALE.AP SEPTEMBER 10% CONDNS WB=>MCDB,0.2696384760,0.1242677793,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 2,SizingPeriod: RABAT-SALE.AP SEPTEMBER 10% CONDNS WB=>MCDB,0.4776985582,0.1910146313,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 3,SizingPeriod: RABAT-SALE.AP SEPTEMBER 10% CONDNS WB=>MCDB,0.4078638604,0.1346208555,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 4,SizingPeriod: RABAT-SALE.AP SEPTEMBER 10% CONDNS WB=>MCDB,0.2456103746,0.1349872248,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 5,SizingPeriod: RABAT-SALE.AP SEPTEMBER 10% CONDNS WB=>MCDB,0.3444176401,0.1999985651,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 6,SizingPeriod: RABAT-SALE.AP SEPTEMBER 10% CONDNS WB=>MCDB,1.3858053065,0.8919884142,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+Environment,RABAT-SALE.AP SEPTEMBER 2% CONDNS DB=>MCWB,SizingPeriod:DesignDay,09/21,09/21,SummerDesignDay,1,N/A,N/A,N/A,N/A,N/A,N/A,Clark and Allen
+Environment:Daylight Saving,No,SizingPeriod:DesignDay
+Environment:Design Day Data,29.10,9.10,DefaultMultipliers,Wetbulb,21.20,{C},100319,340,2.6,0.00,No,No
+Environment:Design Day Misc,264,1151.1,0.1777,9.2179E-002,1.0,6.63,1.0,ASHRAETau2017
+Environment:WarmupDays,  4
+ Warmup Convergence Information,THERMAL ZONE 1,SizingPeriod: RABAT-SALE.AP SEPTEMBER 2% CONDNS DB=>MCWB,0.2603042255,0.1221511841,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 2,SizingPeriod: RABAT-SALE.AP SEPTEMBER 2% CONDNS DB=>MCWB,0.4677994933,0.1848963740,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 3,SizingPeriod: RABAT-SALE.AP SEPTEMBER 2% CONDNS DB=>MCWB,0.3996348664,0.1260576032,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 4,SizingPeriod: RABAT-SALE.AP SEPTEMBER 2% CONDNS DB=>MCWB,0.2324984107,0.1313910809,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 5,SizingPeriod: RABAT-SALE.AP SEPTEMBER 2% CONDNS DB=>MCWB,0.3366320583,0.1934985557,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 6,SizingPeriod: RABAT-SALE.AP SEPTEMBER 2% CONDNS DB=>MCWB,1.3745733651,0.8924763377,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+Environment,RABAT-SALE.AP SEPTEMBER 2% CONDNS WB=>MCDB,SizingPeriod:DesignDay,09/21,09/21,SummerDesignDay,1,N/A,N/A,N/A,N/A,N/A,N/A,Clark and Allen
+Environment:Daylight Saving,No,SizingPeriod:DesignDay
+Environment:Design Day Data,26.50,9.10,DefaultMultipliers,Wetbulb,23.00,{C},100319,340,2.6,0.00,No,No
+Environment:Design Day Misc,264,1151.1,0.1777,9.2179E-002,1.0,6.63,1.0,ASHRAETau2017
+Environment:WarmupDays,  4
+ Warmup Convergence Information,THERMAL ZONE 1,SizingPeriod: RABAT-SALE.AP SEPTEMBER 2% CONDNS WB=>MCDB,0.2633316137,0.1216481771,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 2,SizingPeriod: RABAT-SALE.AP SEPTEMBER 2% CONDNS WB=>MCDB,0.4689435685,0.1878884837,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 3,SizingPeriod: RABAT-SALE.AP SEPTEMBER 2% CONDNS WB=>MCDB,0.4008011950,0.1294205550,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 4,SizingPeriod: RABAT-SALE.AP SEPTEMBER 2% CONDNS WB=>MCDB,0.2379683928,0.1330158993,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 5,SizingPeriod: RABAT-SALE.AP SEPTEMBER 2% CONDNS WB=>MCDB,0.3387568262,0.1957811175,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 6,SizingPeriod: RABAT-SALE.AP SEPTEMBER 2% CONDNS WB=>MCDB,1.3788551904,0.8912506197,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+Environment,RABAT-SALE.AP SEPTEMBER 5% CONDNS DB=>MCWB,SizingPeriod:DesignDay,09/21,09/21,SummerDesignDay,1,N/A,N/A,N/A,N/A,N/A,N/A,Clark and Allen
+Environment:Daylight Saving,No,SizingPeriod:DesignDay
+Environment:Design Day Data,27.00,10.90,DefaultMultipliers,Wetbulb,21.00,{C},100319,340,2.6,0.00,No,No
+Environment:Design Day Misc,264,1151.1,0.1777,9.2179E-002,1.0,6.63,1.0,ASHRAETau2017
+Environment:WarmupDays,  4
+ Warmup Convergence Information,THERMAL ZONE 1,SizingPeriod: RABAT-SALE.AP SEPTEMBER 5% CONDNS DB=>MCWB,0.2872617635,0.1340818151,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 2,SizingPeriod: RABAT-SALE.AP SEPTEMBER 5% CONDNS DB=>MCWB,0.4970110929,0.1950374495,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 3,SizingPeriod: RABAT-SALE.AP SEPTEMBER 5% CONDNS DB=>MCWB,0.4241676079,0.1386303723,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 4,SizingPeriod: RABAT-SALE.AP SEPTEMBER 5% CONDNS DB=>MCWB,0.2623269776,0.1316721232,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 5,SizingPeriod: RABAT-SALE.AP SEPTEMBER 5% CONDNS DB=>MCWB,0.3627572243,0.2072542258,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 6,SizingPeriod: RABAT-SALE.AP SEPTEMBER 5% CONDNS DB=>MCWB,1.4054661258,0.8929624107,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+Environment,RABAT-SALE.AP SEPTEMBER 5% CONDNS WB=>MCDB,SizingPeriod:DesignDay,09/21,09/21,SummerDesignDay,1,N/A,N/A,N/A,N/A,N/A,N/A,Clark and Allen
+Environment:Daylight Saving,No,SizingPeriod:DesignDay
+Environment:Design Day Data,25.40,9.40,DefaultMultipliers,Wetbulb,22.20,{C},100319,340,2.6,0.00,No,No
+Environment:Design Day Misc,264,1151.1,0.1777,9.2179E-002,1.0,6.63,1.0,ASHRAETau2017
+Environment:WarmupDays,  4
+ Warmup Convergence Information,THERMAL ZONE 1,SizingPeriod: RABAT-SALE.AP SEPTEMBER 5% CONDNS WB=>MCDB,0.2688072023,0.1240359278,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 2,SizingPeriod: RABAT-SALE.AP SEPTEMBER 5% CONDNS WB=>MCDB,0.4762070367,0.1901506081,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 3,SizingPeriod: RABAT-SALE.AP SEPTEMBER 5% CONDNS WB=>MCDB,0.4067316033,0.1330929214,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 4,SizingPeriod: RABAT-SALE.AP SEPTEMBER 5% CONDNS WB=>MCDB,0.2442774983,0.1339814323,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 5,SizingPeriod: RABAT-SALE.AP SEPTEMBER 5% CONDNS WB=>MCDB,0.3438297471,0.1990257405,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 6,SizingPeriod: RABAT-SALE.AP SEPTEMBER 5% CONDNS WB=>MCDB,1.3850005936,0.8915334084,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+Environment,RUN PERIOD 1,WeatherFileRunPeriod,01/01/2006,12/31/2006,Sunday,365,Use RunPeriod Specified Day,No,No,No,Yes,Yes,Clark and Allen
+Environment:Daylight Saving,No,RunPeriod Object
+Environment:WarmupDays,  3
+ Warmup Convergence Information,THERMAL ZONE 1,RunPeriod: RUN PERIOD 1,0.2151325899,0.1045829595,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 2,RunPeriod: RUN PERIOD 1,0.4419956693,0.2461406460,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 3,RunPeriod: RUN PERIOD 1,0.4661667631,0.1837272505,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 4,RunPeriod: RUN PERIOD 1,0.2081008703,0.1484882821,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 5,RunPeriod: RUN PERIOD 1,0.1937133665,0.1341487742,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+ Warmup Convergence Information,THERMAL ZONE 6,RunPeriod: RUN PERIOD 1,1.9383039312,1.7922680930,Pass,Pass,0.0000000000,0.0000000000,Pass,Pass
+! <Program Control Information:Threads/Parallel Sims>, Threading Supported,Maximum Number of Threads, Env Set Threads (OMP_NUM_THREADS), EP Env Set Threads (EP_OMP_NUM_THREADS), IDF Set Threads, Number of Threads Used (Interior Radiant Exchange), Number Nominal Surfaces, Number Parallel Sims
+Program Control Information:Threads/Parallel Sims, No,1, N/A, N/A, N/A, N/A, N/A, N/A
+End of Data
