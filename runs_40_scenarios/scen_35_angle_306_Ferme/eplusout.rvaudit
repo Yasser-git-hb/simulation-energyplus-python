@@ -1,0 +1,28 @@
+ ReadVarsESO
+ processing:runs_40_scenarios\scen_33_angle_288_Ferme\scen_33_angle_288_Ferme.rvi
+ input file:runs_40_scenarios\scen_33_angle_288_Ferme\eplusout.eso
+ output file:runs_40_scenarios\scen_33_angle_288_Ferme\eplusout.csv
+ getting all vars from:runs_40_scenarios\scen_33_angle_288_Ferme\eplusout.eso
+  number variables requested for output=          18
+ ReadVars Run Time=00hr 00min  0.16sec
+ ReadVarsESO program completed successfully.
+ly.
+ ReadVarsESO
+ processing:runs_40_scenarios\scen_35_angle_306_Ferme\scen_35_angle_306_Ferme.rvi
+ input file:runs_40_scenarios\scen_35_angle_306_Ferme\eplusout.eso
+ output file:runs_40_scenarios\scen_35_angle_306_Ferme\eplusout.csv
+ getting all vars from:runs ReadVarsESO
+ processing:runs_40_scenarios\scen_36_angle_306_Ouvert\scen_36_angle_306_Ouvert.rvi
+ input file:runs_40_scenarios\scen_36_angle_306_Ouvert\eplusout.eso
+ output file:runs_40_scenarios\scen_36_angle_306_Ouvert\eplusout.csv
+ getting all vars from:runs_40_scenarios\scen_36_angle_306_Ouvert\eplusout.eso
+  number variables requested for output=          18
+ ReadVars Run Time=00hr 00min  0.17sec
+ ReadVarsESO program completed successfully.
+rsESO program terminated.
+ ReadVarsESO program terminated.
+ ReadVarsESO
+ processing:runs_40_scenarios\scen_35_angle_306_Ferme\scen_35_angle_306_Ferme.mvi
+ Requested ESO file=runs_40_scenarios\scen_35_angle_306_Ferme\eplusout.mtr
+ does not exist.  ReadVarsESO program terminated.
+ ReadVarsESO program terminated.

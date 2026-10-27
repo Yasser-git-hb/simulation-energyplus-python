@@ -1,0 +1,18 @@
+ ReadVarsESO
+ processing:runs_40_scenarios\scen_14_angle_108_Ouvert\scen_14_angle_108_Ouvert.rvi
+ input file:runs_40_scenarios\scen_14_angle_108_Ouvert\eplusout.eso
+ output file:runs_40_scenarios\scen_14_angle_108_Ouvert\eplusout.csv
+ getting all vars from:runs_40_scenarios\scen_14_angle_108_Ouvert\eplusout.eso
+  number variables requested for output=          18
+ ReadVars Run Time=00hr 00min  0.16sec
+ ReadVarsESO program completed successfully.
+VarsESO
+ processing:runs_40_scenarios\scen_13_angle_108_Ferme\scen_13_angle_108_Ferme.mvi
+ Requested ESO file=runs_40_scenarios\scen_13_angle_108_Ferme\eplusout.mtr
+ does not exist.  ReadVarsESO program terminated.
+ ReadVarsESO program terminated.
+ ReadVarsESO
+ processing:runs_40_scenarios\scen_14_angle_108_Ouvert\scen_14_angle_108_Ouvert.mvi
+ Requested ESO file=runs_40_scenarios\scen_14_angle_108_Ouvert\eplusout.mtr
+ does not exist.  ReadVarsESO program terminated.
+ ReadVarsESO program terminated.

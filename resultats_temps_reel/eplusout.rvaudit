@@ -1,0 +1,13 @@
+ ReadVarsESO
+ processing:./maison_temps_reel.rvi
+ input file:resultats_temps_reel\eplusout.eso
+ output file:resultats_temps_reel\eplusout.csv
+ getting all vars from:resultats_temps_reel\eplusout.eso
+  number variables requested for output=          18
+ ReadVars Run Time=00hr 00min  1.08sec
+ ReadVarsESO program completed successfully.
+ ReadVarsESO
+ processing:./maison_temps_reel.mvi
+ Requested ESO file=resultats_temps_reel\eplusout.mtr
+ does not exist.  ReadVarsESO program terminated.
+ ReadVarsESO program terminated.
